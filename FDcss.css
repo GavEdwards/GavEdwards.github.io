@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul {
+    line-height: 350%;
+}
+
+body,
+html {
+    height: 100%;
+    font-size: 1em;
+}
+
+.falling-papers {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 480px;
+    border: 0px solid #fff;
+    border-radius: 0px;
+    background: linear-gradient(to bottom, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.paper-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    background: linear-gradient(to bottom, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+}
+
+div.paper-scene div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 25px;
+    background: url(http://image.slidesharecdn.com/constructioncostmanagement24052012-140731192422-phpapp01/95/construction-cost-management-24052012-49-638.jpg?cb=1406835541) no-repeat;
+    background-size: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+}
+
+div#nav-bar {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    top: 610px;
+    z-index: 999;
+}
+
+div#nav-bar li {
+    display: inline-block;
+    padding: 0px 7.5%;
+    line-height: 70px;
+    opacity: 1;
+    color: black;
+    max-width: 20%;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+div#nav-bar li:hover {
+    color: #0166b7;
+    background: whitesmoke;
+    transition: background 0.5s;
+}
+
+h1 {
+    position: relative;
+    margin-bottom: 0px!important;
+    margin-top: 170px;
+    left: 10%;
+    z-index: 999;
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+}
+
+h2 {
+    position: relative;
+    left: 10%;
+    z-index: 1;
+    color: white;
+    padding: 4px;
+}
+
+img.logo {
+    position: relative;
+    left: 7%;
+    height: 200px;
+    z-index: 999;
+    margin-top: 20px;
+}
+
+div#content {
+    position: absolute;
+    top: 680px;
+    width: 100%;
+    background: #5394ac;
+}
+
+div#main-head {
+    width: 100%;
+    min-height: 100px;
+    background: whitesmoke;
+    text-align: center;
+    line-height: 90px;
+    box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.75);
+}
+
+h3 {
+    font-size: 2em;
+}
+
+div.content-1 {
+    text-align: center;
+    width: 90%;
+    margin: 40px auto;
+    min-height: 200px;
+    background: #5394a;
+}
+
+div.what-tag {
+    display: inline-block;
+    width: 30%;
+    min-width: 170px;
+    min-height: 200px;
+    background: whitesmoke;
+    margin: 10px 1.2%;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.75);
+}
+
+div.what-inner {
+    margin: 20px;
+}
+
+div.what-inner img {
+    width: 100px;
+    padding: 20px;
+    transition: 1s;
+}
+
+div.what-inner img:hover {
+    width: 130px;
+    padding: 5px;
+    transition: 1s;
+}
+
+div.content-2 {
+    width: 92%;
+    padding: 4%;
+    padding-bottom: 50px;
+    min-height: 300px;
+    background: #fff;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.75);
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+div.content-2 h4 {
+    text-align: center;
+}
+
+div.content-2 p {
+    font-size: 1em;
+    text-align: justify;
+}
+
+div.content-2 iframe {
+    margin: 5px 0 10px 4%;
+    float: right;
+    width: 50%;
+    max-width: 500px;
+    min-width: 280px;
+}
+
+div.content-3 {
+    position: relative;
+    width: 50%;
+    min-width: 200px;
+    height: 480px;
+    background: whitesmoke;
+    z-index: 0;
+}
+
+div.content-4 {
+    position: relative;
+    width: 100%;
+    min-width: 200px;
+    height: 480px;
+    background: #2C3E50;
+    z-index: 0;
+}
+
+@media screen and (max-width: 720px) {
+    h1 {
+        font-size: 13vw;
+    }
+    div#nav-bar {
+        position: absolute;
+        height: 70px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        top: 0px;
+        z-index: 999;
+    }
+    div#nav-bar li {
+        display: none;
+    }
+}
