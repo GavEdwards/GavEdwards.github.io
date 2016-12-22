@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us</title>
+    <meta name="description" content="Information about FileDirector partners Ascot Business Solutions">
+    <link rel="stylesheet" href="WebsiteCSS.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="WebsiteScript.js" defer></script>
+    <script type="text/javascript" src="about.js" defer></script>
+</head>
+
+<body>
+    <div id="nav-bar">
+        <div class="nav-logo"><img src="images/Ascot-logo-tran.png" alt="Ascot Logo" width=100 height=40></div> <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        <div id="nav-items">
+            <div class="nav-left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="cloud.html">Cloud</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="Purchase.html">Purchase</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li id="setPref"> <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+                        <ul class="options">
+                            <li>
+                                <form id="font-size" class="option" action="setText()">
+                                    <label for="font-options">Font Size</label>
+                                    <select name="font-options">
+                                        <option value="0.9em">Small</option>
+                                        <option value="1em">Normal</option>
+                                        <option value="1.1em">Large</option>
+                                        <option value="1.2em">Extra Large</option>
+                                    </select>
+                                </form>
+                            </li>
+                            <li>
+                                <form id="header-color" class="option" action="setHeader()">
+                                    <label for="header-color">Header Colour</label>
+                                    <input name="header-color" type="color"> </form>
+                            </li>
+                            <li>
+                                <button id="resetColour" onclick="resetColour()">Reset Colour</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="twitter-logo social" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                    <li> <a class="facebook-logo social" href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a class="youtube-logo social" href=""><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-wrap">
+        <canvas id="canvas" class="header"></canvas>
+        <div class="header about"> </div>
+    </div>
+    <div id="content-wrap">
+        <div class="header-content">
+            <div class="header-left"> <img class="logo" alt="Ascot Logo" src="images/Ascot-logo-tran.png">
+                <h2>What We Do Here At Ascot Business Solutions</h2> </div>
+            <div class="header-right"> </div>
+        </div>
+        <div id="content-info">
+            <div class="content-1 content">
+                <canvas id="logocanvas" width="200"></canvas>
+                <div id="main-head">
+                    <h3>Who Are Ascot Business Solutions?</h3></div>
+                <div class="content-width-wrap"> <img src="images/filedirector_logo.png">
+                    <h3>FileDirector partnered with Ascot Business Solutions</h3><img src="images/Ascot-Logo.jpg"> </div>
+            </div>
+            <div class="content-tagline content">
+                <h4>At Ascot Solutions we're specialists in reducing paper and taking your business into the 21st century</h4> </div>
+            <div class="content-2 content">
+                <div class="content-width-wrap">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3EgG0qNbZ4s" allowfullscreen></iframe>
+                    <h4>Leading UK Digital Solutions Company</h4>
+                    <br>
+                    <p>Over the past 10 years Ascot has grown into an award winning and leading UK digital solutions company. Applications include automatic data collection, electronic document and records management, business process management and secure email archiving from a basket of best of breed products.
+                        <br>
+                        <br> Consultancy services are provided by Ascot’s team of highly experienced consultants with a combined service in excess of 50 years. Ascot provides the answer to reducing the ever increasing paper mountain and save organisation space, time and overhead costs to improve competitiveness.</p>
+                </div>
+            </div>
+            <div class="content-3 content">
+                <div class="content-width-wrap">
+                    <h3>Data Innovation Specialists</h3>
+                    <ul>
+                        <li>Simple document scanning</li>
+                        <li>Effective integration in Microsoft Office</li>
+                        <li>Proven ability to work with multifunction devices</li>
+                        <li>Rapid recording of invoices using Freeform</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-4 content">
+                <div class="content-width-wrap">
+                    <h3>We install and maintain FileDirector for our friends over at Spielberg</h3>
+                    <br>
+                    <p>Our friends over at Spielberg make FileDirector document management software, we are the UK partners who install and maintain FileDirector for customers in the UK. They focus on making great software, we focus on looking after you. </p>
+                    <br>
+                    <p>So if you're looking for a reliable and effective way to reduce your paperwork, Ascot Solutions will provide the perfect document managent solution for you</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
