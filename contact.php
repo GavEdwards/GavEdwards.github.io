@@ -119,6 +119,7 @@ if (($handle = fopen("data.csv", "r")) !== FALSE) {
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Contact</title>
         <meta name="description" content="How to contact Ascot Business Solutions">
         <link rel="stylesheet" href="WebsiteCSS.css">
