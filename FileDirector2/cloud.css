@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+}
+
+
+/*header style*/
+
+.header {
+    height: 680px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
+    position: absolute;
+}
+
+h1 {
+    position: relative;
+    margin-top: 170px;
+    left: 10%;
+    z-index: 999;
+    font-size: 5em;
+    font-weight: bold;
+    color: black;
+}
+
+h2 {
+    position: relative;
+    left: 10%;
+    z-index: 1;
+    color: black;
+    padding: 4px;
+}
+
+img#icon {
+    width: 80px;
+    position: relative;
+    z-index: 999;
+}
+
+
+/*falling paper animation*/
+
+.falling-papers {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 680px;
+    border: 0px solid #fff;
+    border-radius: 0px;
+    background: #0166b7;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.paper-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform-style: preserve-3d;
+    background: #0166b7;
+}
+
+div.paper-scene div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 25px;
+    background: url(http://image.slidesharecdn.com/constructioncostmanagement24052012-140731192422-phpapp01/95/construction-cost-management-24052012-49-638.jpg?cb=1406835541) no-repeat;
+    background-size: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+}
+
+
+/*clouds animation */
+
+.sky {
+    height: 680px;
+    background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
+    position: relative;
+    overflow: hidden;
+    -webkit-animation: sky_background 50s ease-out infinite;
+    -moz-animation: sky_background 50s ease-out infinite;
+    -o-animation: sky_background 50s ease-out infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_one {
+    background: url(images/cloud_01.png);
+    opacity: 0.8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300%;
+    -webkit-animation: cloud_one 50s linear infinite;
+    -moz-animation: cloud_one 50s linear infinite;
+    -o-animation: cloud_one 50s linear infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_two {
+    background: url(images/cloud_02.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300%;
+    -webkit-animation: cloud_two 75s linear infinite;
+    -moz-animation: cloud_two 75s linear infinite;
+    -o-animation: cloud_two 75s linear infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_three {
+    background-image: url(images/cloud_03.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300%;
+    -webkit-animation: cloud_three 100s linear infinite;
+    -moz-animation: cloud_three 100s linear infinite;
+    -o-animation: cloud_three 100s linear infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0)
+}
+
+@-webkit-keyframes sky_background {
+    /*USE IF I WANT TO CHANGE BACKGROUND OVER TIME*/
+    0% {
+        background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
+    }
+    50% {
+        background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
+        */
+    }
+    100% {
+        background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
+    }
+}
+
+@-webkit-keyframes cloud_one {
+    0% {
+        left: 0
+    }
+    100% {
+        left: -200%
+    }
+}
+
+@-webkit-keyframes cloud_two {
+    0% {
+        left: 0
+    }
+    100% {
+        left: -200%
+    }
+}
+
+@-webkit-keyframes cloud_three {
+    0% {
+        left: 0
+    }
+    100% {
+        left: -200%
+    }
+}
+
+@-moz-keyframes sky_background {
+    0% {
+        background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
+    }
+    50% {
+        background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
+    }
+    100% {
+        background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
+    }
+}
+
+
+}
+@-moz-keyframes cloud_one {
+    0% {
+        left: 0
+    }
+    
+    100% {
+        left: -200%
+    }
+}
+@-moz-keyframes cloud_two {
+    0% {
+        left: 0
+    }
+    
+    100% {
+        left: -200%
+    }
+}
+@-moz-keyframes cloud_three {
+    0% {
+        left: 0
+    }
+    
+    100% {
+        left: -200%
+    }
+}
+
+/*Body style*/
+div#nav-bar {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    top: 610px;
+    z-index: 999;
+    transition: background 1s;
+}
+div#nav-bar li {
+    display: inline-block;
+    padding: 0 5.5%;
+    line-height: 70px;
+    opacity: 1;
+    color: black;
+    max-width: 20%;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.header-wrap {
+    position: relative;
+    height: 680px;
+}
+div#nav-bar li:hover {
+    color: #0166b7;
+    background: whitesmoke;
+    transition: background 0.2s;
+    border: none;
+}
+img.logo {
+    position: relative;
+    left: 10%;
+    z-index: 1;
+    margin-top: 20px;
+}
+#content-wrap {
+    position: relative;
+    width: 100%;
+    background: #0166b7;
+}
+div#main-head {
+    width: 100%;
+    max-height: 250px;
+    background: whitesmoke;
+    text-align: center;
+    line-height: 90px;
+    box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.75);
+}
+div.vid-wrap {
+    width: 100%;
+    position: relative;
+    min-height: 175px;
+}
+#main-vid {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 65%;
+    top: 220px;
+    border-radius: 190px;
+    border: 3px solid #0166b7;
+    z-index: 999;
+}
+h3 {
+    font-size: 2em;
+}
+div.content-1 {
+    text-align: center;
+    width: 90%;
+    margin: 40px auto;
+    min-height: 200px;
+    background: #0166b7;
+}
+div.what-tag {
+    display: inline-block;
+    width: 30%;
+    min-width: 170px;
+    min-height: 200px;
+    background: whitesmoke;
+    margin: 10px 1.2%;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.75);
+}
+div.what-inner {
+    margin: 20px;
+}
+div.what-inner img {
+    width: 100px;
+    padding: 20px;
+    transition: 1s;
+}
+div.what-inner img:hover {
+    width: 130px;
+    padding: 5px;
+    transition: 1s;
+}
+div.what-info {
+    width: 95%;
+    height: 200px;
+    background: whitesmoke;
+    margin: 0 auto;
+}
+div.content-2 {
+    width: 92%;
+    padding: 4%;
+    padding-bottom: 50px;
+    min-height: 300px;
+    background: #fff;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.75);
+}
+div.content-2 p {
+    font-size: 1em;
+    text-align: justify;
+}
+div.content-2 iframe {
+    margin: 5px 0 10px 4%;
+    float: right;
+    width: 50%;
+    max-width: 500px;
+    min-width: 280px;
+}
+h4 {
+    font-size: 1.5em;
+}
+div.content-2 h4 {
+    text-align: center;
+}
+div.content-2 p {
+    font-size: 1em;
+    text-align: justify;
+}
+div.content-2 .text {
+    position: relative;
+    width: 60%;
+}
+div.content-2 .ani {
+    position: relative;
+    margin: -4% 10px 20px 10px;
+    float: right;
+    width: 40%;
+}
+div.content-3 {
+    position: relative;
+    width: 100%;
+    min-width: 200px;
+    height: 480px;
+    background: whitesmoke;
+    z-index: 0;
+}
+div.content-4 {
+    position: relative;
+    width: 100%;
+    min-width: 200px;
+    height: 480px;
+    background: #2C3E50;
+    z-index: 0;
+}
+div.content-5 {
+    width: 70%;
+    min-width: 280px;
+    min-height: 480px;
+    background: #5394ac;
+}
+@media screen and (max-width: 720px) {
+    h1 {
+        font-size: 13vw;
+    }
+    
+    div#nav-bar {
+        position: absolute;
+        height: 70px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        top: 0px;
+        z-index: 999;
+    }
+    
+    div#nav-bar li {
+        display: none;
+    }
+    
+    .header-wrap {
+        height: 100%;
+    }
+    
+    .header {
+        height: 100%;
+    }
+}
+
+/*File animation*/
+#file1 {
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 10%;
+    font-size: 80px;
+    animation-name: test;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+#file2 {
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 25%;
+    font-size: 80px;
+    animation-name: test;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+#file3 {
+    position: absolute;
+    margin-top: 70%;
+    margin-left: 40%;
+    font-size: 80px;
+    animation-name: test;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+#file4 {
+    position: absolute;
+    margin-top: 70%;
+    margin-left: 60%;
+    font-size: 80px;
+    animation-name: test;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+#file5 {
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 75%;
+    font-size: 80px;
+    animation-name: test;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+#file6 {
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 90%;
+    font-size: 80px;
+    animation-name: test;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+#comp {
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 40%;
+    font-size: 150px;
+}
+@keyframes test {
+    0% {
+        color: black;
+        opacity: 0
+    }
+    
+    25% {
+        opacity: 0.25
+    }
+    
+    50% {
+        opacity: 0.5
+    }
+    
+    75% {
+        opacity: 0.75;
+        color: black;
+    }
+    
+    100% {
+        color: green;
+        opacity: 1;
+        margin-top: 5%;
+        margin-left: 50%;
+        transform: translateZ(0.1px)
+    }
+}

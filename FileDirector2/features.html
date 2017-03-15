@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>File Director Features</title>
+    <meta name="description" content="SPA for FileDirectors Modular Features">
+<link rel="stylesheet" href="SPAcss.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="WebsiteScript.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<body>
+    <div id='page-wrap' class="spa-page">
+        <div id="nav-bar">
+            <div class="nav-logo"><a href="http://www.Ascot-Solutions.co.uk"><img alt="Ascot Logo"src="images/Ascot-logo-tran.png" width=100 height=40></a></div> <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            <div id="nav-items">
+                <div class="nav-left">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="cloud.html">Cloud</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="Purchase.html">Purchase</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <ul>
+                        <li><a class="twitter-logo social" href="https://twitter.com/ascotsolutions?lang=en" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                        <li> <a class="facebook-logo social" href="https://en-gb.facebook.com/ascotsolutions/" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+                        <li><a class="youtube-logo social" href="https://www.youtube.com/channel/UCKdxtOEy7-ud-63mFaTIxYQ" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- START OF SPA -->
+        <div id=wrap>
+            <div id="SPA" ng-app="myApp" ng-controller="myCtrl" ng-init="listTypes()">
+                <div id="mobile-toggle">Choose a feature <i class="fa fa-sort-asc" aria-hidden="true"></i></div>
+                <div id='left-column' class='open-column'>
+                    <h4 id="selectProduct">Select a product:</h4>
+                    <hr>
+                    <ul id="options">
+                        <li class="headers" ng-repeat="x in types" ng-click="activeType(x,$event)" ng-class="{active:x.active}">{{x.type}}
+                            <ul>
+                                <li class="products" onclick="update()" ng-repeat="y in products | filter: {type: x.type}" ng-click="activeProduct(y,$event)" ng-class="{active:y.active}">{{y.name}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--
+<li  ng-repeat="x in products " ng-click="active(x)" ng-class="{active:x.active}"> {{x.name}}</li>
+-->
+                    <!--<select onclick="update()" ng-disabled="mySwitch" ng-model="selectedPro" ng-options="x.name for x in products">
+</select>
+
+<p>
+<input type="checkbox" ng-model="mySwitch"/>Button
+</p>
+-->
+                    <hr/>
+                    <form ng-submit="listAdd(current)">
+                        <h3>Personalised List</h3>
+                        <p>Set a Budget</p>
+                        <p id="budget-warn"></p>
+                        <input ng-model="budget" id="budget" type="number" name="budget" onchange="update()">
+                        <br />
+                        <h4>{{current.name}}</h4>
+                        <input type="submit" value="Add To Price">
+                        <button ng-click="remove()">Remove marked</button>
+                    </form>
+                    <br>
+                    <div ng-repeat="x in list | orderBy : 'type'  track by $index ">
+                        <input type="checkbox" ng-model="x.ticked"> <span ng-bind="x.name"></span>&nbsp;<span ng-bind="x.price | currency : '£' "></span> </div>
+                    <br/>
+                    <hr>
+                    <p>Total Price: <span id="listTotal">{{total() | currency: "£"}}</span></p>
+                    <br />
+                    <p>Your remaining budget is: £<span>{{remBudg()}}</span></p>
+                </div>
+                <!--END LEFT COLUMN -->
+                <div id='right-column' class='header-wrap'>
+                    <div class="info-top">
+                        <h1>{{current.name}}</h1>
+                        <h2>Type: <span id="type">{{current.type}}</span></h2>
+                        <h3>Price: £<span id="price">{{current.price}}</span></h3> </div>
+                    <!-- where the product info is loaded-->
+                    <div class="slide-animate-container">
+                        <div class="slide-animate" ng-include="current.link"></div>
+                    </div>
+                    <div class="info-bottom"> This is just an estimate price, for full pricing and consulation on what FileDirector can do for you please get in touch with us </div>
+                </div>
+                <!-- END RIGHT COLUMN-->
+            </div>
+            <!--END APP -->
+        </div>
+        <!-- END PAGE WRAP -->
+    </div>
+    <script>
+        var app = angular.module('myApp', ['ngAnimate']);
+        app.controller('myCtrl', function ($scope) {
+            //core product
+            var core = "Core Product"
+                //optional components SBE & Enterprise
+            var opSBE_E = "Optional Components (SBE & Enterprise)";
+            //Optional Components (Enterprise Only)
+            var opE = "Optional Components (Enterprise Only)";
+            //Scan Licence - Concurrent (Maximum of 15 with SBE)
+            var sl_c = "Scan Licence - Concurrent";
+            //Scan Licence - Named  (Maximum of 15 with SBE)
+            var sl_n = "Scan Licence - Named";
+            //User Licence - Concurrent  (Maximum of 15 with SBE)
+            var ul_c = "User Licence - Concurrent";
+            //User Licence - Named  (Maximum of 15 with SBE)
+            var ul_n = "User Licence - Named";
+            //Retrieval Media
+            var rm = "Retrieval Media";
+            //Upgrades
+            var u = "Upgrades";
+            $scope.products = [
+
+                {
+                    type: core
+                    , name: 'Small Business Edition'
+                    , price: '1600'
+                    , active: false
+                    , link: "products/info1.html"
+                }
+                , {
+                    type: core
+                    , name: 'Enterprise Edition'
+                    , price: '3495'
+                    , active: false
+                    , link: "products/info2.html"
+                }
+                , {
+                    type: core
+                    , name: 'FileDirector Cloud Edition'
+                    , price: '2200'
+                    , active: false
+                    , link: "products/info3.html"
+                }
+                , {
+                    type: opSBE_E
+                    , name: 'OCR Server'
+                    , price: '1750'
+                    , active: false
+                    , link: "products/info4.html"
+                }
+                , {
+                    type: opSBE_E
+                    , name: 'Audit Trail'
+                    , price: '875'
+                    , active: false
+                    , link: "products/info5.html"
+                }
+                , {
+                    type: opSBE_E
+                    , name: 'ISIS Client'
+                    , price: '200'
+                    , active: false
+                    , link: "products/info6.html"
+                }
+                , {
+                    type: opE
+                    , name: 'Additional Server Licenses'
+                    , price: '2100'
+                    , active: false
+                    , link: "products/info7.html"
+                }
+                , {
+                    type: opE
+                    , name: 'Site Replication/Disaster Recovery'
+                    , price: '2100'
+                    , active: false
+                    , link: "products/info8.html"
+                }
+                , {
+                    type: opE
+                    , name: 'SharePoint'
+                    , price: '2250'
+                    , active: false
+                    , link: "products/info9.html"
+                }
+                , {
+                    type: sl_c
+                    , name: 'Single User Licence'
+                    , price: '945'
+                    , active: false
+                    , link: "products/info10.html"
+                }
+                , {
+                    type: sl_c
+                    , name: 'Pack of 10'
+                    , price: '6615'
+                    , active: false
+                    , link: "products/info11.html"
+                }
+                , {
+                    type: rm
+                    , name: 'Block of 100'
+                    , price: '1365'
+                    , active: false
+                    , link: "products/info12.html"
+                }
+                , {
+                    type: u
+                    , name: 'Upgrade FileDirector SBE to FileDirector Enterprise'
+                    , price: '1900'
+                    , active: false
+                    , link: "products/info13.html"
+                },
+
+    ];
+            //array for types of products
+            $scope.types = [
+
+    ];
+            $scope.activeType = function (x, $event) {
+                for (var i = 0; i < $scope.types.length; i++) {
+                    if (x.type != $scope.types[i].type) {
+                        $scope.types[i].active = false;
+                    }
+                    else {
+                        $scope.current = $scope.types[i];
+                        x.active = true;
+                    }
+                }
+                //remove from others
+                for (var i = 0; i < $scope.products.length; i++) {
+                    $scope.products[i].active = false;
+                }
+            }
+            $scope.activeProduct = function (x, $event) {
+                    $event.stopPropagation();
+                    for (var i = 0; i < $scope.products.length; i++) {
+                        if (x.name != $scope.products[i].name) {
+                            $scope.products[i].active = false;
+                        }
+                        else {
+                            $scope.current = $scope.products[i];
+                            x.active = true;
+                        }
+                    }
+                    //remove from others
+                    for (var i = 0; i < $scope.types.length; i++) {
+                        $scope.types[i].active = false;
+                    }
+                }
+                //function for when user clicks on new product
+            $scope.active = function (x) {
+                if (x.type == '0') {
+                    for (var i = 0; i < $scope.types.length; i++) {
+                        if (x.id != $scope.types[i].id) {
+                            $scope.types[i].active = false;
+                        }
+                        else {
+                            $scope.current = $scope.types[i];
+                            x.active = true;
+                        }
+                    }
+                    //remove from others
+                    for (var i = 0; i < $scope.products.length; i++) {
+                        $scope.products[i].active = false;
+                    }
+                }
+                else {
+                    for (var i = 0; i < $scope.products.length; i++) {
+                        if (x.name != $scope.products[i].name) {
+                            $scope.products[i].active = false;
+                        }
+                        else {
+                            $scope.current = $scope.products[i];
+                            x.active = true;
+                        }
+                    }
+                    //remove from others
+                    for (var i = 0; i < $scope.types.length; i++) {
+                        $scope.types[i].active = false;
+                    }
+                }
+            };
+            //function for listing the different types of products
+            $scope.listTypes = function () {
+                for (var i = 0; i < $scope.products.length; i++) {
+                    var exist = false;
+                    for (var j = 0; j < $scope.products.length; j++) {
+                        if (typeof $scope.types[j] != 'undefined' && $scope.types[j].type == $scope.products[i].type) {
+                            exist = true;
+                        }
+                    }
+                    if (!exist) {
+                        $scope.types.push({
+                            type: $scope.products[i].type
+                            , active: false
+                            , name: $scope.products[i].type
+                        });
+                    }
+                }
+            };
+            //variable to hold the current item.
+            $scope.current = [
+                {
+                }
+
+	];
+            //array for items in the users personal list
+            $scope.list = [];
+            //the users set budget, intialy 0
+            $scope.budget = 0;
+            //add to users list
+            $scope.listAdd = function (newItem) {
+                var id = 0;
+                if (newItem.type == newItem.name) {
+                    alert("Please Select A Item To Add To Cart");
+                }
+                else {
+                    newItem["id"] = id;
+                    $scope.list.push(newItem);
+                    console.log(newItem);
+                    id++;
+                }
+            };
+            
+            
+            //remove product from users list
+            $scope.remove = function () {
+                var oldList = $scope.list;
+                $scope.list = [];
+                angular.forEach(oldList, function (x) {
+                    if (!x.ticked) $scope.list.push(x);
+                });
+            };
+            //get the total list price
+            $scope.total = function () {
+                var total = 0;
+                // Use the angular forEach helper method to
+                // loop through the list array:
+                angular.forEach($scope.list, function (x) {
+                    total += Number(x.price);
+                });
+                return total;
+            };
+            //calc remaining budget
+            $scope.remBudg = function () {
+                var remBudget = Number($scope.budget) - Number($scope.total());
+                return remBudget;
+            };
+        });
+        //mobile version extendable menu
+        //var opMenu = document.getElementById("mobile-toggle");  
+        $('#mobile-toggle').click(function(e){
+          $('#left-column').toggleClass('open-column');
+          $(this).find("i").toggleClass('fa fa-sort-asc');
+          $(this).find("i").toggleClass('fa fa-sort-desc');
+            //$(this).children().not('#selectProduct').toggleClass('close-column');
+        });
+        
+        //update page
+        function update() {
+            //budget warnings
+            var budget = document.getElementById("budget");
+            if (budget.value.length == 0) {
+                document.getElementById('budget-warn').innerHTML = "please set a budget to see what we can build for you";
+            }
+            else {
+                if (budget.value < 100) {
+                    document.getElementById('budget-warn').innerHTML = "please input a higher budget";
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
