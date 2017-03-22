@@ -37,12 +37,13 @@ div#nav-bar {
     float: left;
     height: 36px;
     padding: 10px 10px;
-    width: 100px;
+    width: 110px;
 }
 
 #nav-bar div.nav-logo img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    padding-left:10%;
+    height: 95%;
 }
 
 #nav-bar div.nav-logo img:hover {
@@ -50,7 +51,8 @@ div#nav-bar {
 }
 
 #nav-bar div.nav-logo:hover {
-    background: white;
+    background: #0166b7;
+    opacity:1;
 }
 
 #nav-items {
@@ -64,7 +66,6 @@ div#nav-bar {
 
 #nav-bar .fa:hover {
     color: #1976D2;
-    background: white;
 }
 
 #nav-bar div.nav-right {
@@ -80,16 +81,19 @@ div#nav-bar li,
 #nav-bar .fa-bars {
     display: inline-block;
     line-height: 56px;
-    padding: 0 16px;
     height: 100%;
     position: relative;
     min-width: auto;
     text-transform: uppercase;
     color: white;
 }
-
+#nav-bar .fa-bars:hover {
+    background:white;
+}
 #nav-bar .fa-bars {
     display: none;
+    padding-right:15px;
+    padding-left:15px;
 }
 
 div#nav-bar li {
@@ -105,6 +109,10 @@ div#nav-bar li:hover {
 div#nav-bar li a {
     color: white;
     text-decoration: none;
+    line-height:56px;
+    display:inline-block;
+    padding: 0 16px;
+
 }
 
 div#nav-bar li a:hover {
@@ -168,7 +176,9 @@ ul.options li:hover {
     overflow: hidden;
     background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
 }
-
+.header-wrap.about{
+background:#0067b1;
+}
 #canvas {
     position: absolute;
     width: 100%;
@@ -186,7 +196,7 @@ ul.options li:hover {
     bottom: 0;
     width: 100%;
     max-width: 100%;
-    height: 100%;
+    height: 550px;
     border: 0px solid #fff;
     border-radius: 0px;
     /*background: #0166b7;*/
@@ -343,7 +353,7 @@ div.header-content {
     margin-top: 100px;
     z-index: 100;
     text-align: center;
-    min-height: 30vh;
+    min-height: 250px;
 }
 div.header-left {
     max-width: 500px;
@@ -356,11 +366,19 @@ div.header-right {
     text-align: center;
     vertical-align: top;
 }
-div.header-right iframe {
+div.header-right #videoBtn {
     width: 250px;
     height: 250px;
     border-radius: 125px;
+    background-image: url(images/videoBtn.png);
+    background-position: center;
+    background-size: contain;
+    border:none;
 }
+div.header-right #videoBtn:hover {
+    opacity:0.8;
+}
+
 img.logo {
     max-width: 400px;
 }
@@ -385,6 +403,7 @@ h2 {
     font-size: 1em;
     padding: 8px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 #demoBtn:hover {
     background: #97e597;
@@ -403,6 +422,7 @@ img#icon {
 }
 
 /*Body style*/
+
 .content {
     /*margin-top: 20px;
     margin-bottom: 20px;
@@ -424,7 +444,7 @@ img#icon {
 div.content-top {
     /*text-align: center;*/
     
-    height: 190px;
+    height: 150px;
     background: #ffffff;
 }
 div.content-top .video-wrap {
@@ -501,7 +521,6 @@ div#main-head {
     max-height: 250px;
     background: #ffffff;
     text-align: center;
-    line-height: 90px;
 }
 h3 {
     font-size: 2em;
@@ -514,7 +533,6 @@ div.content-1 {
     text-align: center;
     width: 100%;
     padding-bottom: 30px;
-    min-height: 200px;
     background: #ffffff;
     margin-top: 0;
     height: auto;
@@ -569,15 +587,20 @@ div.content-width-wrap {
 }
 div.content-tagline {
     width: 92%;
-    padding: 10px 4%;
-    background: #2C3E50;
+    padding: 20px 4%;
+    background: #0067b1;
     text-align: center;
+    color:whitesmoke;
+    margin: 40px 0;
+}
+div.content-tagline.no-margin{
+ margin:0px;
+height:20px;
 }
 div.content-2 {
     width: 92%;
     padding: 4%;
     padding-bottom: 50px;
-    min-height: 300px;
     background: #f5f5f5;
 }
 div.content-2 p {
@@ -590,7 +613,6 @@ div.content-2 .screenshot,
     float: right;
     width: 92%;
     max-width: 500px;
-    min-width: 280px;
 }
 h4 {
     font-size: 1.5em;
@@ -606,12 +628,17 @@ div.content-2 p {
     font-size: 1em;
     text-align: justify;
 }
+div.content-full{
+    position: relative;
+    width:100%;
+    direction: inline-block;
+    
+}
 div.content-left {
     position: relative;
     width: 55%;
     display: inline-block;
     vertical-align: top;
-    text
 }
 div.content-right {
     position: relative;
@@ -622,12 +649,18 @@ div.content-right {
 }
 div.content-left img {
     width: 90%;
+    height:90%;
+    padding:5%;
+}
+div.content-right img {
+    width: 90%;
+    height:90%;
+    padding:5%;
 }
 div.content-3 {
     position: relative;
     width: 92%;
     padding: 4%;
-    min-width: 200px;
     background: #e6e6e6;
     z-index: 0;
 }
@@ -635,25 +668,65 @@ div.content-4 {
     position: relative;
     width: 92%;
     padding: 4%;
-    min-width: 200px;
     background: #2C3E50;
     z-index: 0;
+    color:whitesmoke
 }
 div.content-5 {
     width: 92%;
     padding: 4%;
-    min-width: 280px;
     min-height: 480px;
     background: #5394ac;
 }
-
-/*FOOTER*/
-#footer {
-    width: 100%;
-    height: 80px;
-    background: white;
+div.content-width-wrap.logos{
+    min-height:100px;
+    margin-bottom: 50px;
+}
+.fdLogo{
+    float:right;
+    max-height:90px;
 }
 
+.ascotLogo{
+    float:left;
+    max-height:100px;
+    margin-left: 10%;
+}
+/*FOOTER*/
+#footer {
+    padding:20px 0;
+    width: 100%;
+    background: #0166b7;
+    color:#ffffff;
+}
+#footer ul{
+    list-style: none;
+}
+
+#footer ul a{
+    text-decoration: none;
+    color:#ffffff;
+}
+#footer ul a:hover{
+    text-decoration: none;
+    color:#000000;
+}
+.footer-left{
+    float:left;
+    width:50%;
+    
+}
+
+.footer-right{
+    float:right;
+    width:49%;
+}
+
+.footer-bottom{
+    float:clear;
+    width:100%;
+    font-size: 0.9em
+}
 /*MEDIA QUERIES*/
 @media screen and (max-width: 920px) {
     .clicked-navwrap {
@@ -696,9 +769,12 @@ div.content-5 {
     }
     
     h1 {
-        font-size: 13vw;
+        font-size: 11vw;
     }
     
+    h3{
+        font-size:1.5em;
+    }
     #nav-items {
         width: 0px;
     }
@@ -706,7 +782,10 @@ div.content-5 {
     div#nav-bar li {
         display: none;
     }
-    
+    #nav-bar li a{
+        padding:0px!important;
+        width:100%;
+    }
     #nav-bar .fa-bars {
         display: inline-block;
         float: right;
@@ -729,17 +808,18 @@ div.content-5 {
         /*margin-top: 66px;*/
     }
     
-    div.header-right iframe {
+    div.header-right #videoBtn {
         margin: 10% 0;
         width: 200px;
         height: 200px;
+        
     }
     
     div.content-right {
         clear: both;
         float: none;
         width: 100%;
-        height: 500px;
+        min-height: 100px;
         float: none;
     }
     
@@ -775,71 +855,23 @@ div.content-5 {
     div.content-top .volumeBar {
         display: none;
     }
+    
+
+.fdLogo{
+    float:none;
+    max-height:90px;
+}
+
+.ascotLogo{
+    float:none;
+    max-height:100px;
+    margin-left: 0%;
+}
+    
 }
 
 /*END MEDIA */
 
-/*File animation*/
-#file1 {
-    position: absolute;
-    margin-top: 50%;
-    margin-left: 10%;
-    font-size: 80px;
-    animation-name: test;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-}
-#file2 {
-    position: absolute;
-    margin-top: 60%;
-    margin-left: 25%;
-    font-size: 80px;
-    animation-name: test;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-}
-#file3 {
-    position: absolute;
-    margin-top: 70%;
-    margin-left: 40%;
-    font-size: 80px;
-    animation-name: test;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-}
-#file4 {
-    position: absolute;
-    margin-top: 70%;
-    margin-left: 60%;
-    font-size: 80px;
-    animation-name: test;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-}
-#file5 {
-    position: absolute;
-    margin-top: 60%;
-    margin-left: 75%;
-    font-size: 80px;
-    animation-name: test;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-}
-#file6 {
-    position: absolute;
-    margin-top: 50%;
-    margin-left: 90%;
-    font-size: 80px;
-    animation-name: test;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-}
-#comp {
-    position: absolute;
-    margin-top: 5%;
-    margin-left: 40%;
-    font-size: 150px;
-}
 @keyframes test {
     0% {
         color: black;
@@ -889,31 +921,6 @@ div.contact-us {
 
 /*about css*/
 
-/*Features(SPA) CSS*/
-div.spa-page {
-    width: 100%;
-    height: 100vh;
-    background: green;
-}
-.spa-page #nav-bar {
-    background: rgb(25, 118, 210);
-}
-.spa-content {
-    width: 100%;
-    height: 100%;
-}
-.spa-content .spa-main {
-    width: 80%;
-    height: 100%;
-    background: yellow;
-    float: right;
-}
-.spa-content .sidebar {
-    width: 20%;
-    height: 100%;
-    background: orange;
-    float: left;
-}
 
 /*POP-UP STYLE*/
 #pop-up {
@@ -979,6 +986,11 @@ popup-bodywrap {}
 }
 
 /* Pop-up Content */
+.createEmail{
+    width: 150px;
+    height: 30px;
+}
+
 .popup-content {
     position: relative;
     background-color: #fefefe;
@@ -986,6 +998,7 @@ popup-bodywrap {}
     padding: 0;
     border: 1px solid #888;
     width: 80%;
+    max-width:920px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -995,6 +1008,64 @@ popup-bodywrap {}
 .popup-content h2 {
     display: inline-block;
 }
+
+/*POP-UP STYLE*/
+#pop-upVid {
+    display: none;
+    /* Hidden by default */
+    
+    position: fixed;
+    /* Stay in place */
+    
+    z-index: 999;
+    /* Sit on top */
+    
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    
+    height: 100%;
+    /* Full height */
+    
+    overflow: auto;
+    /* Enable scroll if needed */
+    
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Pop-up Body */
+.popup-body {
+    padding: 16px 16px;
+}
+popup-bodywrap {}
+
+/* Pop-up Footer */
+.popup-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Pop-up Content */
+#pop-upVid .popup-content {
+    height:50%;
+}
+#main-vid{
+    position: absolute;
+    width:90%;
+    height: 80%;
+}
+.popup-content h2 {
+    display: inline-block;
+}
+
+/*END POPUP VID */
 
 /* Add Animation */
 @-webkit-keyframes animatetop {

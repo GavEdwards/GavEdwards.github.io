@@ -32,20 +32,25 @@ div.spa-page #nav-bar {
     width: 20%;
     padding: 2.5%;
     color: black;
-    min-height: 100vh;
+    height: 100vh;
     line-height: 30px;
     padding-top: 86px;
+    overflow-y: auto;
 }
+
 
 #right-column {
     background: linear-gradient(145deg, #0D47A1, #42A5F5);
     float: right;
     width: 70%;
     padding: 2.5%;
-    min-height: 100vh;
+    height: 100vh;
     padding-top: 86px;
+    overflow-y: auto;
 }
-
+#right-column h2{
+    margin: 20px 0;
+}
 .info {
     padding: 30px 0;
 }
@@ -55,7 +60,7 @@ ul {
 }
 
 li.headers.active {
-    background: #0166b7;
+    background: #8ec16d;
 }
 
 li.header li.products {
@@ -93,12 +98,13 @@ div#nav-bar {
     float: left;
     height: 36px;
     padding: 10px 10px;
-    width: 100px;
+    width: 110px;
 }
 
 #nav-bar div.nav-logo img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    padding-left:10%;
+    height: 95%;
 }
 
 #nav-bar div.nav-logo img:hover {
@@ -106,7 +112,7 @@ div#nav-bar {
 }
 
 #nav-bar div.nav-logo:hover {
-    background: white;
+    background: #0166b7;
 }
 
 #nav-items {
@@ -136,16 +142,19 @@ div#nav-bar li,
 #nav-bar .fa-bars {
     display: inline-block;
     line-height: 56px;
-    padding: 0 16px;
     height: 100%;
     position: relative;
     min-width: auto;
     text-transform: uppercase;
     color: white;
 }
-
+#nav-bar .fa-bars:hover {
+    background:white;
+}
 #nav-bar .fa-bars {
     display: none;
+    padding-right:15px;
+    padding-left:15px;
 }
 
 div#nav-bar li {
@@ -161,6 +170,9 @@ div#nav-bar li:hover {
 div#nav-bar li a {
     color: white;
     text-decoration: none;
+    line-height: 56px;
+    display: inline-block;
+    padding: 0 16px;
 }
 
 div#nav-bar li a:hover {
@@ -216,7 +228,7 @@ ul.options li:hover {
     position: relative;
     background: rgb(25, 118, 210);
     border: 1px solid white;
-    height: 400px;
+    min-height: 400px;
     overflow: hidden;
 }
 
@@ -289,12 +301,16 @@ ul.options li:hover {
         box-shadow: none!important;
         border-radius: 0!important;
     }
-    h1 {}
+    
     #nav-items {
         width: 0px;
     }
     div#nav-bar li {
         display: none;
+    }
+    div#nav-bar li a {
+        padding:0px;
+        width:100%;
     }
     #nav-bar .fa-bars {
         display: inline-block;
@@ -306,5 +322,47 @@ ul.options li:hover {
     }
 }
 
+#mobile-toggle{
+    /*display:none;*/
+}
+
+@media (max-width:720px){
+    
+#mobile-toggle{
+    position:fixed;
+    z-index:200;
+    width:90%;
+    height:30px;
+    padding-top:66px;
+    background:white;
+    color:black;
+    padding-left: 10%;
+    border-bottom:2px solid black;
+}
+    #mobile-toggle i{
+        margin-left:10px;
+    }
+   #left-column {
+    float: none;
+    position:absolute;
+    z-index:100;
+    width: 90%;
+    padding: 5%;
+    line-height: 30px;
+    padding-top: 100px;
+}
+    .open-column{
+        display: none;
+    }
+
+#right-column {
+    float:none;
+    width: 90%;
+    padding: 5%;
+    padding-top: 100px;
+}
+    
+    
+}
 
 /*END MEDIA */

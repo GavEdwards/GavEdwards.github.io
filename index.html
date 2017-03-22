@@ -1,3 +1,4 @@
+<!--FileDirector Website Designed and Developed by Gavin Edwards -->
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +18,8 @@
 
 <body>
     <div id="nav-bar">
-        <div class="nav-logo"><img alt="Ascot Logo"src="images/Ascot-logo-tran.png" width=100 height=40></div> <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        <div class="nav-logo"><a href="http://www.Ascot-Solutions.co.uk"><img alt="Ascot Logo" src="images/Ascot-Logo-white.png" width=100 height=40 ></a></div>
+        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
         <div id="nav-items">
             <div class="nav-left">
                 <ul>
@@ -26,37 +28,14 @@
                     <li><a href="cloud.html">Cloud</a></li>
                     <li><a href="AboutUs.html">About Us</a></li>
                     <li><a href="Purchase.html">Purchase</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="nav-right">
                 <ul>
-                    <li id="setPref"> <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
-                        <ul class="options">
-                            <li>
-                                <form id="font-size" class="option" action="setText()">
-                                    <label for="font-options">Font Size</label>
-                                    <select name="font-options">
-                                        <option value="0.9em">Small</option>
-                                        <option value="1em">Normal</option>
-                                        <option value="1.1em">Large</option>
-                                        <option value="1.2em">Extra Large</option>
-                                    </select>
-                                </form>
-                            </li>
-                            <li>
-                                <form id="header-color" class="option" action="setHeader()">
-                                    <label for="header-color">Header Colour</label>
-                                    <input name="header-color" type="color"> </form>
-                            </li>
-                            <li>
-                                <button id="resetColour" onclick="resetColour()">Reset Colour</button>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="twitter-logo social" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-                    <li> <a class="facebook-logo social" href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
-                    <li><a class="youtube-logo social" href=""><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a class="twitter-logo social" href="https://twitter.com/ascotsolutions?lang=en" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                    <li> <a class="facebook-logo social" href="https://en-gb.facebook.com/ascotsolutions/" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a class="youtube-logo social" href="https://www.youtube.com/channel/UCKdxtOEy7-ud-63mFaTIxYQ" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -69,7 +48,7 @@
             <div class="header-left">
                 <h1>FileDirector</h1>
                 <h2>Document Mangement Software</h2>
-                <button id="demoBtn" name="free-demo">Free Demo</button>
+                <button id="demoBtn" name="free-demo" onclick="demoPopup()">Free Demo</button>
             </div>
             <div class="header-right"></div>
         </div>
@@ -96,19 +75,19 @@
                 <div class="content-width-wrap">
                     <div class="what-tag" id="tag1">
                         <div class="what-inner">
-                            <h4>1. Scan</h4> <img width=130 alt="scan"src="https://cdn3.iconfinder.com/data/icons/logistics-delivery-set-2/512/9-512.png">
+                            <h4>1. Scan</h4> <img width=130 alt="scan"src="images/scan_icon.png">
                             <div class="what-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
                         </div>
                     </div>
                     <div class="what-tag" id="tag2">
                         <div class="what-inner">
-                            <h4>2. Upload</h4> <img alt="upload" src="http://icons.iconarchive.com/icons/custom-icon-design/mono-general-4/128/upload-icon.png">
+                            <h4>2. Upload</h4> <img alt="upload" src="images/file_upload.png">
                             <div class="what-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
                         </div>
                     </div>
                     <div class="what-tag" id="tag3">
                         <div class="what-inner">
-                            <h4>3. Retrieve</h4> <img alt="retrieve" width=130 src="https://cdn3.iconfinder.com/data/icons/files-buttons/512/File_Download-512.png">
+                            <h4>3. Retrieve</h4> <img alt="retrieve" width=130 src="images/file_retrieve.png">
                             <div class="what-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
                         </div>
                     </div>
@@ -123,56 +102,108 @@
                             <br>
                             <br> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
                     </div>
-                    <div class="content-right"> <img alt="FileDirector"class="text-logo" src="images/FileDirector.jpg"> <img alt="Screenshot"class="screenshot" src="images/FileDirectorDesktopType.png"> </div>
+                    <div class="content-right"> </div>
                 </div>
             </div>
             <div class="content-3 content">
                 <div class="content-width-wrap">
-                    <div class="content-left"> <img class="logo" alt="image"src="https://lh3.googleusercontent.com/z7qncUahwU6XuMLeFnlWH58YE9Fpw410135fsjOixCi_mXuHVGNow9Z_WmW_3aJq624GzSFMwRp1kVnF80f39SCJ0oJ2QxAW0wE5N3rQXGmDhSUQUG6LCR2yOLRXrLWJNzaSLUqstF3YrCqXpbKvQwluDT3dKSXFMeMgfATPwqTDbdBU5xxxPwt1gy32cpWw2mjaOu0JCut8Wfugd6ysCl8gV1AgTwPW_2N7ijWB0R-mH5w1O8ybMqPYTpvKLsWnnZRnR8QOVoS5iy41Yjg17GhfYrwARidthy-HnEN3_REh3pHhy2v1aPlJp2Cq0gwik7lpGgKpJFA7iOgkCqK4oALVbYhOoJgc9YkN0CheWChNDQlKtkW9ueVlqhE3eaUSVYHij6M8TqcBvOwq3j70b0ikFViSuCyW361PRraZxqFdVue7kKCZ8ze44HvVHkNx5vmLjU26r0apk9Fq5jNtSke5_tjmD112uXsa_eDOpj023lkhtkiN7uS9bCPIQCbN0fMZR5tsumBR7nMAB8Y3KWNxWYbcA-NMrQOZzfb7BvUjC3O7K3YdsKGA6j95FzqJpkw7w_umt1f76toG2_9IjvfOksTx-CgVTNS8yhTbVAC-Sbs=s175-no"></div>
+                    <div class="content-left"> </div>
                     <div class="content-right">
                         <h3>Why FileDirector Can Pay You Back</h3>
                         <p>The benefits of an intelligent document management solution are self-evident if you think, for instance, of the improved efficiency: documents are located, stored and distributed more quickly. What’s more, staff do not waste time or money on duplicating or distributing documents. Digitising avoids all these unnecessary steps and gives your staff more time to concentrate on the essentials. On top of this, document storage costs are reduced because a considerably smaller storage area is required.</p>
-                        <h3>Data capturing in the blink of an eye</h3>
-                        <ul>
-                            <li>Simple document scanning</li>
-                            <li>Effective integration in Microsoft Office</li>
-                            <li>Proven ability to work with multifunction devices</li>
-                            <li>Rapid recording of invoices using Freeform</li>
-                        </ul>
+
+                        
                     </div>
                 </div>
             </div>
             <div class="content-4 content">
                 <div class="content-width-wrap">
-                    <div class="content-left"> <img alt="screenshot"src="images/FileDirectorDesktopScreenshot2.png" width=400> </div>
-                    <div class="content-right">
+                    <div class="content-left">
                         <h3>Right at home with all your business software</h3>
-                        <p>Integrated with microsoft office products so that your digital documents meet your paper documents in one simple and organised place.</p>
+                        <p>Integrated with microsoft office products so that your digital documents meet your paper documents in one simple and organised place.</p> </div>
+                    <div class="content-right">
+                        <img alt="screenshot"src="images/FileDirectorDesktopScreenshot2.png" width=400>
+                    </div>
+                </div>
+            </div>
+            <div class="content-2 content">
+                <div class="content-width-wrap">
+                    <h3>FileDirector Cabinets</h3>
+                    <br>
+                    <p>
+                        FileDirector stores documents in Cabinets. These virtual Cabinets are able to store any document format. There are no limitations set by FileDirector on the size or number of documents stored. Normally a company would set up one Cabinet to store their documents. These documents are held in different Document Types. It is possible to search for documents in a Cabinet over all Document Types stored.</p> <br>
+                    <h3>Document Types</h3>
+                    <br>
+                    <p>
+                        In order to file and classify documents they are stored in different Document Types. In a typical office situation this could for example be Quotes, Orders and Invoices. A Document Type is mainly defined by the index fields used to classify the documents. These fields are selected from the pool of index fields which have been specified previously and should contain each index field used to classify all possible documents.  FileDirector manages over 250 document formats, including MS Office, PDF, AutoCAD, and standard image formats such as TIFF, JPG and BMP. Using FileDirector’s Office Integration, MS Office documents and emails can be stored to FileDirector in their original format directly from the applications. Other documents can be created by scanning paper documents or importing existing electronic documents or spool data.</p>
+                    <br>
+                    <h3>Scheduled Processes</h3>
+                    <br>
+                    <p>The FileDirector server has several schedulers which are extremely useful for recurring tasks such as document or index imports, which can be performed automatically on a fixed timescale, or selected folders can be monitored for new documents. Documents can be managed through a specific process, which is defined as a fixed series of steps. Certain users must work on the document in each step. Applications which cannot connect directly to FileDirector, and cannot create electronic documents to be imported can create image documents by printing to FileDirector’s Image Printer or Virtual Network Printer (VNP). These documents can be indexed and stored automatically.  The versatile OCR module can create a full text index for full text retrieval or read defined zones with a forms recognition module. Reading of Barcodes offers another possibility of automatic indexing.</p>
+                </div>
+            </div>
+            <div id="footer" class="content">
+                <div class="content-width-wrap">
+                    <div class="footer-left">
+                    <ul>
+                    <li><a href="http://www.ascot-solutions.co.uk">Ascot Solutions</a></li>
+                        <li><a href="https://www.scannersuperstore.co.uk">Scanner Superstore</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    <br>
+                    </ul>
+                    </div>
+                    <div class="footer-right">
+                    <ul>
+                    <li><a href="sitemap.xml">Sitemap</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="http://www.ascot-solutions.co.uk/uploads/pdf/cookiepolicy.pdf">Privacy Statement</a></li>
+                    <br>
+                    </ul>
+                    </div>
+                    <br>
+                    <div class="footer-bottom">
+                        <p><b>Ascot Business Solutions Limited.</b> Ascot House, 8 Hargreaves Court, Dyson Way, Staffordshire Technology Park, Stafford ST18 OWN</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!--POP UP HTML-->
     <div id="pop-up">
         <div class="popup-content">
-            <div class="popup-header"> <span class="close">×</span>
-                <h3>Free 15 minute demonstration from one of our experts</h3> </div>
+            <div class="popup-header"> <span class="close" onclick="closePopup()">×</span>
+                <div class="content-width-wrap">
+                    <h3>Free 15 minute demonstration from one of our experts</h3> </div></div>
             <div class="popup-body">
                 <div class="popup-bodywrap">
                     <div class="content-width-wrap">
-                        <p>Enter your email to set up a personal demonstration from one of our experts where we will demonstrate exactly how it can help you</p>
+                        <p>Enter your email to set up a personal demonstration from one of our experts where we will demonstrate exactly how it can help you and your business.</p>
                         <br>
-                        <form>
-                            <label for="email">Email Address:</label>
-                            <input type="text" name="email" placeholder="Email..."> </form>
+                        <form action="mailto:info@ascot-solutions.co.uk?subject=FileDirector Demo" method="post" enctype="text/plain">
+                            <label for="Name">Name:&nbsp;</label>
+                            <br>
+                            <input type="text" name="Name" placeholder="Name..".><br>
+                            <label for="Business">Business:&nbsp;</label>
+                            <br>
+                            <input type="text" name="Business" placeholder="Business..".><br>
+                            <label for="Email Address">Email Address:&nbsp;</label>
+                            <br>
+                            <input type="text" name="Email Address" placeholder="Email..."> 
+                            <br> 
+                            <br>
+                            <input class="createEmail" type="submit" value="Create Email">
+                        </form>
                         <br>
                         <p>If you'd like to find out about other ways to manage your documents please visit <a href="http://www.Ascot-Solutions.co.uk" target="_blank">www.Ascot-Solutions.co.uk</a></p>
                     </div>
                 </div>
             </div>
             <div class="popup-footer">
-                <h4>Document Management Software Specialists</h4> </div>
+                <div class="content-width-wrap">
+                <h4>Document Management Software Specialists</h4> 
+                </div>
+                </div>
         </div>
     </div>
     <!-- END POP UP -->

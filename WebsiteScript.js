@@ -23,7 +23,8 @@ jQuery(document).ready(function ($) {
             }
         });
     });
-////////////////get/set user preferences //////////////////
+
+//////////////// get/set user preferences //////////////////
 
 $( document).ready(function() {
     
@@ -180,24 +181,48 @@ $('.fa-bars').click(function(){
 ///////////// POP UP BOX //////////////////////////
 // Get the modal
 var popup = document.getElementById('pop-up');
-// Get the button that opens the modal
-var demoBtn = document.getElementById('demoBtn');
-// Get the <span> element that closes the modal
-var close = document.getElementsByClassName("close")[0];
+var popupVid = document.getElementById('pop-upVid');	
+
 // When the user clicks on the button, open the modal 
-demoBtn.onclick = function () {
+function demoPopup() {
         popup.style.display = "block";
     }
     // When the user clicks on <span> (x), close the modal
-close.onclick = function () {
+function closePopup() {
         popup.style.display = "none";
     } // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
         if (event.target == popup) {
             popup.style.display = "none";
         }
+    if (event.target == popupVid) {
+            popupVid.style.display = "none";
+            
+            $("#main-vid").each(function() { 
+            var src= $(this).attr('src');
+            $(this).attr('src',src);  
+            });
+        
+        }
+}
+function vidPopup() {
+        popupVid.style.display = "block";
     }
-	
+    // When the user clicks on <span> (x), close the modal
+function closeVidPopup() {
+        popupVid.style.display = "none";
+    
+            popupVid.style.display = "none";
+            
+            $("#main-vid").each(function() { 
+            var src= $(this).attr('src');
+            $(this).attr('src',src);  
+            });
+        
+        
+    } // When the user clicks anywhere outside of the modal, close it
+
+
 function confirmSignUp(){
         popup.style.display = "block";
     }
