@@ -246,7 +246,7 @@ ul.options li:hover {
     padding: 10px 0;
 }
 .info-top{
-    height:120px;
+    min-height:120px;
 }
 #selectProduct{
     padding-left:5%;
