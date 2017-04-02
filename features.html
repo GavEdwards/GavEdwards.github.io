@@ -44,8 +44,8 @@
             <div id="SPA" ng-app="myApp" ng-controller="myCtrl" ng-init="listTypes()">
                 <div id="mobile-toggle">Choose a feature <i class="fa fa-sort-asc" aria-hidden="true"></i></div>
                 <div id='left-column' class='open-column'>
-                    <h4 id="selectProduct">Select a product:</h4>
-                    <hr>
+                    <h4 id="selectProduct">Select a feature:</h4>
+                    <div class="inner-left">
                     <ul id="options">
                         <li class="headers" ng-repeat="x in types" ng-click="activeType(x,$event)" ng-class="{active:x.active}">{{x.type}}<span>&nbsp;&nbsp;</span><i class="fa fa-info-circle" aria-hidden="true"></i>
                             <ul>
@@ -57,16 +57,20 @@
                     <hr/>
                     
                     <br />
+                    </div>
                 </div>
                 <!--END LEFT COLUMN -->
                 <div id='right-column' class='header-wrap'>
                     <div class="info-top">
+                    <div class="content-width-wrap">
+                    
                         <h1>{{current.name}}</h1>
                         <h2>Type: <span id="type">{{current.type}}</span></h2>
                         </div>
+                    </div>
                     <!-- where the product info is loaded-->
-                    <div class="slide-animate-container">
-                        <div class="slide-animate" ng-include="current.link"></div>
+                    <div >
+                        <div  ng-include="current.link"></div>
                     </div>
                     
                 </div>
@@ -83,19 +87,15 @@
         var app = angular.module('myApp', ['ngAnimate']);
         app.controller('myCtrl', function ($scope) {
             //core product
-            var core = "Core Product"
+            var core = "Core Product";
+            var coreF = "Core FileDirector Features";
+            var int = "Integration";
                 //optional components SBE & Enterprise
-            var opSBE_E = "Optional Components (SBE & Enterprise)";
+            
             //Optional Components (Enterprise Only)
             var opE = "Optional Components (Enterprise Only)";
             //Scan Licence - Concurrent (Maximum of 15 with SBE)
-            var sl_c = "Scan Licence - Concurrent";
-            //Scan Licence - Named  (Maximum of 15 with SBE)
-            var sl_n = "Scan Licence - Named";
-            //User Licence - Concurrent  (Maximum of 15 with SBE)
-            var ul_c = "User Licence - Concurrent";
-            //User Licence - Named  (Maximum of 15 with SBE)
-            var ul_n = "User Licence - Named";
+            var ul = "User Licences";
             //Retrieval Media
             var rm = "Retrieval Media";
             //Upgrades
@@ -105,7 +105,7 @@
 
                 {
                     type: core
-                    , name: 'Small Business Edition'
+                    , name: 'SBE Edition'
                     , active: false
                     , link: "products/info1.html"
                     ,ltype: 1
@@ -124,30 +124,97 @@
                     , link: "products/info3.html"
                     ,ltype: 1
                 }
-                , {
-                    type: opSBE_E
-                    , name: 'OCR Server'
+                , 
+                {
+                    type: coreF
+                    , name: 'Indexing'
                     , active: false
                     , link: "products/info4.html"
                     ,ltype: 1
                 }
                 , {
-                    type: opSBE_E
-                    , name: 'Audit Trail'
+                    type: coreF
+                    , name: 'Web Access'
                     , active: false
                     , link: "products/info5.html"
                     ,ltype: 1
                 }
                 , {
-                    type: opSBE_E
-                    , name: 'ISIS Client'
+                    type: coreF
+                    , name: 'Workflows & Approvals'
                     , active: false
                     , link: "products/info6.html"
                     ,ltype: 1
                 }
                 , {
+                    type: coreF
+                    , name: 'Security'
+                    , active: false
+                    , link: "products/info7.html"
+                    ,ltype: 1
+                }
+                , {
+                    type: coreF
+                    , name: 'Searching'
+                    , active: false
+                    , link: "products/info8.html"
+                    ,ltype: 1
+                }
+                , {
+                    type: coreF
+                    , name: 'Supports Many Document Formats'
+                    , active: false
+                    , link: "products/info9.html"
+                    ,ltype: 1
+                }
+                , {
+                    type: coreF
+                    , name: 'Mobile Support'
+                    , active: false
+                    , link: "products/info10.html"
+                    ,ltype: 1
+                }
+                ,
+                {
+                    type: coreF
+                    , name: 'OCR'
+                    , active: false
+                    , link: "products/info11.html"
+                    ,ltype: 1
+                }
+                , {
+                    type: coreF
+                    , name: 'Audit Trail'
+                    , active: false
+                    , link: "products/info12.html"
+                    ,ltype: 1
+                }
+
+                , {
+                    type: coreF
+                    , name: 'Process Management'
+                    , active: false
+                    , link: "products/info13.html"
+                    ,ltype: 1
+                }
+                , {
+                    type: int
+                    , name: 'Microsoft Office'
+                    , active: false
+                    , link: "products/info2.html"
+                    ,ltype: 1
+                }
+                , {
+                    type: int
+                    , name: 'SQL'
+                    , active: false
+                    , link: "products/info3.html"
+                    ,ltype: 1
+                }
+                
+                , {
                     type: opE
-                    , name: 'Additional Server Licenses'
+                    , name: 'Container Storage'
                     , active: false
                     , link: "products/info7.html"
                     ,ltype: 1
@@ -167,22 +234,36 @@
                     ,ltype: 1
                 }
                 , {
-                    type: sl_c
-                    , name: 'Single User Licence'
+                    type: ul
+                    , name: 'Scan Licence - Concurrent'
                     , active: false
                     , link: "products/info10.html"
                     ,ltype: 1
                 }
                 , {
-                    type: sl_c
-                    , name: 'Pack of 10'
+                    type: ul
+                    , name: 'Scan Licence - Named'
+                    , active: false
+                    , link: "products/info11.html"
+                    ,ltype: 1
+                }
+                , {
+                    type: ul
+                    , name: 'User Licence - Concurrent'
+                    , active: false
+                    , link: "products/info10.html"
+                    ,ltype: 1
+                }
+                , {
+                    type: ul
+                    , name: 'User Licence - Named'
                     , active: false
                     , link: "products/info11.html"
                     ,ltype: 1
                 }
                 , {
                     type: rm
-                    , name: 'Block of 100'
+                    , name: 'Retrieval Media'
                     , active: false
                     , link: "products/info12.html"
                     ,ltype: 1
@@ -206,30 +287,21 @@
                link: "products/type1.html"
               },
                 {
-                type :opSBE_E,
+                type :coreF,
                     link: "products/type2.html"
                 },
                 {
             type :opE,
                     link : "products/type3.html"
                 },
-                {type: sl_c,
+                {type: ul,
                link: "products/type4.html"
               },
-                {type: sl_n,
+                {type: rm,
                link: "products/type5.html"
               },
-                {type: ul_c,
-               link: "products/type6.html"
-              },
-                {type: ul_n,
-               link: "products/type7.html"
-              },
-                {type: rm,
-               link: "products/type8.html"
-              },
                 {type: u,
-               link: "products/type9.html"
+               link: "products/type6.html"
               },
             
               

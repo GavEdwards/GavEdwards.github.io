@@ -1,6 +1,0 @@
-[1204/154539:ERROR:file_io.cc(30)] read: expected 36, observed 0
-[1204/155047:ERROR:file_io.cc(30)] read: expected 36, observed 0
-[1204/160044:ERROR:file_io.cc(30)] read: expected 36, observed 0
-[1204/204058:ERROR:file_io.cc(30)] read: expected 36, observed 0
-[1206/191043:ERROR:file_io.cc(30)] read: expected 36, observed 0
-[1206/194437:ERROR:file_io.cc(30)] read: expected 36, observed 0
