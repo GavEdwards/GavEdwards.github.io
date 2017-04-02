@@ -131,7 +131,7 @@ if (($handle = fopen("data.csv", "r")) !== FALSE) {
 
     <body>
         <div id="nav-bar">
-            <div class="nav-logo"><img src="images/Ascot-logo-tran.png" width=100 height=40></div> <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            <div class="nav-logo"><a href="http://www.Ascot-Solutions.co.uk"><img alt="Ascot Logo"src="images/Ascot-logo-tran.png" width=100 height=40></a></div> <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
             <div id="nav-items">
                 <div class="nav-left">
                     <ul>
@@ -145,32 +145,9 @@ if (($handle = fopen("data.csv", "r")) !== FALSE) {
                 </div>
                 <div class="nav-right">
                     <ul>
-                        <li id="setPref"> <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
-                            <ul class="options">
-                                <li>
-                                    <form id="font-size" class="option" action="setText()">
-                                        <label for="font-options">Font Size</label>
-                                        <select name="font-options">
-                                            <option value="0.9em">Small</option>
-                                            <option value="1em">Normal</option>
-                                            <option value="1.1em">Large</option>
-                                            <option value="1.2em">Extra Large</option>
-                                        </select>
-                                    </form>
-                                </li>
-                                <li>
-                                    <form id="header-color" class="option" action="setHeader()">
-                                        <label for="header-color">Header Colour</label>
-                                        <input name="header-color" type="color"> </form>
-                                </li>
-                                <li>
-                                    <button id="resetColour" onclick="resetColour()">Reset Colour</button>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a class="twitter-logo social" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-                        <li> <a class="facebook-logo social" href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
-                        <li><a class="youtube-logo social" href=""><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+                        <<li><a class="twitter-logo social" href="https://twitter.com/ascotsolutions?lang=en" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                    <li> <a class="facebook-logo social" href="https://en-gb.facebook.com/ascotsolutions/" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a class="youtube-logo social" href="https://www.youtube.com/channel/UCKdxtOEy7-ud-63mFaTIxYQ" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -223,10 +200,11 @@ if (($handle = fopen("data.csv", "r")) !== FALSE) {
         <!--POP UP HTML-->
         <div id="pop-up">
             <div class="popup-content">
-                <div class="popup-header"> <span class="close">×</span>
-                    <h3>Thank you for joining the mailing list</h3> </div>
+                <div class="popup-header"> <span class="close"onclick="closePopup()">×</span>
+                    <div class="content-width-wrap"><h3>Thank you for joining the mailing list</h3></div> </div>
                 <div class="popup-body">
                     <div class="popup-bodywrap">
+					<div class="content-width-wrap">
                         <p>We'll get back to you with the latest FileDirector information and offers</p>
                         <br> Your Information:
                         <br /> Firstname:
@@ -237,23 +215,24 @@ if (($handle = fopen("data.csv", "r")) !== FALSE) {
                                 <?php echo $_POST["email"];?>
                                     <br />
                                     <br>
-                                    <p>If you'd like to find out about other ways to manage your documents please visit</p>
+                                    <p>If you'd like to find out about other ways to manage your documents please visit <a href="http://www.ascot-solutions.co.uk" target="_blank">Ascot Solutions</a></p>
                     </div>
+					</div>
                 </div>
                 <div class="popup-footer">
-                    <h4>Document Management Software Specialists</h4> </div>
+				<div class="content-width-wrap">
+                    <h4>Document Management Software Specialists</h4>
+					</div>
+					</div>
             </div>
         </div>
         <?php 
 		if($confirmed==true){
 	echo '<script type="text/javascript" defer>',
      'var popup = document.getElementById("pop-up");
-	 var close = document.getElementsByClassName("close")[0];
 
 	 popup.style.display = "block";
-	 close.onclick = function () {
-        popup.style.display = "none";
-    } 
+
 	window.onclick = function (event) {
         if (event.target == popup) {
             popup.style.display = "none";

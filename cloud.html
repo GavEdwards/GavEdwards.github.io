@@ -16,7 +16,9 @@
 
 <body>
     <div id="nav-bar">
-        <div class="nav-logo"><img src="images/Ascot-logo-tran.png" alt="Ascot Logo" width=100 height=40></div> <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        <div class="nav-logo">
+            <a href="http://www.Ascot-Solutions.co.uk"><img alt="Ascot Logo" src="images/Ascot-Logo-white.png" width=100 height=40></a>
+        </div> <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
         <div id="nav-items">
             <div class="nav-left">
                 <ul>
@@ -25,37 +27,14 @@
                     <li><a href="cloud.html">Cloud</a></li>
                     <li><a href="AboutUs.html">About Us</a></li>
                     <li><a href="Purchase.html">Purchase</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="nav-right">
                 <ul>
-                    <li id="setPref"> <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
-                        <ul class="options">
-                            <li>
-                                <form id="font-size" class="option" action="setText()">
-                                    <label for="font-options">Font Size</label>
-                                    <select name="font-options">
-                                        <option value="0.9em">Small</option>
-                                        <option value="1em">Normal</option>
-                                        <option value="1.1em">Large</option>
-                                        <option value="1.2em">Extra Large</option>
-                                    </select>
-                                </form>
-                            </li>
-                            <li>
-                                <form id="header-color" class="option" action="setHeader()">
-                                    <label for="header-color">Header Colour</label>
-                                    <input name="header-color" type="color"> </form>
-                            </li>
-                            <li>
-                                <button id="resetColour" onclick="resetColour()">Reset Colour</button>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="twitter-logo social" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-                    <li> <a class="facebook-logo social" href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
-                    <li><a class="youtube-logo social" href=""><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a class="twitter-logo social" href="https://twitter.com/ascotsolutions?lang=en" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                    <li> <a class="facebook-logo social" href="https://en-gb.facebook.com/ascotsolutions/" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a class="youtube-logo social" href="https://www.youtube.com/channel/UCKdxtOEy7-ud-63mFaTIxYQ" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -69,60 +48,166 @@
     </div>
     <div id="content-wrap">
         <div class="header-content">
-            <div class="header-left">
                 <h1 class="dark">FileDirector Cloud <img id="icon" alt="cloud icon" src="http://simpleicon.com/wp-content/uploads/cloud-10.png"></h1>
-                <h2 class="dark">The power of the cloud for your business</h2> </div>
-            <div class="header-right">
-                <iframe id="main-vid" width="560" height="315" src="https://www.youtube.com/embed/3EgG0qNbZ4s" allowfullscreen></iframe>
-            </div>
+                <h2 class="dark">The power of the cloud for your business</h2>
+                <button id="demoBtn" name="free-demo" onclick="demoPopup()">Free Demo</button>
+            
         </div>
         <div id="content-info">
             <div class="content-1 content">
                 <div id="main-head">
                     <div class="content-a">
-                        <audio src="Paul%20Weller%20-%20Above%20the%20Clouds%20Album%20Single%20Version.mp3" controls autoplay>Unfortunately, your browser does not audio</audio>
-                        <h3>What is FileDirector Cloud?</h3></div>
+                        <h3>What is FileDirector Cloud?</h3>
+                    </div>
                 </div>
                 <div class="content-width-wrap">
                     <div class="what-tag" id="tag1">
                         <div class="what-inner">
-                            <h4>1. Scan</h4><img width=130 alt="Scan" src="https://cdn3.iconfinder.com/data/icons/logistics-delivery-set-2/512/9-512.png"></div>
+                            <h4>1. Upload to Cloud</h4><img alt="Upload" src="images/cloud_upload.png"><img width=130 alt="Scan" src="images/scan_icon.png"></div>
                     </div>
                     <div class="what-tag" id="tag2">
                         <div class="what-inner">
-                            <h4>2. Upload to Cloud</h4><img alt="Upload"src="http://icons.iconarchive.com/icons/custom-icon-design/mono-general-4/128/upload-icon.png"></div>
+                            <h4>2. Index & Organise</h4><img alt="upload" src="images/archive.png"></div>
                     </div>
                     <div class="what-tag" id="tag3">
                         <div class="what-inner">
-                            <h4>3. Access Anywhere</h4><img alt="Access" width=130 src="https://cdn3.iconfinder.com/data/icons/files-buttons/512/File_Download-512.png"> </div>
+                            <h4>3. Search & Retrieve</h4><img alt="Access" width=130 src="images/cloud_retrieve.png"> <img alt="retrieve" width=130 src="images/file_search.png"> </div>
                     </div>
                 </div>
             </div>
             <div class="content-2 content">
                 <div class="content-width-wrap">
-                    <div class="content-right"> <i class="fa fa-desktop" aria-hidden="true" id="comp"></i> <i class="fa fa-file-pdf-o" aria-hidden="true" id="file1"></i> <i class="fa fa-file-image-o" aria-hidden="true" id="file2"></i> <i class="fa fa-file-text" aria-hidden="true" id="file3"></i> <i class="fa fa-file" aria-hidden="true" id="file4"></i> <i class="fa fa-file-image-o" aria-hidden="true" id="file5"></i> <i class="fa fa-file-text" aria-hidden="true" id="file6"></i> </div>
-                    <div class="content-left">
+                    <div class="content-full">
+                        <div class="content-left">
                         <h4>Simple Document Management</h4>
                         <br>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                            <br>
-                            <br> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                    </div>
+                        <p>Use FileDirector Cloud for all your off premise document management needs. The FileDirector installation is fully featured and allows the user to beneﬁt from all the modules including Full Text OCR and Business Process Management.</p><br><p>
+                            FileDirector Cloud solution makes budgeting for your system costs straight forward, simple and without any overhead for the purchase and maintenance of a server and the associated.
+                        </p>
+                        <br>
+                        </div>
+                        <div class="content-right content-img"><img class="document" src="images/file_upload.png"></div><br><br>
+                    </div></div></div>
+                        <div class="content-3 content">
+                            <div class="content-width-wrap">
+                        <div class="content-left content-img"><img alt="features" width="250" src="images/filedirector_logo.png"></div>
+                        <div class="content-right">
+                        <h4>Features</h4><br>
+                        <p>
+                            Licences are concurrent or named licences. The minimum purchase is one scan license. This is required to enable the cabinet to be conﬁgured. </p><br>
+                        <p>
+                            Each installation comes with 10GB of document storage included. Addional document storage can be purchased. in 10 GB units. </p><br>
+                        <p>
+                            Each Installation will have their own internal domain, and will have a Cabinet created for them to which one account will have administrave permissions.
+                        </p>
+                        <br>
+                        </div>
+                            </div></div>
+            <div class="content-2 content">
+                <div class="content-width-wrap">
+                        <div class="content-left">
+                        <h4>Security</h4>
+                            <br><p>Of course, our FileDirector Cloud solution provides all security features of a local FileDirector installation e.g. its 3 layer‐architecture and the built‐in rights management.</p><br><p>FileDirector Cloud is hosted on a Microsoft Azure data centre nearest to you. An important part of Microsoft‘s security capabilies include their response processes. The Security Incident Management (SIM) team responds to potential security issues when they occure, operating around the clock. The SIM processes are aligned with: ISO/IEC 18044 & NIST SP 800‐61</p>
+                        </div>
+                        <div class="content-right content-img">
+                        <img alt="padlock" src="images/padlock.png">
+                        </div>
+
                 </div>
             </div>
             <div class="content-3 content">
                 <div class="content-width-wrap">
-                    <div class="content-left"><img class="logo" src="https://lh3.googleusercontent.com/z7qncUahwU6XuMLeFnlWH58YE9Fpw410135fsjOixCi_mXuHVGNow9Z_WmW_3aJq624GzSFMwRp1kVnF80f39SCJ0oJ2QxAW0wE5N3rQXGmDhSUQUG6LCR2yOLRXrLWJNzaSLUqstF3YrCqXpbKvQwluDT3dKSXFMeMgfATPwqTDbdBU5xxxPwt1gy32cpWw2mjaOu0JCut8Wfugd6ysCl8gV1AgTwPW_2N7ijWB0R-mH5w1O8ybMqPYTpvKLsWnnZRnR8QOVoS5iy41Yjg17GhfYrwARidthy-HnEN3_REh3pHhy2v1aPlJp2Cq0gwik7lpGgKpJFA7iOgkCqK4oALVbYhOoJgc9YkN0CheWChNDQlKtkW9ueVlqhE3eaUSVYHij6M8TqcBvOwq3j70b0ikFViSuCyW361PRraZxqFdVue7kKCZ8ze44HvVHkNx5vmLjU26r0apk9Fq5jNtSke5_tjmD112uXsa_eDOpj023lkhtkiN7uS9bCPIQCbN0fMZR5tsumBR7nMAB8Y3KWNxWYbcA-NMrQOZzfb7BvUjC3O7K3YdsKGA6j95FzqJpkw7w_umt1f76toG2_9IjvfOksTx-CgVTNS8yhTbVAC-Sbs=s175-no"></div>
+                    <div class="content-left">
+                    <h4>Perfect for SME's</h4>
+                        <br>
+                    <p>
+                        For small and medium organisation's FileDirector Cloud Edition can provide the perfect solution to document management. It removes the costs and time required to set up and maintain your own server. Simply let the cloud take care of all of that so you can focus on running your business.
+                        </p>
+                        <br>
+                    </div>
+                    <div class="content-right content-img"><img alt="SME" src="images/small_business.png"></div>
+                    <div class="content-left content-img">
+                    <img alt="enterprise" width=130 src="images/big_business.png"></div>
+                    <div class="content-right">
+                    <h4>For large organisations</h4>
+                        <br>
+                        <p>
+                            For organisations with a large number of users it may be more cost effective to maintain your own server and use FileDirector Enterprise Edition. Don't worry, we can help with this. You can find out more information about FileDirector Enterprise on our <a href="features.html">features</a> page or instead <a href="contact.html">contact us</a> where our experts can help inform you of what we could do and design a custom document management solution for you.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="content-4 content">
                 <div class="content-width-wrap"></div>
             </div>
-            <div class="content-5 content">
-                <div class="content-width-wrap"></div>
+
+            <div id="footer" class="content">
+                <div class="content-width-wrap">
+                    <div class="footer-left">
+                        <ul>
+                            <li><a href="http://www.ascot-solutions.co.uk">Ascot Solutions</a></li>
+                            <li><a href="https://www.scannersuperstore.co.uk">Scanner Superstore</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <br>
+                        </ul>
+                    </div>
+                    <div class="footer-right">
+                        <ul>
+                            <li><a href="sitemap.xml">Sitemap</a></li>
+                            <li><a href="AboutUs.html">About Us</a></li>
+                            <li><a href="http://www.ascot-solutions.co.uk/uploads/pdf/cookiepolicy.pdf">Privacy Statement</a></li>
+                            <br>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="footer-bottom">
+                        <p><b>Ascot Business Solutions Limited.</b> Ascot House, 8 Hargreaves Court, Dyson Way, Staffordshire Technology Park, Stafford ST18 OWN</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!--POP UP HTML-->
+    <div id="pop-up">
+        <div class="popup-content">
+            <div class="popup-header"> <span class="close" onclick="closePopup()">×</span>
+                <div class="content-width-wrap">
+                    <h3>Free 15 minute demonstration from one of our experts</h3>
+                </div>
+            </div>
+            <div class="popup-body">
+                <div class="popup-bodywrap">
+                    <div class="content-width-wrap">
+                        <p>Enter your email to set up a personal demonstration from one of our experts where we will demonstrate exactly how it can help you and your business.</p>
+                        <br>
+                        <form action="mailto:info@ascot-solutions.co.uk?subject=FileDirector Demo" method="post" enctype="text/plain">
+                            <label for="Name">Name:&nbsp;</label>
+                            <br>
+                            <input type="text" name="Name" placeholder="Name.." .><br>
+                            <label for="Business">Business:&nbsp;</label>
+                            <br>
+                            <input type="text" name="Business" placeholder="Business.." .><br>
+                            <label for="Email Address">Email Address:&nbsp;</label>
+                            <br>
+                            <input type="text" name="Email Address" placeholder="Email...">
+                            <br>
+                            <br>
+                            <input class="createEmail" type="submit" value="Create Email">
+                        </form>
+                        <br>
+                        <p>If you'd like to find out about other ways to manage your documents please visit <a href="http://www.Ascot-Solutions.co.uk" target="_blank">www.Ascot-Solutions.co.uk</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="content-width-wrap">
+                    <h4>Document Management Software Specialists</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END POP UP -->
+    
 </body>
 
 </html>
