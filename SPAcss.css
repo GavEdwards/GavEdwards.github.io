@@ -42,7 +42,6 @@ div.spa-page #nav-bar {
     padding: 0 5%;
 }
 #right-column {
-    /* background: linear-gradient(145deg, #0D47A1, #42A5F5);*/
     background: white;
     color: black;
     float: right;
@@ -257,16 +256,19 @@ ul.options li:hover {
     color:white;
     padding: 10px 0;
 }
+
 .info-top{
     min-height:130px;
     border-bottom:30px solid whitesmoke;
     box-shadow:rgba(0, 0, 0, 0.239216) 0px 2px 5px 0px;
+    min-height:120px;
 }
+
 #selectProduct{
     padding-left:5%;
 }
 
-/*END NAV
+/*END NAV*/
 
 
 
@@ -439,6 +441,4 @@ div.content-img {
         padding: 0;
     }
 }
-
-
 /*END MEDIA */
