@@ -800,9 +800,11 @@ div.content-width-wrap.logos{
     }
     
     h1 {
-        font-size: 11vw;
+        font-size: 15vw;
     }
-    
+    h2{
+	font-size:8vw;    
+	}
     h3{
         font-size:1.5em;
     }
