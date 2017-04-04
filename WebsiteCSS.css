@@ -6,7 +6,7 @@
 html,
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.05em;
+    font-size: 1.1em;
     color: #546E7A;
 }
 
@@ -178,7 +178,9 @@ ul.options li:hover {
     background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
 }
 .header-wrap.about{
-background: linear-gradient(to bottom, rgba(125,185,232,1) 0%,rgba(41,137,216,1) 19%,rgba(32,124,202,1) 42%,rgba(0,103,177,1) 100%); 
+background: linear-gradient(145deg,#0D47A1,#42A5F5)
+
+
 }
 #canvas {
     position: absolute;
@@ -221,8 +223,7 @@ div.paper-scene div {
     left: 0;
     width: 40px;
     height: 60px;
-    background: url(http://www.iconeasy.com/icon/png/System/iVista%202%20OS%20X%20Icons/Document.png) no-repeat;
-    /*url(http://image.slidesharecdn.com/constructioncostmanagement24052012-140731192422-phpapp01/95/construction-cost-management-24052012-49-638.jpg?cb=1406835541) no-repeat;*/
+    background: url("images/falling-paper.png") no-repeat;
     background-size: 100%;
     transform-style: preserve-3d;
     backface-visibility: visible;
@@ -446,7 +447,7 @@ div.content-top {
 }
 div.content-top .video-wrap {
     position: absolute;
-    top: -110px;
+    top: -80px;
     border-radius: 6px;
     box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.75);
     margin: 0 auto;
@@ -568,6 +569,9 @@ div.what-tag {
     cursor: pointer;
     transition: transform 0.7s;
 }
+div.what-tag i{
+    color: #546e7a;
+}
 div.what-content {
     display: none;
     text-align: left;
@@ -595,6 +599,10 @@ div.what-inner img {
     padding: 5px;
     transition: 1s;
 }
+.content ul {
+    margin-left: 20px;
+}
+
 div.content-width-wrap {
     width: 95%;
     max-width: 1000px;
@@ -746,12 +754,12 @@ div.content-width-wrap.logos{
 }
 
 .footer-bottom{
-    float:clear;
+    clear:both;
     width:100%;
     font-size: 0.9em
 }
 /*MEDIA QUERIES*/
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1000px) {
     .clicked-navwrap {
         position: fixed;
         z-index: 999;

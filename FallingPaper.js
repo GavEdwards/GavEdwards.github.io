@@ -4,7 +4,7 @@ var paperFalling = function (el) {
     this.world = document.createElement('div');
     this.papers = [];
     this.options = {
-        numPaper: 10
+        numPaper: window.innerWidth/100
             /*edit so that the num paper is relative to the screen size*/
             //maybe add option for multiple document types
     };
@@ -120,10 +120,17 @@ paperFalling.prototype.render = function () {
             this._updatePaper(this.papers[i]);
         }
         this.timer++;
-        requestAnimationFrame(this.render.bind(this));
+        var self = this;
+    //set framerate
+        setTimeout(function() {
+                            requestAnimationFrame(self.render.bind(self));
+
+    }, 15);
+        
     }
     // start up leaf scene
 var paperContainer = document.querySelector('.falling-papers')
     , papers = new paperFalling(paperContainer);
 papers.init();
+
 papers.render();

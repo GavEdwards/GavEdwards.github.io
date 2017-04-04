@@ -6,7 +6,7 @@
 html,
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.05em;
+    font-size: 1.1em;
     color: white;
 }
 
@@ -35,6 +35,8 @@ div.spa-page #nav-bar {
     line-height: 30px;
     padding-top: 0px;
     overflow-y: auto;
+    
+
 }
 .inner-left{
     padding: 0 5%;
@@ -48,6 +50,10 @@ div.spa-page #nav-bar {
     height: 100vh;
     padding-top: 0px;
     overflow-y: auto;
+            overflow-x: hidden;
+
+    box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.3);
+
 }
 
 #right-column h2 {
@@ -58,8 +64,9 @@ div.spa-page #nav-bar {
     padding: 30px 0;
 }
 
-#left-column ul {
+#left-column ul li{
     list-style: none;
+    padding:5px;
     cursor: pointer;
 }
 
@@ -67,10 +74,6 @@ div.spa-page #nav-bar {
     margin-left: 20px;
 }
 
-li.headers.active {
-    background: #7aa0bf;
-    transition: 0.5s;
-}
 
 li.header li.products {
     display: none;
@@ -86,9 +89,10 @@ li.products:hover {
 li.products {
     background: lightgray;
     border-top: 0.5px solid white;
+    color:black;
 }
 
-li.products.active {
+li.products.active, li.headers.active  {
     background: #0166b7;
     color: white;
 }
@@ -96,8 +100,16 @@ li.products.active {
 .hidden {
     display: none;
 }
-
-
+li.headers {
+    border-top: 3px solid whitesmoke;
+    margin-top: 5px;
+}
+.content-full{
+    position: relative;
+    width:100%;
+    direction: inline-block;
+    
+}
 /*NAV BAR STYLE*/
 
 div#nav-bar {
@@ -246,7 +258,9 @@ ul.options li:hover {
     padding: 10px 0;
 }
 .info-top{
-    height:120px;
+    min-height:130px;
+    border-bottom:30px solid whitesmoke;
+    box-shadow:rgba(0, 0, 0, 0.239216) 0px 2px 5px 0px;
 }
 #selectProduct{
     padding-left:5%;
@@ -269,6 +283,7 @@ div.content-left {
     width: 50%;
     display: inline-block;
     vertical-align: top;
+    margin:10px 0;
     margin-right: 5%;
 }
 
@@ -278,6 +293,8 @@ div.content-right {
     height: 100%;
     display: inline-block;
     vertical-align: top;
+        margin:10px 0;
+
 }
 
 div.content-left img {
@@ -322,7 +339,7 @@ div.content-img {
     }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1000px) {
     .clicked-navwrap {
         position: fixed;
         z-index: 999;
@@ -389,12 +406,12 @@ div.content-img {
         display: block;
         position: fixed;
         z-index: 200;
-        width: 90%;
+        width: 100%;
         height: 30px;
         padding-top: 66px;
         background: white;
         color: black;
-        padding-left: 10%;
+        text-align: center;
         border-bottom: 2px solid black;
         cursor: pointer;
     }
@@ -407,6 +424,7 @@ div.content-img {
         z-index: 100;
         width:100%;
         line-height: 30px;
+
     }
     .inner-left{
         width: 90%;
