@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>File Director Features</title>
-    <meta name="description" content="SPA for FileDirectors Modular Features">
+<title>File Director Features</title>
+<meta name="description" content="SPA for FileDirectors Modular Features">
 <link rel="stylesheet" href="SPAcss.css">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -19,7 +19,9 @@
 <body>
     <div id='page-wrap' class="spa-page">
         <div id="nav-bar">
-            <div class="nav-logo"><a href="http://www.Ascot-Solutions.co.uk"><img alt="Ascot Logo"src="images/Ascot-Logo-white.png" width=100 height=40></a></div> <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            <div class="nav-logo">
+                <a href="http://www.Ascot-Solutions.co.uk"><img alt="Ascot Logo" src="images/Ascot-Logo-white.png" width=100 height=40></a>
+            </div> <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
             <div id="nav-items">
                 <div class="nav-left">
                     <ul>
@@ -47,237 +49,221 @@
                 <div id='left-column' class='open-column'>
                     <h4 id="selectProduct">Select a feature:</h4>
                     <div class="inner-left">
-                    <ul id="options">
-                        <li class="headers" ng-repeat="x in types" ng-click="activeType(x,$event)" ng-class="{active:x.active}">{{x.type}}<span>&nbsp;&nbsp;</span><i class="fa fa-info-circle" aria-hidden="true"></i>
-                            <ul>
-                                <li class="products"  ng-repeat="y in products | filter: {type: x.type}" ng-click="activeProduct(y,$event)" ng-class="{active:y.active}">{{y.name}}</li>
-                            </ul>
-                        </li>
-                    </ul>
-                   
-                    <hr/>
-                    
-                    <br />
+                        <ul id="options">
+                            <li class="headers" ng-repeat="x in types" ng-click="activeType(x,$event)" ng-class="{active:x.active}">{{x.type}}<span>&nbsp;&nbsp;</span><i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <ul>
+                                    <li class="products" ng-repeat="y in products | filter: {type: x.type}" ng-click="activeProduct(y,$event)" ng-class="{active:y.active}">{{y.name}}</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <hr/>
+
+                        <br />
                     </div>
                 </div>
                 <!--END LEFT COLUMN -->
                 <div id='right-column' class='header-wrap'>
                     <div class="info-top">
-                    <div class="content-width-wrap">
-                    
-                        <h1>{{current.name}}</h1>
-                        <h2>Type: <span id="type">{{current.type}}</span></h2>
+                        <div class="content-width-wrap">
+
+                            <h1>{{current.name}}</h1>
+                            <h2>Type: <span id="type">{{current.type}}</span></h2>
                         </div>
                     </div>
                     <!-- where the product info is loaded-->
-                    <div >
-                        <div  ng-include="current.link"></div>
+                    <div>
+                        <div ng-include="current.link"></div>
                     </div>
-                    
+
                 </div>
                 <!-- END RIGHT COLUMN-->
             </div>
-            
+
             <!--END APP -->
-            
+
         </div>
-        
+
         <!-- END PAGE WRAP -->
     </div>
     <script>
         var app = angular.module('myApp', ['ngAnimate']);
-        app.controller('myCtrl', function ($scope) {
+        app.controller('myCtrl', function($scope) {
             //core product
             var core = "Core Product";
             var coreF = "Core FileDirector Features";
             var int = "Integration";
-                //optional components SBE & Enterprise
-                        //Scan Licence - Concurrent (Maximum of 15 with SBE)
+            //optional components SBE & Enterprise
+            //Scan Licence - Concurrent (Maximum of 15 with SBE)
             var ul = "User Licences";
             //Upgrades
             var u = "Upgrades";
-            
+
             $scope.products = [
 
                 {
-                    type: core
-                    , name: 'SBE Edition'
-                    , active: false
-                    , link: "products/info1.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: core
-                    , name: 'Enterprise Edition'
-                    , active: false
-                    , link: "products/info2.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: core
-                    , name: 'FileDirector Cloud Edition'
-                    , active: false
-                    , link: "products/info3.html"
-                    ,ltype: 1
-                }
-                , 
-                {
-                    type: coreF
-                    , name: 'Document Capture'
-                    , active: false
-                    , link: "products/info13.html"
-                    ,ltype: 1
-                }
-                ,
-                {
-                    type: coreF
-                    , name: 'Indexing'
-                    , active: false
-                    , link: "products/info4.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: coreF
-                    , name: 'Web Access'
-                    , active: false
-                    , link: "products/info5.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: coreF
-                    , name: 'Workflows & Approvals'
-                    , active: false
-                    , link: "products/info6.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: coreF
-                    , name: 'Security'
-                    , active: false
-                    , link: "products/info7.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: coreF
-                    , name: 'Searching'
-                    , active: false
-                    , link: "products/info8.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: coreF
-                    , name: 'Supports Many Document Formats'
-                    , active: false
-                    , link: "products/info9.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: coreF
-                    , name: 'Mobile Support'
-                    , active: false
-                    , link: "products/info10.html"
-                    ,ltype: 1
-                }
-                ,
-                {
-                    type: coreF
-                    , name: 'OCR'
-                    , active: false
-                    , link: "products/info11.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: coreF
-                    , name: 'Integration'
-                    , active: false
-                    , link: "products/info12.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: coreF
-                    , name: 'Scalability'
-                    , active: false
-                    , link: "products/info14.html"
-                    ,ltype: 1
+                    type: core,
+                    name: 'SBE Edition',
+                    active: false,
+                    link: "products/info1.html",
+                    ltype: 1
+                }, {
+                    type: core,
+                    name: 'Enterprise Edition',
+                    active: false,
+                    link: "products/info2.html",
+                    ltype: 1
+                }, {
+                    type: core,
+                    name: 'FileDirector Cloud Edition',
+                    active: false,
+                    link: "products/info3.html",
+                    ltype: 1
                 },
                 {
-                    type: coreF
-                    , name: 'Audit History'
-                    , active: false
-                    , link: "products/info16.html"
-                    ,ltype: 1
+                    type: coreF,
+                    name: 'Document Capture',
+                    active: false,
+                    link: "products/info13.html",
+                    ltype: 1
+                },
+                {
+                    type: coreF,
+                    name: 'Indexing',
+                    active: false,
+                    link: "products/info4.html",
+                    ltype: 1
+                }, {
+                    type: coreF,
+                    name: 'Web Access',
+                    active: false,
+                    link: "products/info5.html",
+                    ltype: 1
+                }, {
+                    type: coreF,
+                    name: 'Workflows & Approvals',
+                    active: false,
+                    link: "products/info6.html",
+                    ltype: 1
+                }, {
+                    type: coreF,
+                    name: 'Security',
+                    active: false,
+                    link: "products/info7.html",
+                    ltype: 1
+                }, {
+                    type: coreF,
+                    name: 'Searching',
+                    active: false,
+                    link: "products/info8.html",
+                    ltype: 1
+                }, {
+                    type: coreF,
+                    name: 'Supports Many Document Formats',
+                    active: false,
+                    link: "products/info9.html",
+                    ltype: 1
+                }, {
+                    type: coreF,
+                    name: 'Mobile Support',
+                    active: false,
+                    link: "products/info10.html",
+                    ltype: 1
+                },
+                {
+                    type: coreF,
+                    name: 'OCR',
+                    active: false,
+                    link: "products/info11.html",
+                    ltype: 1
+                }, {
+                    type: coreF,
+                    name: 'Integration',
+                    active: false,
+                    link: "products/info12.html",
+                    ltype: 1
+                }, {
+                    type: coreF,
+                    name: 'Scalability',
+                    active: false,
+                    link: "products/info14.html",
+                    ltype: 1
+                },
+                {
+                    type: coreF,
+                    name: 'Audit History',
+                    active: false,
+                    link: "products/info16.html",
+                    ltype: 1
+                }, {
+                    type: ul,
+                    name: 'Scan Licence - Concurrent',
+                    active: false,
+                    link: "products/info17.html",
+                    ltype: 1
+                }, {
+                    type: ul,
+                    name: 'Scan Licence - Named',
+                    active: false,
+                    link: "products/info18.html",
+                    ltype: 1
+                }, {
+                    type: ul,
+                    name: 'User Licence - Concurrent',
+                    active: false,
+                    link: "products/info19.html",
+                    ltype: 1
+                }, {
+                    type: ul,
+                    name: 'User Licence - Named',
+                    active: false,
+                    link: "products/info20.html",
+                    ltype: 1
                 }
+
                 , {
-                    type: ul
-                    , name: 'Scan Licence - Concurrent'
-                    , active: false
-                    , link: "products/info17.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: ul
-                    , name: 'Scan Licence - Named'
-                    , active: false
-                    , link: "products/info18.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: ul
-                    , name: 'User Licence - Concurrent'
-                    , active: false
-                    , link: "products/info19.html"
-                    ,ltype: 1
-                }
-                , {
-                    type: ul
-                    , name: 'User Licence - Named'
-                    , active: false
-                    , link: "products/info20.html"
-                    ,ltype: 1
-                }
-                
-                , {
-                    type: u
-                    , name: 'Upgrade FileDirector SBE to FileDirector Enterprise'
-                    , active: false
-                    , link: "products/info15.html"
-                    ,ltype: 1
+                    type: u,
+                    name: 'Upgrade FileDirector SBE to FileDirector Enterprise',
+                    active: false,
+                    link: "products/info15.html",
+                    ltype: 1
                 },
 
-    ];
+            ];
             //array for types of products
             $scope.types = [
 
-    ];
+            ];
             //finish off creating all links and need to edit to show when selected
-            $scope.typeLink = [
-              {type: core,
-               link: "products/type1.html"
-              },
+            $scope.typeLink = [{
+                    type: core,
+                    link: "products/type1.html"
+                },
                 {
-                type :coreF,
+                    type: coreF,
                     link: "products/type2.html"
                 },
-                {type: ul,
-               link: "products/type3.html"
-              },
-               
-                {type: u,
-               link: "products/type4.html"
-              },
-            
-              
-              
+                {
+                    type: ul,
+                    link: "products/type3.html"
+                },
+
+                {
+                    type: u,
+                    link: "products/type4.html"
+                },
+
+
+
             ];
-            
-            $scope.activeType = function (x, $event) {
+
+            $scope.activeType = function(x, $event) {
                 $event.stopPropagation();
-                
+
                 for (var i = 0; i < $scope.types.length; i++) {
                     if (x.type != $scope.types[i].type) {
                         $scope.types[i].active = false;
-                    }
-                    else { 
+                    } else {
                         $scope.current = $scope.typeLink[i];
                         x.active = true;
                     }
@@ -287,32 +273,31 @@
                     $scope.products[i].active = false;
                 }
             }
-            
-            $scope.activeProduct = function (x, $event) {
-                    $event.stopPropagation();
-                    for (var i = 0; i < $scope.products.length; i++) {
-                        if (x.name != $scope.products[i].name) {
-                            $scope.products[i].active = false;
-                        }
-                        else {
-                            $scope.current = $scope.products[i];
-                            x.active = true;
-                        }
-                    }
-                    //remove from others
-                    for (var i = 0; i < $scope.types.length; i++) {
-                        $scope.types[i].active = false;
-                    }
-                
-                
-                }
-            
-             
 
-            
-            
+            $scope.activeProduct = function(x, $event) {
+                $event.stopPropagation();
+                for (var i = 0; i < $scope.products.length; i++) {
+                    if (x.name != $scope.products[i].name) {
+                        $scope.products[i].active = false;
+                    } else {
+                        $scope.current = $scope.products[i];
+                        x.active = true;
+                    }
+                }
+                //remove from others
+                for (var i = 0; i < $scope.types.length; i++) {
+                    $scope.types[i].active = false;
+                }
+
+
+            }
+
+
+
+
+
             //function for listing the different types of products
-            $scope.listTypes = function () {
+            $scope.listTypes = function() {
                 for (var i = 0; i < $scope.products.length; i++) {
                     var exist = false;
                     for (var j = 0; j < $scope.products.length; j++) {
@@ -322,43 +307,41 @@
                     }
                     if (!exist) {
                         $scope.types.push({
-                            type: $scope.products[i].type
-                            , ltype: 0
-                            , active: false
-                            , name: $scope.products[i].type
+                            type: $scope.products[i].type,
+                            ltype: 0,
+                            active: false,
+                            name: $scope.products[i].type
                         });
                     }
                 }
-                
+
                 //make core product the intial selected option
-                
+
             }
             //variable to hold the current item.
-            $scope.current = [
-                {
-                    
+            $scope.current = [{
+
                 }
 
             ];
 
-            
-            
-               
+
+
+
         });
-        
+
         //mobile version extendable menu
         //var opMenu = document.getElementById("mobile-toggle");  
-        $('#mobile-toggle').click(function(e){
-          $('#left-column').toggleClass('open-column');
-          $(this).find("i").toggleClass('fa fa-sort-asc');
-          $(this).find("i").toggleClass('fa fa-sort-desc');
+        $('#mobile-toggle').click(function(e) {
+            $('#left-column').toggleClass('open-column');
+            $(this).find("i").toggleClass('fa fa-sort-asc');
+            $(this).find("i").toggleClass('fa fa-sort-desc');
             //$(this).children().not('#selectProduct').toggleClass('close-column');
         });
         //on load auto click top type of product
         $("document").ready(function() {
             $("#options li:first").trigger('click');
         });
-
     </script>
 </body>
 

@@ -35,12 +35,12 @@ div.spa-page #nav-bar {
     line-height: 30px;
     padding-top: 0px;
     overflow-y: auto;
-    
-
 }
-.inner-left{
+
+.inner-left {
     padding: 0 5%;
 }
+
 #right-column {
     background: white;
     color: black;
@@ -49,10 +49,8 @@ div.spa-page #nav-bar {
     height: 100vh;
     padding-top: 0px;
     overflow-y: auto;
-            overflow-x: hidden;
-
-    box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.3);
-
+    overflow-x: hidden;
+    box-shadow: inset 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 #right-column h2 {
@@ -63,16 +61,15 @@ div.spa-page #nav-bar {
     padding: 30px 0;
 }
 
-#left-column ul li{
+#left-column ul li {
     list-style: none;
-    padding:5px;
+    padding: 5px;
     cursor: pointer;
 }
 
 #right-column ul {
     margin-left: 20px;
 }
-
 
 li.header li.products {
     display: none;
@@ -88,10 +85,11 @@ li.products:hover {
 li.products {
     background: lightgray;
     border-top: 0.5px solid white;
-    color:black;
+    color: black;
 }
 
-li.products.active, li.headers.active  {
+li.products.active,
+li.headers.active {
     background: #0166b7;
     color: white;
 }
@@ -99,16 +97,19 @@ li.products.active, li.headers.active  {
 .hidden {
     display: none;
 }
+
 li.headers {
     border-top: 3px solid whitesmoke;
     margin-top: 5px;
 }
-.content-full{
+
+.content-full {
     position: relative;
-    width:100%;
+    width: 100%;
     direction: inline-block;
-    
 }
+
+
 /*NAV BAR STYLE*/
 
 div#nav-bar {
@@ -153,15 +154,14 @@ div#nav-bar {
     float: left;
 }
 
-
 #nav-bar div.nav-right {
     float: right;
-    padding-top:5px;
-}
-.nav-right li:hover{
-    color:red;
+    padding-top: 5px;
 }
 
+.nav-right li:hover {
+    color: red;
+}
 
 div#nav-bar li,
 #nav-bar .fa-bars {
@@ -201,9 +201,11 @@ div#nav-bar li,
     display: inline-block;
     padding: 0 16px;
 }
+
 #nav-bar .nav-right li a {
     padding: 0 8px;
 }
+
 div#nav-bar .nav-left li a:hover {
     color: #0166b7;
 }
@@ -252,24 +254,24 @@ ul.options li:hover {
 #selectProduct,
 .info-top {
     margin-top: 56px;
-    background:#0166b7;
-    color:white;
+    background: #0166b7;
+    color: white;
     padding: 10px 0;
 }
 
-.info-top{
-    min-height:130px;
-    border-bottom:30px solid whitesmoke;
-    box-shadow:rgba(0, 0, 0, 0.239216) 0px 2px 5px 0px;
-    min-height:120px;
+.info-top {
+    min-height: 130px;
+    border-bottom: 30px solid whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.239216) 0px 2px 5px 0px;
+    min-height: 120px;
 }
 
-#selectProduct{
-    padding-left:5%;
+#selectProduct {
+    padding-left: 5%;
 }
+
 
 /*END NAV*/
-
 
 
 /*PRODUCT TYLE*/
@@ -285,7 +287,7 @@ div.content-left {
     width: 50%;
     display: inline-block;
     vertical-align: top;
-    margin:10px 0;
+    margin: 10px 0;
     margin-right: 5%;
 }
 
@@ -295,8 +297,7 @@ div.content-right {
     height: 100%;
     display: inline-block;
     vertical-align: top;
-        margin:10px 0;
-
+    margin: 10px 0;
 }
 
 div.content-left img {
@@ -400,10 +401,10 @@ div.content-img {
 }
 
 @media (max-width:720px) {
-    .info-top, #selectProduct {
+    .info-top,
+    #selectProduct {
         margin-top: 96px;
     }
-
     #mobile-toggle {
         display: block;
         position: fixed;
@@ -424,11 +425,10 @@ div.content-img {
         float: none;
         position: absolute;
         z-index: 100;
-        width:100%;
+        width: 100%;
         line-height: 30px;
-
     }
-    .inner-left{
+    .inner-left {
         width: 90%;
         padding: 0 5%;
     }
@@ -441,4 +441,6 @@ div.content-img {
         padding: 0;
     }
 }
+
+
 /*END MEDIA */

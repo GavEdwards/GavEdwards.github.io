@@ -42,7 +42,7 @@ div#nav-bar {
 
 #nav-bar div.nav-logo img {
     width: 90%;
-    padding-left:10%;
+    padding-left: 10%;
     height: 95%;
 }
 
@@ -52,7 +52,7 @@ div#nav-bar {
 
 #nav-bar div.nav-logo:hover {
     background: #0166b7;
-    opacity:1;
+    opacity: 1;
 }
 
 #nav-items {
@@ -64,12 +64,10 @@ div#nav-bar {
     float: left;
 }
 
-
 #nav-bar div.nav-right {
     float: right;
-    padding-top:5px;
+    padding-top: 5px;
 }
-
 
 div#nav-bar li,
 #nav-bar .fa-bars {
@@ -81,14 +79,16 @@ div#nav-bar li,
     text-transform: uppercase;
     color: white;
 }
+
 #nav-bar .fa-bars:hover {
-    background:white;
+    background: white;
     color: #0166b7;
 }
+
 #nav-bar .fa-bars {
     display: none;
-    padding-right:15px;
-    padding-left:15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 #nav-bar li {
@@ -104,15 +104,15 @@ div#nav-bar li,
 #nav-bar li a {
     color: white;
     text-decoration: none;
-    line-height:56px;
-    display:inline-block;
+    line-height: 56px;
+    display: inline-block;
     padding: 0 16px;
-
 }
 
 #nav-bar .nav-right li a {
     padding: 0 8px;
 }
+
 div#nav-bar .nav-left li a:hover {
     color: #0166b7;
 }
@@ -120,6 +120,7 @@ div#nav-bar .nav-left li a:hover {
 div#nav-bar .nav-right li a:hover {
     opacity: 0.6;
 }
+
 
 /*CUSTOMISE CONTROLS*/
 
@@ -177,19 +178,21 @@ ul.options li:hover {
     overflow: hidden;
     background: linear-gradient(to bottom, rgba(2, 131, 229, 1) 1%, rgba(91, 172, 229, 1) 59%, rgba(195, 215, 229, 1) 100%);
 }
-.header-wrap.about{
-background: linear-gradient(145deg,#0D47A1,#42A5F5)
 
-
+.header-wrap.about {
+    background: linear-gradient(145deg, #0D47A1, #42A5F5)
 }
+
 #canvas {
     position: absolute;
     width: 100%;
     height: 100%;
 }
-#logocanvas{
-	width:100%;
+
+#logocanvas {
+    width: 100%;
 }
+
 
 /*falling paper animation*/
 
@@ -368,11 +371,9 @@ div.header-right {
     text-align: center;
     vertical-align: top;
 }
-
 div.header-right #videoBtn:hover {
-    opacity:0.8;
+    opacity: 0.8;
 }
-
 img.logo {
     max-width: 400px;
 }
@@ -416,10 +417,9 @@ img#icon {
 }
 
 /*Body style*/
-
-.content a{
+.content a {
     text-decoration: none;
-    color:#0166b7;
+    color: #0166b7;
 }
 .content {
     /*margin-top: 20px;
@@ -432,6 +432,7 @@ img#icon {
     top: 56px;
     /*width: 95%;
     max-width: 1200px; */
+    
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -458,7 +459,7 @@ div.content-top .video-wrap {
     width: 95%;
     height: auto;
 }
-div.content-top iframe{
+div.content-top iframe {
     position: relative;
     margin: 0 auto;
     left: 0;
@@ -467,7 +468,7 @@ div.content-top iframe{
     height: 250px;
     border-radius: 6px 6px 0 0;
 }
-div.content-top video{
+div.content-top video {
     position: relative;
     margin: 0 auto;
     left: 0;
@@ -535,15 +536,14 @@ h3 {
 .content-1 h3 {
     display: block;
     padding: 15px;
-	color: #262223;
+    color: #262223;
 }
 .content-1 i {
-	color: #262223;
+    color: #262223;
 }
-
 .content-1.contact i {
     color: #546e7a;
-} 
+}
 div.content-1 {
     text-align: center;
     width: 100%;
@@ -569,7 +569,7 @@ div.what-tag {
     cursor: pointer;
     transition: transform 0.7s;
 }
-div.what-tag i{
+div.what-tag i {
     color: #546e7a;
 }
 div.what-content {
@@ -602,7 +602,6 @@ div.what-inner img {
 .content ul {
     margin-left: 20px;
 }
-
 div.content-width-wrap {
     width: 95%;
     max-width: 1000px;
@@ -613,12 +612,12 @@ div.content-tagline {
     padding: 20px 4%;
     background: #0067b1;
     text-align: center;
-    color:whitesmoke;
+    color: whitesmoke;
     margin: 40px 0;
 }
-div.content-tagline.no-margin{
- margin:0px;
-height:20px;
+div.content-tagline.no-margin {
+    margin: 0px;
+    height: 20px;
 }
 div.content-2 {
     width: 92%;
@@ -643,24 +642,22 @@ h5 {
     font-size: 1.3em;
     font-weight: normal;
 }
-
 div.content-2 p {
     font-size: 1em;
     text-align: justify;
 }
-div.content-full{
+div.content-full {
     position: relative;
-    width:100%;
+    width: 100%;
     direction: inline-block;
-    
 }
 div.content-left {
     position: relative;
     width: 50%;
     display: inline-block;
     vertical-align: top;
-    margin:20px 0;
-    margin-right:5%;
+    margin: 20px 0;
+    margin-right: 5%;
 }
 div.content-right {
     position: relative;
@@ -668,19 +665,17 @@ div.content-right {
     height: 100%;
     display: inline-block;
     vertical-align: top;
-        margin:20px 0;
-
+    margin: 20px 0;
 }
 div.content-left img {
     max-width: 350px;
-    padding:5%;
-    max-height:500px;
+    padding: 5%;
+    max-height: 500px;
 }
 div.content-right img {
     max-width: 350px;
-    padding:5%;
-    max-height:500px;
-
+    padding: 5%;
+    max-height: 500px;
 }
 div.content-3 {
     position: relative;
@@ -695,7 +690,7 @@ div.content-4 {
     padding: 4%;
     background: #2C3E50;
     z-index: 0;
-    color:whitesmoke
+    color: whitesmoke
 }
 div.content-5 {
     width: 92%;
@@ -703,61 +698,56 @@ div.content-5 {
     min-height: 480px;
     background: #5394ac;
 }
-div.content-width-wrap.logos{
-    min-height:100px;
+div.content-width-wrap.logos {
+    min-height: 100px;
     margin-bottom: 50px;
 }
-.fdLogo{
-    float:right;
-    max-height:90px;
+.fdLogo {
+    float: right;
+    max-height: 90px;
 }
-
-.ascotLogo{
-    float:left;
-    max-height:100px;
+.ascotLogo {
+    float: left;
+    max-height: 100px;
     margin-left: 7%;
 }
-
-.content-img{
+.content-img {
     text-align: center;
 }
+
 /*FOOTER*/
 #footer {
-    padding:20px 0;
+    padding: 20px 0;
     width: 100%;
     background: #0166b7;
-    color:#ffffff;
+    color: #ffffff;
     /*box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);*/
-
 }
-#footer ul{
+#footer ul {
     list-style: none;
 }
-
-#footer ul a{
+#footer ul a {
     text-decoration: none;
-    color:#ffffff;
+    color: #ffffff;
 }
-#footer ul a:hover{
+#footer ul a:hover {
     text-decoration: none;
-    color:#000000;
+    color: #000000;
 }
-.footer-left{
-    float:left;
-    width:50%;
-    
+.footer-left {
+    float: left;
+    width: 50%;
 }
-
-.footer-right{
-    float:right;
-    width:49%;
+.footer-right {
+    float: right;
+    width: 49%;
 }
-
-.footer-bottom{
-    clear:both;
-    width:100%;
+.footer-bottom {
+    clear: both;
+    width: 100%;
     font-size: 0.9em
 }
+
 /*MEDIA QUERIES*/
 @media screen and (max-width: 1000px) {
     .clicked-navwrap {
@@ -802,12 +792,15 @@ div.content-width-wrap.logos{
     h1 {
         font-size: 15vw;
     }
-    h2{
-	font-size:8vw;    
-	}
-    h3{
-        font-size:1.5em;
+    
+    h2 {
+        font-size: 8vw;
     }
+    
+    h3 {
+        font-size: 1.5em;
+    }
+    
     #nav-items {
         width: 0px;
     }
@@ -815,10 +808,12 @@ div.content-width-wrap.logos{
     div#nav-bar li {
         display: none;
     }
-    #nav-bar li a{
-        padding:0px!important;
-        width:100%;
+    
+    #nav-bar li a {
+        padding: 0px!important;
+        width: 100%;
     }
+    
     #nav-bar .fa-bars {
         display: inline-block;
         float: right;
@@ -833,13 +828,10 @@ div.content-width-wrap.logos{
         min-height: 100vh;
     }
     
-
-    
     div.header-right #videoBtn {
         margin: 10% 0;
         width: 200px;
         height: 200px;
-        
     }
     
     div.content-right {
@@ -859,14 +851,14 @@ div.content-width-wrap.logos{
         max-width: 100%;
     }
     
-   div.content-left img {
-    max-width:90%;
-       height:auto;
-}
-div.content-right img {
-    max-width:90%;
-       height:auto;
-
+    div.content-left img {
+        max-width: 90%;
+        height: auto;
+    }
+    
+    div.content-right img {
+        max-width: 90%;
+        height: auto;
     }
     /*MAIN CUSTOM VIDEO*/
     
@@ -893,30 +885,27 @@ div.content-right img {
         display: none;
     }
     
-
-.fdLogo{
-    float:none;
-    max-width:250px;
-	margin-top:10px;
-	margin-bottom:10px;
-}
-
-.ascotLogo{
-    float:none;
-    max-width:250px;
-    margin-left: 0%;
-	margin-top:10px;
-	margin-bottom:10px;
-}
-
-img.logo {
-    max-width: 250px;
-}
+    .fdLogo {
+        float: none;
+        max-width: 250px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     
+    .ascotLogo {
+        float: none;
+        max-width: 250px;
+        margin-left: 0%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    img.logo {
+        max-width: 250px;
+    }
 }
 
 /*END MEDIA */
-
 @keyframes test {
     0% {
         color: black;
@@ -965,7 +954,6 @@ div.contact-us {
 }
 
 /*about css*/
-
 
 /*POP-UP STYLE*/
 #pop-up {
@@ -1031,11 +1019,10 @@ popup-bodywrap {}
 }
 
 /* Pop-up Content */
-.createEmail{
+.createEmail {
     width: 150px;
     height: 30px;
 }
-
 .popup-content {
     position: relative;
     background-color: #fefefe;
@@ -1043,7 +1030,7 @@ popup-bodywrap {}
     padding: 0;
     border: 1px solid #888;
     width: 80%;
-    max-width:920px;
+    max-width: 920px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -1083,7 +1070,6 @@ popup-bodywrap {}
     /* Black w/ opacity */
 }
 
-
 /* Pop-up Body */
 .popup-body {
     padding: 16px 16px;
@@ -1099,11 +1085,11 @@ popup-bodywrap {}
 
 /* Pop-up Content */
 #pop-upVid .popup-content {
-    height:50%;
+    height: 50%;
 }
-#main-vid{
+#main-vid {
     position: absolute;
-    width:90%;
+    width: 90%;
     height: 80%;
 }
 .popup-content h2 {
