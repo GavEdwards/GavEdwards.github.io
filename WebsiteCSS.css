@@ -1121,3 +1121,8 @@ popup-bodywrap {}
         opacity: 1
     }
 }
+
+
+#twitter-widget-0 { 
+ box-shadow: rgba(0, 0, 0, 0.239216) 0px 2px 5px 0px;   
+}
