@@ -341,13 +341,17 @@
         //on load auto click top type of product
         $("document").ready(function() {
             $("#options li:first").trigger('click');
-        });
-        
-        
-        $('li').click(function(e) {
+            
+            $('li').click(function(e) {
             $('#left-column').toggleClass('open-column');
             //$(this).children().not('#selectProduct').toggleClass('close-column');
+            });
+            
+            
         });
+        
+        
+        
     </script>
 </body>
 
