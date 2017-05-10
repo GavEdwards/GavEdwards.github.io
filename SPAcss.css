@@ -176,6 +176,7 @@ div#nav-bar li,
 
 #nav-bar .fa-bars:hover {
     background: white;
+    color:rgb(25, 118, 210);
 }
 
 #nav-bar .fa-bars {
