@@ -483,10 +483,12 @@ display: inline-block;
 }
 
 #body-wrapper{
+/*
     width: 100vw;
     height: 100vh;
     position: fixed;
     overflow: hidden;
+*/
 }
 .gradient-border {
        --borderWidth: 7px;
