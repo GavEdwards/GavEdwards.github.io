@@ -48,9 +48,13 @@ abbr,acronym { border: 0;
  * --------------------------------------- */
 body{
 	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+    background:#1D1F20;
+
 	color: #f2f2f2;
 }
 h1{
+	font-family: 'Press Start 2P', cursive;
 	font-size: 6em;
 }
 p{
@@ -89,6 +93,10 @@ p{
 #menu li.active a{
 	color: #fff;
 }
+
+#menu li a.last{
+	margin-right:20px;
+}
 #menu{
 	position:fixed;
 	top:0;
@@ -97,13 +105,23 @@ p{
 	width: 100%;
 	padding: 0;
 	margin:0;
-    background:   linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
+	font-family: 'Press Start 2P', cursive;
+display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+#nav-bar{
+	
+}
 .intro{
-        position: relative;
+        /*position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%);*/
+/*
+    display: table-cell;
+    vertical-align: middle;
+*/
 }
 .intro p{
 	width: 80%;
@@ -111,137 +129,28 @@ p{
 	margin: 0 auto;
 	font-size: 1.5em;
 }
-.twitter-share-button{
-	position: fixed !important;
-	z-index: 99;
-	right: 149px;
-	top: 9px;
-}
 
-#download{
-	margin: 10px 0 0 0;
-	padding: 15px 10px;
-	color: #fff;
-	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-	background-color: #49afcd;
-	background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
-	background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
-	background-image: -webkit-gradient(linear,0 0,0 100%,from( #5bc0de),to( #2f96b4));
-	background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
-	background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
-	background-image: linear-gradient(top, #5bc0de, #2f96b4);
-	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
-	border-color: #2f96b4 #2f96b4 #1f6377;
-	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
-	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	vertical-align: middle;
-	cursor: pointer;
-	display: inline-block;
-	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
-	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
-}
-#download a{
-	text-decoration:none;
-	color:#fff;
-}
-#download:hover{
-	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-	background-color: #2F96B4;
-	background-position: 0 -15px;
-	-webkit-transition: background-position .1s linear;
-	-moz-transition: background-position .1s linear;
-	-ms-transition: background-position .1s linear;
-	-o-transition: background-position .1s linear;
-	transition: background-position .1s linear;
-}
-
-#infoMenu{
-	height: 20px;
-	color: #f2f2f2;
-	position:fixed;
-	z-index:70;
-	bottom:0;
-	width:100%;
-	text-align:right;
-	font-size:0.9em;
-	padding:8px 0 8px 0;
-}
-#infoMenu ul{
-	padding: 0 40px;
-}
-#infoMenu li a{
-	display: block;
-	margin: 0 22px 0 0;
-	color: #333;
-}
-#infoMenu li a:hover{
-	text-decoration:underline;
-}
-#infoMenu li{
-	display:inline-block;
-	position:relative;
-}
-#examplesList{
-	display:none;
-	background: #282828;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	padding: 20px;
-	float: left;
-	position: absolute;
-	bottom: 29px;
-	right: 0;
-	width:638px;
-	text-align:left;
-}
-#examplesList ul{
-	padding:0;
-}
-#examplesList ul li{
-	display:block;
-	margin: 5px 0;
-}
-#examplesList ul li a{
-	color: #BDBDBD;
-	margin:0;
-}
-#examplesList ul li a:hover{
-	color: #f2f2f2;
-}
-#examplesList .column{
-	float: left;
-	margin: 0 20px 0 0;
-}
-#examplesList h3{
-	color: #f2f2f2;
-	font-size: 1.2em;
-	margin: 0 0 15px 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-	padding: 0 0 5px 0;
-}
 
 /* Section 1
  * --------------------------------------- */
+
+#section1{
+/*
+    background-image: url(campus2dark.jpg);
+    background-size: cover;
+    background-position-x: center;
+
+*/
+}
+
 #section1 h1{
 	color: #444;
 }
 #section1 p{
 	color: white;
 }
-#section1 img{
-	margin: 20px 0;
-	opacity: 0.7;
-}
+
 
 /* Section 2
  * --------------------------------------- */
@@ -253,38 +162,13 @@ p{
 	opacity: 0.8;
 }
 
-#section2 #colors{
-	right: 60px;
-	bottom: 0;
-	position: absolute;
-	height: 413px;
-	width: 258px;
-	background-image: url(imgs/colors.gif);
-	background-repeat: no-repeat;
-}
 
 /* Section 3
  * --------------------------------------- */
-#section3 #colors{
-	left: 60px;
-	bottom: 0;
-}
+
 #section3 p{
 	color: #757575;
 }
-
-#colors2,
-#colors3{
-	position: absolute;
-	height: 163px;
-	width: 362px;
-	z-index: 1;
-	background-repeat: no-repeat;
-	left: 0;
-	margin: 0 auto;
-	right: 0;
-}
-
 
 /* Section 4
  * --------------------------------------- */
@@ -294,6 +178,18 @@ p{
 
 /* Overwriting fullPage.js tooltip color
 * --------------------------------------- */
+.pp-tableCell{
+    text-align: center;
+}
+.section{
+    opacity:0;
+        border-radius: 6px;
+
+}
+.active{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
 #pp-nav.custom .pp-tooltip{
 	color: #AAA;
 }
@@ -365,6 +261,7 @@ animation: svgColor 10s ease infinite;*/
     
     .logo-wrap{
         margin-bottom:30px;
+		filter:brightness(1.2);
     }
 
 #signup-form{
@@ -372,7 +269,7 @@ animation: svgColor 10s ease infinite;*/
 }
 
 .logo-wrap {
-    animation: fadeinLogo 1.6s;
+    animation: fadeinLogo 2.6s;
 }
 
 #signup-form{
@@ -389,8 +286,8 @@ animation: svgColor 10s ease infinite;*/
     animation: fadeinDelay 3s;
 }
     #menu{
-top: 20px;
-    left: 20px;
+top: 15px;
+    left: 15px;
     background: none;
 }
     
@@ -403,15 +300,15 @@ top: 20px;
     width: 100vw;
     min-height: 100vh;
     z-index:-1;
-	        filter: brightness(0.4);
+    filter: opacity(0.3);
     margin:0px!important;
     
-    animation: backgroundFade 2s;
-    color: red;
+/*    animation: backgroundFade 4s;*/
+    color: black;
 }
 
 .section{
-    background-color: #1D1F20;
+    background:none;
 }
 
 .brand-blue{
@@ -446,6 +343,10 @@ top: 20px;
     #nav-button{
         display: block;
     }
+
+    body{
+        font-size: 0.7em;
+    }
 }
 
 .menu-click{
@@ -479,13 +380,18 @@ top: 20px;
     cursor: pointer;
 }
 .FAQ-pop-up{
-    display: block;
+       display: block;
     position: absolute;
-    top:5vh;
-    left:5vw;
-    width:90vw;
-    height:90vh;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
     background: blue;
+}
+
+.pop-up-text{
+    
+    padding-top:80px;
 }
 button.pop-up-button, a.pop-up-button{
     margin: 10px;
@@ -519,11 +425,13 @@ display: inline-block;
 }
 
 @keyframes backgroundFade {
-    0% { filter: brightness(0); }
-    50%   {filter: brightness(0);  }
-    100%   { filter: brightness(0.4);  }
+    0% { filter: opacity(0); }
+    50%   { filter: opacity(0);  }
+       100% { filter: opacity(0.3); }
+
 }
-    
+   
+ 
 @keyframes fadeinLogo {
     0% { opacity: 0; }
     10%   { opacity: 0; }
@@ -547,6 +455,7 @@ display: inline-block;
     top: calc(2* var(--borderWidth));
     left: calc(2* var(--borderWidth));
     width: calc(100% - 4 * var(--borderWidth));
+    display: table;
 }
 
 
@@ -558,9 +467,10 @@ display: inline-block;
   left: calc(-1 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
-   background:linear-gradient(60deg, #13420d 0%,#0c4f0f 11%,#157019 24%,#1b8e20 37%,#21a521 51%,#65af59 62%,#79d374 77%,#a1e0a1 87%,#95f49a 100%);
+   /*background:linear-gradient(60deg, #13420d 0%,#0c4f0f 11%,#157019 24%,#1b8e20 37%,#21a521 51%,#65af59 62%,#79d374 77%,#a1e0a1 87%,#95f49a 100%);*/
+   background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
   z-index: -1;
-  animation: animatedgradient 3s ease alternate infinite;
+  animation: animatedgradient 14s infinite;
   background-size: 300% 300%;
 }
 

@@ -3,6 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>pagePiling.js plugin - Horizontal scroll</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
 	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
@@ -12,10 +13,12 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.4/jquery.pagepiling.css" />
 	<link rel="stylesheet" type="text/css" href="examples.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Condensed" rel="stylesheet">
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="HackKeele.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.4/jquery.pagepiling.js"></script>
+	<script type="text/javascript" src="jquery.pagepiling.js"></script>
 	<script type="text/javascript">
         
             const second = 1000,
@@ -47,7 +50,7 @@ let countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
 			* Plugin intialization
 			*/
 	    	$('#pagepiling').pagepiling({
-	          	direction: 'horizontal',
+	          	//direction: 'horizontal',
 	    		menu: '#menu',
 	    		anchors: ['page1', 'page2', 'page3','page4','page5','page6','page7','page8'],
 			   
@@ -75,6 +78,7 @@ let countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
 
 </head>
 <body>
+    <div id="body-wrapper">
     <div id="nav-bar">
         <i id="nav-button" class="fa fa-bars fa-2x" aria-hidden="true" onclick="navClick()"></i>
 	<ul id="menu">
@@ -85,19 +89,22 @@ let countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
         <li data-menuanchor="page5"><a href="#page5">Sign Up</a></li>
         <li data-menuanchor="page6"><a href="#page6">FAQ</a></li>
         <li data-menuanchor="page7"><a href="#page7">Sponsers</a></li>
-        <li data-menuanchor="page8"><a href="#page8">Contact</a></li>
+        <li data-menuanchor="page8"><a href="#page8" class="last">Contact</a></li>
 	</ul>
     </div>
 
 
 	<div id="pagepiling">
+                                <div class="gradient-border">
+
 	    <div class="section" id="section1">
 	    	<div class="logo-wrap">
 
               <svg id="main-logo-svg" width="100%" viewBox="0 0 655 320">
         
         
-        <defs>  
+<defs>  
+<!--
         <linearGradient id="logo-gradient" x1="50%" y1="0%" x2="50%" y2="100%"> 
             
             <stop offset="0%" stop-color="#2eb475">
@@ -109,11 +116,22 @@ let countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
             </stop>
 
         </linearGradient> 
+-->
+    
+    <linearGradient id="skyGradient" x1="100%" y1="100%">
+          <stop offset="0%" stop-color="lightblue" >
+            <animate attributeName="stop-color" values="#1098ad;#5073b8;#ef4e7b;#ef4e7b;#5073b8;#ef4e7b;#ef4e7b;#a166ab;#1098ad" dur="14s" repeatCount="indefinite" />
+          </stop>
+          <stop offset="100%" stop-color="lightblue" >
+            <animate attributeName="stop-color" values="#1098ad;#f37055;#a166ab;#a166ab;#1098ad;#a166ab;#a166ab;#5073b8;#1098ad" dur="14s" repeatCount="indefinite" />
+            <animate attributeName="offset" values=".95;.80;.60;.40;.20;0;.20;.40;.60;.80;.95" dur="24s" repeatCount="indefinite" />
+          </stop>
+        </linearGradient>
 
     </defs>
         
         
-    <g transform="translate(0.000000,352.000000) scale(0.100000,-0.100000)" fill="url('#logo-gradient')" stroke="none">
+    <g transform="translate(0.000000,352.000000) scale(0.100000,-0.100000)" fill="url('#skyGradient')" stroke="none">
 <path  d="M280 2211 l0 -740 83 -32 c104 -40 368 -141 472 -180 44 -17 107 -41
 140 -54 200 -77 249 -95 335 -128 52 -20 140 -54 195 -75 l100 -39 3 213 2
 214 1665 0 1665 0 0 -216 c0 -169 3 -215 12 -211 7 3 121 47 253 98 132 51
@@ -192,12 +210,12 @@ c0 -163 4 -255 10 -255 6 -1 63 -1 128 -1 l117 0 3 255 2 256 256 -2 256 -3
     color: #ffffff !important;"> <span class="message"></span>
                 </form>
             <!--https://media.tenor.com/images/66880179a13cef64c70412cca8094073/tenor.gif -->
-            <img id="main-background" src="campus2.jpg"  /> 
+            <!--img id="main-background" src="campus2.jpg"  /--> 
+			
 	    </div>
         
         
 	    <div class="section" id="section2">
-                        <div class="gradient-border">
 
 	    	<div class="intro">
 	    		<h1 >What is Hack Keele?</h1>
@@ -255,38 +273,30 @@ To collaboratively push the limits of technology as we know it today.</p>
                 <iframe id="hack-video" width="500" height="300" src="https://www.youtube.com/embed/qj4DQfYx2Hg" frameborder="0" allowfullscreen></iframe>
     </div>
 	    	</div>
-    </div>
 	    </div>
         <div class="section" id="section2">
-            <div class="gradient-border">
 	    	<div class="intro">
 	    		<h1>Where?</h1>
 	    		<p>Just as you expected!</p>
 	  
 	    	</div>
-            </div>
 	    </div>
         <div class="section" id="section4">
-                                    <div class="gradient-border">
 
 	    	<div class="intro">
 	    		<h1>When?</h1>
 	    		<p>Just as you expected!</p>
                                         </div>
-	    	</div>
 	    </div>
         <div class="section" id="section5">
-                                    <div class="gradient-border">
 
 	    	<div class="intro">
 	    		<h1>Sign up!</h1>
 	    		<p>Just as you expected!</p>
                                         </div>
-	    	</div>
 	    </div>
         
         <div class="section" id="section6">
-                                    <div class="gradient-border">
 
 	    	<div class="intro">
 	    		<h1>FAQ</h1>
@@ -358,29 +368,25 @@ To collaboratively push the limits of technology as we know it today.</p>
   </div>
     
     
-</div>
 	    
 </div></div>
 	    </div>
         <div class="section" id="section7">
-                                    <div class="gradient-border">
 
 	    	<div class="intro">
 	    		<h1>Sponsers</h1>
                                         </div>
-	    	</div>
 	    </div>
         <div class="section" id="section8">
-                                    <div class="gradient-border">
 
 	    	<div class="intro">
 	    		<h1>Contact</h1>
 	    		<p>Just as you expected!</p>
                                         </div>
-	    	</div>
 	    </div>
         	    
 	</div>
-
+</div>
+</div>
 </body>
 </html>
