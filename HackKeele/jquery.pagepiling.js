@@ -966,10 +966,10 @@
         */
         function getTranslate3d(){
             if (options.direction !== 'vertical') {
-                  return 'translate3d(-110%, 0px, 0px)';
+                  return 'translate3d(-100%, 0px, 0px)';
             }
 
-            return 'translate3d(0px, -110%, 0px)';
+            return 'translate3d(0px, -100%, 0px)';
         }
 
     };

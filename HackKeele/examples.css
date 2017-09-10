@@ -106,9 +106,16 @@ p{
 	padding: 0;
 	margin:0;
 	font-family: 'Press Start 2P', cursive;
+display: -webkit-box;
+display: -ms-flexbox;
 display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 #nav-bar{
@@ -188,7 +195,9 @@ display: flex;
 }
 .active{
     opacity: 1;
-    transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
 }
 #pp-nav.custom .pp-tooltip{
 	color: #AAA;
@@ -261,7 +270,8 @@ animation: svgColor 10s ease infinite;*/
     
     .logo-wrap{
         margin-bottom:30px;
-		filter:brightness(1.2);
+		-webkit-filter:brightness(1.2);
+		        filter:brightness(1.2);
     }
 
 #signup-form{
@@ -269,21 +279,25 @@ animation: svgColor 10s ease infinite;*/
 }
 
 .logo-wrap {
-    animation: fadeinLogo 2.6s;
+    -webkit-animation: fadeinLogo 2.6s;
+            animation: fadeinLogo 2.6s;
 }
 
 #signup-form{
-        animation: fadeinDelay 2.6s;
+        -webkit-animation: fadeinDelay 2.6s;
+                animation: fadeinDelay 2.6s;
 
 }
 
 #strapline{
-    animation: fadeinDelay 2.6s;
+    -webkit-animation: fadeinDelay 2.6s;
+            animation: fadeinDelay 2.6s;
 }
 @media screen and (min-width: 700px) {
 
 #menu{
-    animation: fadeinDelay 3s;
+    -webkit-animation: fadeinDelay 3s;
+            animation: fadeinDelay 3s;
 }
     #menu{
 top: 15px;
@@ -300,7 +314,8 @@ top: 15px;
     width: 100vw;
     min-height: 100vh;
     z-index:-1;
-    filter: opacity(0.3);
+    -webkit-filter: opacity(0.3);
+            filter: opacity(0.3);
     margin:0px!important;
     
 /*    animation: backgroundFade 4s;*/
@@ -369,7 +384,8 @@ top: 15px;
 }
 .pop-up{
     display:none;
-    box-shadow: 0px 0px 5px 0px black;
+    -webkit-box-shadow: 0px 0px 5px 0px black;
+            box-shadow: 0px 0px 5px 0px black;
     border-radius: 6px;
 }
 .pop-up .close{
@@ -424,10 +440,25 @@ display: inline-block;
 
 }
 
+@-webkit-keyframes backgroundFade {
+    0% { -webkit-filter: opacity(0); filter: opacity(0); }
+    50%   { -webkit-filter: opacity(0); filter: opacity(0);  }
+       100% { -webkit-filter: opacity(0.3); filter: opacity(0.3); }
+
+}
+
 @keyframes backgroundFade {
-    0% { filter: opacity(0); }
-    50%   { filter: opacity(0);  }
-       100% { filter: opacity(0.3); }
+    0% { -webkit-filter: opacity(0); filter: opacity(0); }
+    50%   { -webkit-filter: opacity(0); filter: opacity(0);  }
+       100% { -webkit-filter: opacity(0.3); filter: opacity(0.3); }
+
+}
+   
+ 
+@-webkit-keyframes fadeinLogo {
+    0% { opacity: 0; }
+    10%   { opacity: 0; }
+    100%   { opacity: 1; }
 
 }
    
@@ -437,6 +468,12 @@ display: inline-block;
     10%   { opacity: 0; }
     100%   { opacity: 1; }
 
+}
+
+@-webkit-keyframes fadeinDelay {
+    0% { opacity: 0; }
+    50% {opacity: 0;}
+    100%   { opacity: 1; }
 }
 
 @keyframes fadeinDelay {
@@ -473,10 +510,26 @@ display: inline-block;
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
    /*background:linear-gradient(60deg, #13420d 0%,#0c4f0f 11%,#157019 24%,#1b8e20 37%,#21a521 51%,#65af59 62%,#79d374 77%,#a1e0a1 87%,#95f49a 100%);*/
+   background: -webkit-linear-gradient(30deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+   background: -o-linear-gradient(30deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
   z-index: -1;
-  animation: animatedgradient 14s infinite;
+  -webkit-animation: animatedgradient 14s infinite;
+          animation: animatedgradient 14s infinite;
   background-size: 300% 300%;
+}
+
+
+@-webkit-keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 
@@ -491,4 +544,3 @@ display: inline-block;
 		background-position: 0% 50%;
 	}
 }
-
