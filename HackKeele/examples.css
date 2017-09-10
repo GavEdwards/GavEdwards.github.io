@@ -136,8 +136,8 @@ display: flex;
  * --------------------------------------- */
 
 #section1{
-/*
-    background-image: url(campus2dark.jpg);
+
+   /* background-image: url(campus2dark.jpg);
     background-size: cover;
     background-position-x: center;
 
@@ -445,7 +445,12 @@ display: inline-block;
     100%   { opacity: 1; }
 }
 
-
+#body-wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+}
 .gradient-border {
        --borderWidth: 7px;
     background: #1D1F20;
