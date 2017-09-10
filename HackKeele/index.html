@@ -82,6 +82,14 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
     <div id="nav-bar">
         <i id="nav-button" class="fa fa-bars fa-2x" aria-hidden="true" onclick="navClick()"></i>
 	<ul id="menu">
+		<li class="active"><a href="#page1">About</a></li>
+		<li ><a href="#page2">Events</a></li>
+		<li ><a href="#page3">Register</a></li>
+        <li ><a href="#page7">Sponsers</a></li>
+        <li ><a href="#page6">FAQ</a></li>
+        <li ><a href="#page8" class="last">Contact</a></li>
+	</ul>
+        <!--ul id="menu">
 		<li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
 		<li data-menuanchor="page2"><a href="#page2">What</a></li>
 		<li data-menuanchor="page3"><a href="#page3">Where</a></li>
@@ -90,7 +98,7 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
         <li data-menuanchor="page6"><a href="#page6">FAQ</a></li>
         <li data-menuanchor="page7"><a href="#page7">Sponsers</a></li>
         <li data-menuanchor="page8"><a href="#page8" class="last">Contact</a></li>
-	</ul>
+	</ul-->
     </div>
 
 
@@ -210,8 +218,9 @@ c0 -163 4 -255 10 -255 6 -1 63 -1 128 -1 l117 0 3 255 2 256 256 -2 256 -3
     color: #ffffff !important;"> <span class="message"></span>
                 </form>
             <!--https://media.tenor.com/images/66880179a13cef64c70412cca8094073/tenor.gif -->
+            
             <!--img id="main-background" src="campus2.jpg"  /--> 
-			
+			<iframe class="grain" src="https://www.youtube.com/embed/8tZ_N3wP9Ko?autoplay=1&amp;loop=1&amp;controls=0&amp;iv_load_policy=3&amp;start=5&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;modestbranding=1"></iframe>
 	    </div>
         
         
@@ -224,6 +233,7 @@ c0 -163 4 -255 10 -255 6 -1 63 -1 128 -1 l117 0 3 255 2 256 256 -2 256 -3
                 <br/>
                 <div class="questions-left">
                  <button class="pop-up-button" >What is a hackathon?</button>
+<div class="pop-up-container">
   <div class="pop-up">
     <div class="pop-up-text">
     <span class="close" onclick="closePopup()">×</span>
@@ -234,10 +244,13 @@ It is one such opportunity where you make many new friends from diverse backgrou
       <a href="#">Link</a>
     </div>
   </div>
+                    </div>
                     </br>
                 
                  <button class="pop-up-button" >Why are hackathons good for me?</button>
-  <div class="pop-up">
+  <div class="pop-up-container">
+
+                <div class="pop-up">
     <div class="pop-up-text">
     <span class="close" onclick="closePopup()">×</span>
         <h1>Hackthons & You</h1>
@@ -256,9 +269,12 @@ To collaboratively push the limits of technology as we know it today.</p>
       <a href="#">Link</a>
     </div>
   </div>
+                </div>
                     </br>
             
              <button class="pop-up-button" >This is another question?</button>
+            <div class="pop-up-container">
+
   <div class="pop-up">
     <div class="pop-up-text">
     <span class="close" onclick="closePopup()">×</span>
@@ -267,11 +283,12 @@ To collaboratively push the limits of technology as we know it today.</p>
       <a href="#">Link</a>
     </div>
   </div>
+            </div>
                     </br>
                 </div>
-    <div class="video-right">
+    <!--div class="video-right">
                 <iframe id="hack-video" width="500" height="300" src="https://www.youtube.com/embed/qj4DQfYx2Hg" frameborder="0" allowfullscreen></iframe>
-    </div>
+    </div-->
 	    	</div>
 	    </div>
         <div class="section" id="section2">
@@ -301,72 +318,7 @@ To collaboratively push the limits of technology as we know it today.</p>
 	    	<div class="intro">
 	    		<h1>FAQ</h1>
 	    		<div class="wrapper">
-  <a class="pop-up-button" >Click</a>
-  <div class="pop-up">
-    <div class="pop-up-text">
-    <span class="close" onclick="closePopup()">×</span>
-        <h1>Title</h1>
-      <p>some pop-up text</p>
-      <a href="#">Link</a>
-    </div>
-  </div>
-                    </br>
-                    
-                     <a class="pop-up-button">Click2</a>
-  <div class="pop-up">
-    <div class="pop-up-text">
-            <span class="close" onclick="closePopup()">×</span>
 
-      <h1>Title</h1>
-      <p>some pop-up text</p>
-      <a href="#">Link</a>
-    </div>
-  </div>
-                
-      </br>
-                    
-                     <a class="pop-up-button">Click3</a>
-  <div class="pop-up">
-    <div class="pop-up-text">
-            <span class="close" onclick="closePopup()">×</span>
-
-      <h1>Title</h1>
-      <p>some pop-up text</p>
-      <a href="#">Link</a>
-    </div>
-  </div>          
-     
-            
-            
-            </br>
-                    
-                     <a class="pop-up-button">Click4</a>
-  <div class="pop-up">
-    <div class="pop-up-text">
-            <span class="close" onclick="closePopup()">×</span>
-
-      <h1>Title</h1>
-      <p>some pop-up text</p>
-      <a href="#">Link</a>
-    </div>
-  </div>
-        
-        
-        
-        
-        </br>
-                    
-                     <a class="pop-up-button">Click5</a>
-  <div class="pop-up">
-    <div class="pop-up-text">
-            <span class="close" onclick="closePopup()">×</span>
-
-      <h1>Title</h1>
-      <p>some pop-up text</p>
-      <a href="#">Link</a>
-    </div>
-  </div>
-    
     
 	    
 </div></div>
@@ -387,6 +339,9 @@ To collaboratively push the limits of technology as we know it today.</p>
         	    
 	</div>
 </div>
+
+  <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+
 </div>
 </body>
 </html>

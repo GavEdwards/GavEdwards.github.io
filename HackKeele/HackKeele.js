@@ -10,12 +10,13 @@ function navClick() {
 
 	$('.pop-up-button').click(function(){
         
-		 $(this).next().toggleClass('FAQ-pop-up');
+		 $(this).next().toggleClass('active-pop-up');
 		 
     });
 	
 	});
 	
+//MAKE IT SO ONLY REMOVES FROM CALLED FROM OIBJECT
 	function closePopup() {
-         $('.pop-up').removeClass('FAQ-pop-up');
+         $('.pop-up-container').removeClass('active-pop-up');
     }
