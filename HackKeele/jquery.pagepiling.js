@@ -971,6 +971,11 @@
 
             return 'translate3d(0px, -100%, 0px)';
         }
+        
+        
+        function arrowClick(){
+            PP.moveSectionDown();
+        }
 
     };
 })(jQuery, document, window);

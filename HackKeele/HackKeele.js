@@ -20,3 +20,9 @@ function navClick() {
 	function closePopup() {
          $('.pop-up-container').removeClass('active-pop-up');
     }
+
+
+        function arrowClick(){
+            var PP = $.fn.pagepiling;
+            PP.moveSectionDown();
+        }
