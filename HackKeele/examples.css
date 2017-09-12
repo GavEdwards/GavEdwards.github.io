@@ -150,7 +150,7 @@ display: flex;
 */
     
 
-      background: radial-gradient(ellipse at center, rgba(2,106,170,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(https://tchetcuti.files.wordpress.com/2016/01/grid-stars1.gif);
+      background: radial-gradient(ellipse at center, rgba(2,106,170,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(https://archive-media-0.nyafuu.org/wg/image/1419/65/1419654434693.jpg);
     
 
     /*
@@ -161,8 +161,18 @@ display: flex;
     
     http://68.media.tumblr.com/e5c2fbbea040663825fdd3f7b4051cd1/tumblr_nunuhzWaJq1tbgnn1o1_400.gif
     
+    https://tchetcuti.files.wordpress.com/2016/01/grid-stars1.gif
+    
+    http://www.desktop-background.com/p/2012/05/19/392408_retro-80s-arcade-game-awesome-wallpapers-and-cool-backgrounds_1920x1080_h.jpg
+    
+    https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAhoAAAAJDgzMDdjZjY3LTJlYjAtNDBjYi05ZTRmLTZjM2NkYjg2OWRlZg.png
     
     
+    https://archive-media-0.nyafuu.org/wg/image/1419/65/1419654434693.jpg
+    
+    http://natewren.com/themes/wallpaper2/radpack/radpack_17.jpg
+    
+    giphy.webp
     */
     background-size:cover;
     background-position-x:center;
@@ -555,7 +565,6 @@ display: inline-block;
     top: calc(2* var(--borderWidth) );
     left: calc(2* var(--borderWidth));
     width: calc(100% - 4 * var(--borderWidth) );
-    display: table;
 }
 
 
