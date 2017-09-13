@@ -51,12 +51,13 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
 			*/
 	    	$('#pagepiling').pagepiling({
 	          	//direction: 'horizontal',
-	    		menu: '#menu',
-	    		anchors: ['page1', 'page2', 'page3','page4','page5','page6','page7','page8'],
+                //CHANGE MENU HIGHLIGHTING
+	    		menu: 'null',
+	    		anchors: ['page1', 'page2', 'page3','page4','page5','page6'],
 			   
 			    navigation: {
 			    	'position': 'right',
-			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4','Page 5','page6','page7','page8']
+			   		'tooltips': ['Home', 'What?', 'Who?', 'Why?','Skills','Sign Up']
 			   	},
 			    afterRender: function(){
 			    	$('#pp-nav').addClass('custom');
@@ -77,17 +78,17 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
 
 
 </head>
-<body>
+<body class="main">
     <div id="body-wrapper">
     <div id="nav-bar">
         <i id="nav-button" class="fa fa-bars fa-2x" aria-hidden="true" onclick="navClick()"></i>
 	<ul id="menu">
-		<li class="active"><a href="#page1">About</a></li>
-		<li ><a href="#page2">Events</a></li>
-		<li ><a href="#page3">Register</a></li>
-        <li ><a href="#page7">Sponsers</a></li>
-        <li ><a href="#page6">FAQ</a></li>
-        <li ><a href="#page8" class="last">Contact</a></li>
+		<li class="active"><a href="index.html">About</a></li>
+		<li ><a href="events.html">Events</a></li>
+		<li ><a href="register.html">Register</a></li>
+        <li ><a href="sponsers.html">Sponsers</a></li>
+        <li ><a href="faq.html">FAQ</a></li>
+        <li ><a href="contact.html" class="last">Contact</a></li>
 	</ul>
         <!--ul id="menu">
 		<li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
@@ -108,7 +109,7 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
 	    <div class="section" id="section1">
 	    	<div class="logo-wrap">
 
-              <svg id="main-logo-svg" width="100%" viewBox="0 0 655 320">
+              <svg id="main-logo-svg" width="100%" viewBox="0 50 655 275">
         
         
 <defs>  
@@ -212,8 +213,7 @@ c0 -163 4 -255 10 -255 6 -1 63 -1 128 -1 l117 0 3 255 2 256 256 -2 256 -3
             <!--img id="main-background" src="campus2.jpg"  /--> 
 			<!--iframe class="grain" src="https://www.youtube.com/embed/8tZ_N3wP9Ko?autoplay=1&amp;loop=1&amp;controls=0&amp;iv_load_policy=3&amp;start=5&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;modestbranding=1"></iframe-->
             <!--img class="grain" src="http://www.textures4photoshop.com/tex/thumbs/computer-screen-code-glitch-animation-gif-background-free-thumb57.gif"/-->
-	    </div>
-        
+                                    </div>
         
 	    <div class="section" id="section2">
 
@@ -282,45 +282,42 @@ To collaboratively push the limits of technology as we know it today.</p>
     </div-->
 	    	</div>
 	    </div>
-        <div class="section" id="section2">
+        <div class="section" id="section3">
 	    	<div class="intro">
 	    		<h1>Who is allowed?</h1>
-	    		<p>Just as you expected!</p>
+                <br/>
+	    		<p>Our hackathons are free to enter! If you're over 18, and you're a student or have graduated in the past 12 months, you are welcome to attend! More information will be released soon.</p>
 	  
 	    	</div>
 	    </div>
-        <div class="section" id="section4">
+    <div class="section" id="section4">
 
 	    	<div class="intro">
-	    		<h1>What skills do I need?</h1>
-	    		<p>Just as you expected!</p>
-                                        </div>
-	    </div>
-        <div class="section" id="section5">
-
-	    	<div class="intro">
-	    		<h1>What can Hack Keele do for me?</h1>
-	    		<p>Just as you expected!</p>
+	    		<h1>Why are hackthons important?</h1>
+                <br/>
+	    		<p>Students establish industry connections which not only create employment opportunities for the students, but it also puts a school on the radar of important donors and corporate partners. </p><br/><p>More importantly, countless students get to spend a weekend having fun, meeting new people, and preparing themselves for technical careers. Hackathons provide a real-world experience for students, as they compete in teams to create a product. Similar to the product cycles of a startup company, hackathon teams quickly transition from the idea stage to the final product.</p><br/><p> Students have a chance to gain time management skills, along with technical expertise and new connections. In addition, students get to spend one-on-one time with expert mentors who spend the hackathon teaching students new technical skills and helping students with their projects.</p>
                                         </div>
 	    </div>
         
-        <div class="section" id="section6">
+        <div class="section" id="section5">
 
 	    	<div class="intro">
-	    		<h1>FAQ</h1>
-	    		<div class="wrapper">
-
-    
-	    
-</div></div>
+	    		<h1>What skills do I need?</h1>
+                <br/>
+                <p>But I don't have any experience - I won't be any good!</p><p><br/>
+Nonsense - Everyone has to start somewhere, and we will have mentors at the event to help you along. One of the most awesome qualities of hackathons is the sheer number of lovely people that you'll meet at them, so no matter your skill level or expertise, you'll always be able to have an awesome time, pick up loads of new skills, and make new friends!</p>
+                                        </div>
 	    </div>
-        <div class="section" id="section7">
+        
+
+        <div class="section" id="section6">
 
 	    	<div class="intro">
 	    		<h1>Get Involved!</h1>
                 <br/>
                 <h3>Facebook</h3>
                 <h3>Twitter</h3>
+                <h3>Email</h3>
                  <form id="signup-form" method="post" action="#">
 				
                     <input type="email" name="email" spellcheck="false" id="email" placeholder="Keele Email Address">
@@ -328,15 +325,8 @@ To collaboratively push the limits of technology as we know it today.</p>
                 </form>
                                         </div>
 	    </div>
-        <div class="section" id="section8">
-
-	    	<div class="intro">
-	    		<h1>Contact</h1>
-	    		<p>Just as you expected!</p>
-                                        </div>
-	    </div>
         	    
-	</div>
+    </div></div>
 </div>
 
   <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""

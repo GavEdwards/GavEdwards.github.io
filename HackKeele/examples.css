@@ -49,10 +49,12 @@ abbr,acronym { border: 0;
 body{
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	font-family: 'Roboto Condensed', sans-serif;
-    background:#1D1F20;
+    background:black;
 
 	color: #f2f2f2;
+    /*animation: fadein 1.5s;*/
 }
+
 h1{
 	font-family: 'Press Start 2P', cursive;
 	font-size: 6em;
@@ -95,53 +97,51 @@ p{
 }
 
 #menu li a.last{
-	margin-right:20px;
+
 }
+
 #menu{
-	position:fixed;
-	top:0;
-	left:0;
-	z-index: 70;
-	width: 100%;
-	padding: 0;
-	margin:0;
-	font-family: 'Press Start 2P', cursive;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: flex;
+	justify-content: space-between;
+    display: inline;
+    max-width: 1200px;
 }
 
 #nav-bar{
-	
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 70;
+    width: 100%;
+    padding: 15px 0 0 0;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    
 }
 .intro{
-        /*position: relative;
-    top: 50%;
-    transform: translateY(-50%);*/
-/*
-    display: table-cell;
-    vertical-align: middle;
-*/
+       
+    display: inline-block;
+    max-width: 900px;
+    text-align: left;
+}
+.intro-section-wrap{
+    max-width: 900px;
+    display: inline-block;
+    animation: fadein 2.5s;
+    animation-delay: 0.1s;
 }
 .intro p{
-	width: 80%;
-	max-width:900px;
+	max-width: 80vw;
 	margin: 0 auto;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 
 /* Section 1
  * --------------------------------------- */
 
-#section1{
+.main #section1{
 
    /* background-image: url(campus2dark.jpg);
     background-size: cover;
@@ -150,13 +150,18 @@ display: flex;
 */
     
 
-      background: radial-gradient(ellipse at center, rgba(2,106,170,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(https://archive-media-0.nyafuu.org/wg/image/1419/65/1419654434693.jpg);
+      background: radial-gradient(ellipse at center, rgba(2,106,170,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(grid.png);
     
 
     /*
     rgba(127,0,173,0.6)
     
     2 106 170
+    
+    http://natewren.com/rad-pack-80s-themed-hd-wallpapers/
+    
+    http://www.kaltblut-magazine.com/found-on-the-internet-kidmograph/
+    
     http://shipadrift.com//images/static.gif
     
     http://68.media.tumblr.com/e5c2fbbea040663825fdd3f7b4051cd1/tumblr_nunuhzWaJq1tbgnn1o1_400.gif
@@ -171,6 +176,8 @@ display: flex;
     https://archive-media-0.nyafuu.org/wg/image/1419/65/1419654434693.jpg
     
     http://natewren.com/themes/wallpaper2/radpack/radpack_17.jpg
+    
+    http://orig12.deviantart.net/3531/f/2015/322/1/0/the_grid___komodo_upload_02_by_winampers_pro-d9h4oaw.png
     
     giphy.webp
     */
@@ -196,17 +203,13 @@ display: flex;
 
 /* Section 2
  * --------------------------------------- */
-#section2 h1,
-#section2 p{
-	z-index: 3;
-}
 
 
 /* Section 3
  * --------------------------------------- */
 
 #section3 p{
-	color: #757575;
+
 }
 
 /* Section 4
@@ -278,19 +281,22 @@ display: flex;
 }
 
 	h1{
-	font-size:2em;
+	font-size:1.4em;
 			text-shadow: 0 1px 4px rgba(0,0,0,0.25);
             }
 		
 	#banner{
 		padding:0px;
 	}
-    #main-logo{
+    .main #main-logo{
         max-height: 250px;
-    }     
+    }   
     
-    #main-logo-svg{
+    .main #main-logo-svg{
         max-width:650px;
+    }
+ #main-logo-svg{
+        max-width:425px;
     }
     
         #main-logo-svg path{
@@ -309,24 +315,28 @@ animation: svgColor 10s ease infinite;*/
     margin-top:30px;
 }
 
-.logo-wrap {
+.main .logo-wrap {
     -webkit-animation: fadeinLogo 2.6s;
             animation: fadeinLogo 2.6s;
 }
 
-#signup-form{
+.main #signup-form{
         -webkit-animation: fadeinDelay 2.6s;
                 animation: fadeinDelay 2.6s;
 
 }
 
-#strapline{
+.main #strapline{
     -webkit-animation: fadeinDelay 2.6s;
             animation: fadeinDelay 2.6s;
 }
-@media screen and (min-width: 700px) {
 
 #menu{
+    
+}
+@media screen and (min-width: 700px) {
+
+.main #menu{
     -webkit-animation: fadeinDelay 3s;
             animation: fadeinDelay 3s;
 }
@@ -355,6 +365,7 @@ top: 15px;
 
 .section{
     background:none;
+
 }
 
 .brand-blue{
@@ -375,20 +386,22 @@ top: 15px;
     position: fixed;
     top:20px;
     right:20px;
-    z-index: 100;
+    z-index: 200;
 }
 
 
 
 
 .menu-click{
-        display: block !important;
+    display: block !important;
     position: fixed !important;
     width: 100vw !important;
-    height: 100vh !important;
+    min-height: 100vh !important;
     background: black !important;
     top:0px;
     left:0px;
+    z-index: 100;
+    padding-top:40px;
 }
 
 .menu-click li{
@@ -496,34 +509,24 @@ display: inline-block;
     color: #ffffff !important;
 }
 
-@-webkit-keyframes backgroundFade {
-    0% { background: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 90%), url(https://tchetcuti.files.wordpress.com/2016/01/grid-stars1.gif)} 
-    
-    
-     20% { background: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 90%), url(https://tchetcuti.files.wordpress.com/2016/01/grid-stars1.gif) }
-    
-    
-       100% { background: radial-gradient(ellipse at center, rgba(127,0,173,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(https://tchetcuti.files.wordpress.com/2016/01/grid-stars1.gif) }
 
-}
-
-@keyframes backgroundFade {
-           0% { background: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 90%), url(https://tchetcuti.files.wordpress.com/2016/01/grid-stars1.gif)} 
-    
-    
-     50% { background: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 90%), url(https://tchetcuti.files.wordpress.com/2016/01/grid-stars1.gif) }
-    
-    
-       100% { background: radial-gradient(ellipse at center, rgba(127,0,173,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(https://tchetcuti.files.wordpress.com/2016/01/grid-stars1.gif) }
-
-}
+   
+ @-webkit-keyframes fadein {
+    0% { opacity: 0; }
+    100%   { opacity: 1; }
 
 }
    
  
+@keyframes fadein {
+    0% { opacity: 0; }
+    100%   { opacity: 1; }
+
+}
+
 @-webkit-keyframes fadeinLogo {
     0% { opacity: 0; }
-    10%   { opacity: 0; }
+    30%   { opacity: 0; }
     100%   { opacity: 1; }
 
 }
@@ -531,7 +534,7 @@ display: inline-block;
  
 @keyframes fadeinLogo {
     0% { opacity: 0; }
-    10%   { opacity: 0; }
+    30%   { opacity: 0; }
     100%   { opacity: 1; }
 
 }
@@ -556,9 +559,11 @@ display: inline-block;
     overflow: hidden;
 */
 }
+.gradient-border, body {
+    background:#0d0e0e;
+}
 .gradient-border {
        --borderWidth: 7px;
-    background: #1D1F20;
     position: absolute;
     border-radius: var(--borderWidth);
     height: calc(100% - 4 * var(--borderWidth) );
@@ -614,11 +619,6 @@ display: inline-block;
 
 
 
-
-
-
-body{background-color:#000; overflow:hidden;}
-
 html body [data-ca3_iconfont="ETmodules"]::before {
     font-family: "ETmodules";
 }
@@ -636,21 +636,26 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 .ca3-scroll-down-link {
   cursor:pointer;
 	height: 60px;
-	width: 80px;
+	width: 62px;
 	margin: 0px 0 0 -40px;
-	line-height: 60px;
-	position: absolute;
+
+	
 	bottom: 25px;
-	color: #FFF;
+
 	text-align: center;
 	font-size: 70px;
-	z-index: 100;
-	text-decoration: none;
-	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
-        left: calc(50% + 22px);
+	z-index: 50;
+	
+	
 	-webkit-animation: ca3_fade_move_down 2s ease-in-out infinite;
 	-moz-animation:    ca3_fade_move_down 2s ease-in-out infinite;
 	animation:         ca3_fade_move_down 2s ease-in-out infinite;
+    
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -687,7 +692,12 @@ html body [data-ca3_iconfont="ETmodules"]::before {
   pointer-events: none;
 }
 
-
+@media screen and (max-width: 700px) {
+    #menu li{
+        font-size: 0.65em;
+    }
+    
+}
 
 @media screen and (max-width: 700px) {
     
@@ -709,6 +719,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     
     #pp-nav.right{
         right:7px;
+        z-index: 50;
     }
         .pop-up-text h1{
     font-size:15px;
@@ -763,5 +774,13 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     .pop-up .close{
             top: -5px;
     right: 5px;
+    }
+    
+    .intro p{
+        font-size: 0.9rem;
+    }
+    
+    .intro h1{
+        font-size: 1rem;
     }
 }
