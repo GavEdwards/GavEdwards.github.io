@@ -58,6 +58,7 @@ body{
 h1{
 	font-family: 'Press Start 2P', cursive;
 	font-size: 6em;
+    text-align: center;
 }
 p{
 	font-size: 2em;
@@ -131,12 +132,14 @@ p{
     animation: fadein 2.5s;
     animation-delay: 0.1s;
 }
-.intro p{
+.intro p, .intro h1{
 	max-width: 80vw;
 	margin: 0 auto;
-	font-size: 1.2em;
 }
 
+.intro p{
+    	font-size: 1.2em;
+}
 
 /* Section 1
  * --------------------------------------- */
@@ -692,7 +695,8 @@ html body [data-ca3_iconfont="ETmodules"]::before {
   pointer-events: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
+    
     #menu li{
         font-size: 0.65em;
     }
@@ -733,7 +737,6 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     .ca3-scroll-down-arrow{
         width:30px;
         height: 30px;
-            left: calc(50% + 30px);
     }
     .intro{
         margin-top:15px;
