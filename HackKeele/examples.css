@@ -147,15 +147,7 @@ p{
 
 .main #section1{
 
-   /* background-image: url(campus2dark.jpg);
-    background-size: cover;
-    background-position-x: center;
 
-*/
-    
-
-      background: radial-gradient(ellipse at center, rgba(2,106,170,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(grid.png);
-    
 
     /*
     rgba(127,0,173,0.6)
@@ -184,18 +176,34 @@ p{
     http://orig12.deviantart.net/3531/f/2015/322/1/0/the_grid___komodo_upload_02_by_winampers_pro-d9h4oaw.png
     
     giphy.webp
+    
+    grid.png
+    
+    https://pbs.twimg.com/media/DD__LdPXUAA6OIE.jpg
+    
+    https://i.ytimg.com/vi/Kv_CkWdyVtA/maxresdefault.jpg
+
+    http://konachan.com/sample/f1032128667d0673bd05145cace28105/Konachan.com%20-%20170643%20sample.jpg
+    
     */
-    background-size:cover;
-    background-position-x:center;
+
     
-/*
-    background: radial-gradient(ellipse at center, rgba(127,0,173,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/31787/stars.jpg);
+ 
+
+   /* background: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.7) 90%), url(https://underconstructionkeele.files.wordpress.com/2015/06/keele-concourse-panorama.jpg);
     
+     background-size:cover;
+    background-position:center;
+
 */
-    /*
-    animation: backgroundFade 4s;
-    */
+    
+    background: radial-gradient(ellipse at center, rgba(2,106,170,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(grid.png);
+       background-size:cover;
+    background-position:center;
+
 }
+
+
 
 #section1 h1{
     font-size: 3em;
