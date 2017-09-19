@@ -190,16 +190,10 @@ p{
     
  
 
-   /* background: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.7) 90%), url(https://underconstructionkeele.files.wordpress.com/2015/06/keele-concourse-panorama.jpg);
     
-     background-size:cover;
-    background-position:center;
-
-*/
-    
-    background: radial-gradient(ellipse at center, rgba(2,106,170,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(grid.png);
+    /*background: radial-gradient(ellipse at center, rgba(2,106,170,0.6) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 90%), url(grid.png);
        background-size:cover;
-    background-position:center;
+    background-position:center;*/
 
 }
 
@@ -305,23 +299,13 @@ p{
     }   
     
     .main #main-logo-svg{
-        max-width:650px;
-    }
+        max-width:700px;
+    max-height: 35vh;    }
  #main-logo-svg{
         max-width:425px;
     }
     
-        #main-logo-svg path{
- /* -webkit-animation: svgColor 10s ease infinite;
--moz-animation: svgColor 10s ease infinite;
-animation: svgColor 10s ease infinite;*/
-    }
-    
-    .logo-wrap{
-        margin-bottom:30px;
-		-webkit-filter:brightness(1.2);
-		        filter:brightness(1.2);
-    }
+
 
 #signup-form{
     margin-top:30px;
@@ -438,8 +422,8 @@ top: 15px;
     text-align: center;
 }
 .pop-up{
-    -webkit-box-shadow: 0px 0px 5px 0px black;
-    box-shadow: 0px 0px 5px 0px black;
+    -webkit-box-shadow:0px 0px 26px 0px #38b3c3;
+    box-shadow: 0px 0px 26px 0px #38b3c3;
     border-radius: 6px;
     max-width: 700px;
     background:black;
@@ -515,6 +499,18 @@ display: inline-block;
     border-radius: 5px;
     padding: 0 1em; color:#fff; max-width: 220px;
 }
+
+#main-submit2{
+    background: #26ae5c;
+    display: inline-block;
+    padding: 1em 1.7em;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
+    color: #ffffff !important;
+}
+
+
 #main-submit{
     background: #26ae5c;
     margin-left: 10px;
@@ -587,6 +583,15 @@ display: inline-block;
     top: calc(2* var(--borderWidth) );
     left: calc(2* var(--borderWidth));
     width: calc(100% - 4 * var(--borderWidth) );
+    
+    
+    background: linear-gradient(rgba(0,0,0,0.7) 0%,  rgba(0,0,0,0.7) 100%), url(    http://natewren.com/themes/wallpaper2/radpack/radpack_17.jpg
+);
+    
+     background-size:cover;
+    background-position:center;
+
+
 }
 
 
@@ -601,10 +606,10 @@ display: inline-block;
    /*background:linear-gradient(60deg, #13420d 0%,#0c4f0f 11%,#157019 24%,#1b8e20 37%,#21a521 51%,#65af59 62%,#79d374 77%,#a1e0a1 87%,#95f49a 100%);*/
    background: -webkit-linear-gradient(30deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
    background: -o-linear-gradient(30deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-   background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+   background: linear-gradient( 30deg, #7A5FFF,#01FF89,#7A5FFF,#01FF89);
   z-index: -1;
-  -webkit-animation: animatedgradient 14s infinite;
-          animation: animatedgradient 14s infinite;
+  -webkit-animation: animatedgradient 8s infinite;
+          animation: animatedgradient 8s infinite;
   background-size: 300% 300%;
 }
 
@@ -741,12 +746,25 @@ html body [data-ca3_iconfont="ETmodules"]::before {
   pointer-events: none;
 }
 
+
+#mlh-logo{
+    position:absolute;top:0px; right: 60px; width:80px; z-index:10;
+}
+@media screen and (max-width:1200px){
+    #mlh-logo{
+        display: none;
+    }
+}
 @media screen and (max-width: 900px) {
     
     #menu li{
-        font-size: 0.65em;
+        font-size: 0.75em;
+
     }
-    
+        #menu li a{
+                    padding-left: 9px;
+        padding-right: 9px;
+    }
 }
 
 @media screen and (max-width: 700px) {

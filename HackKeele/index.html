@@ -83,6 +83,7 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
 </head>
 <body class="main">
     <div id="body-wrapper">
+
     <div id="nav-bar">
         <i id="nav-button" class="fa fa-bars fa-2x" aria-hidden="true" onclick="navClick()"></i>
 	<ul id="menu">
@@ -93,6 +94,9 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
         <li ><a href="faq.html">FAQ</a></li>
         <li ><a href="contact.html" class="last">Contact</a></li>
 	</ul>
+        <img id="mlh-logo" src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season">
+        
+         
         <!--ul id="menu">
 		<li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
 		<li data-menuanchor="page2"><a href="#page2">What</a></li>
@@ -112,23 +116,34 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
 	    <div class="section" id="section1">
 	    	<div class="logo-wrap">
 
-              <svg id="main-logo-svg" width="100%" viewBox="0 50 855 375">
+   
         <svg
-     width="665.000000pt"
-   height="352.000000pt"
-   viewBox="0 0 665.000000 352.000000"
+             id="main-logo-svg"
+     
+   viewBox="15 40 625.000000 290"
    preserveAspectRatio="xMidYMid meet"
 >
           <defs>
-                <linearGradient id="gradient" x1="100%" y1="100%">
+            <linearGradient id="gradient" x1="50%" y1="0%" x2="50%" y2="100%" > 
+            
+            <stop offset="0%" stop-color="#7A5FFF">
+                <animate attributeName="stop-color" values="#7A5FFF; #01FF89; #7A5FFF" dur="4s" repeatCount="indefinite"></animate>
+            </stop>
+
+            <stop offset="100%" stop-color="#01FF89">
+                <animate attributeName="stop-color" values="#01FF89; #7A5FFF; #01FF89" dur="4s" repeatCount="indefinite"></animate>
+            </stop>
+
+        </linearGradient> 
+                <!--linearGradient id="gradient" x1="100%" y1="100%">
           <stop offset="0%" stop-color="lightblue" >
             <animate attributeName="stop-color" values="#1098ad;#5073b8;#ef4e7b;#ef4e7b;#5073b8;#ef4e7b;#ef4e7b;#a166ab;#1098ad" dur="14s" repeatCount="indefinite" />
           </stop>
-          <stop offset="100%" stop-color="lightblue" >
+          <stop offset="100%"  >
             <animate attributeName="stop-color" values="#1098ad;#f37055;#a166ab;#a166ab;#1098ad;#a166ab;#a166ab;#5073b8;#1098ad" dur="14s" repeatCount="indefinite" />
             <animate attributeName="offset" values=".95;.80;.60;.40;.20;0;.20;.40;.60;.80;.95" dur="24s" repeatCount="indefinite" />
           </stop>
-        </linearGradient>
+        </linearGradient-->
             <!--
             <filter id="glow">
                 <fegaussianblur class="blur" result="coloredBlur" stddeviation="4"></fegaussianblur>
@@ -238,17 +253,20 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
     <li><span id="seconds">0</span>Seconds</li>
   </ul>
 </div>
-                    <input type="email" name="email" spellcheck="false" id="email" placeholder="Keele Email Address">
-                    <input type="submit" value="Sign Up!" id="main-submit"> <span class="message"></span>
-                </form>
+            </form>
+     
+        <!--a id="main-submit" class="register" href="http://my.mlh.io/oauth/authorize?client_id=15aca68722898f2f3026a5a8ed825c1964e590f920c3f57dd22bdc93eef8b3b8;redirect_uri=http://gavedwards.github.io/HackKeele/index.html;response_type=token">Register!</a-->
+     
+          
+        <a id="main-submit2" class="register"  href="https://docs.google.com/forms/d/e/1FAIpQLSeRUOr0cpw1ODicgwMBr2GeKBlH2AQIFzY_Und8n0GBjackgQ/viewform">Sign Up!</a>
+     
+     
             <!--https://media.tenor.com/images/66880179a13cef64c70412cca8094073/tenor.gif -->
             
             <!--img id="main-background" src="8bit.png"  --> 
             
 			<!--iframe class="grain" src="https://www.youtube.com/embed/8tZ_N3wP9Ko?autoplay=1&amp;loop=1&amp;controls=0&amp;iv_load_policy=3&amp;start=5&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;modestbranding=1"></iframe-->
-            
-            <!--img class="grain" src="http://www.textures4photoshop.com/tex/thumbs/computer-screen-code-glitch-animation-gif-background-free-thumb57.gif"/-->
-                                    </div>
+           </div>
         
 	    <div class="section" id="section2">
 
