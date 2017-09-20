@@ -47,7 +47,7 @@ abbr,acronym { border: 0;
 /* Custom CSS
  * --------------------------------------- */
 body{
-	font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Montserrat', sans-serif;
     background:black;
 
 	color: #f2f2f2;
@@ -59,9 +59,25 @@ h1, h2{
 h1{
 	font-size: 6em;
     text-align: center;
+    margin:0 0 15px 0;
+}
+h3{
+    font-size: 1.3em;
+    padding:10px;
 }
 p{
-	font-size: 2em;
+	font-size: 1.8em;
+}
+
+a{
+    color: #01FF89;
+            transition: color ease-in-out 0.2s;
+
+}
+
+a:hover{
+        color:#7A5FFF;
+
 }
 .section{
 	text-align: center;
@@ -132,8 +148,8 @@ p{
 .intro-section-wrap{
     max-width: 900px;
     display: inline-block;
-    animation: fadein 2.5s;
-    animation-delay: 0.1s;
+    animation: fadein 2s;
+    animation-delay: 0s;
     width: 85vw;
 }
 
@@ -201,6 +217,8 @@ p{
 
 #section1 h1{
     font-size: 3em;
+        margin:30px 0;
+
 }
 #section1 p{
 	color: white;
@@ -507,9 +525,14 @@ display: inline-block;
     border-radius: 3px;
     border: 0;
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
-    color: #ffffff !important;
+    color: #ffffff ;
+        transition: background ease-in-out 0.5s;
+
 }
 
+#main-submit2:hover{
+    background: #7A5FFF;
+}
 
 #main-submit{
     background: #26ae5c;
@@ -585,7 +608,7 @@ display: inline-block;
     width: calc(100% - 4 * var(--borderWidth) );
     
     
-    background: linear-gradient(rgba(0,0,0,0.7) 0%,  rgba(0,0,0,0.7) 100%), url(    http://natewren.com/themes/wallpaper2/radpack/radpack_17.jpg
+    background: linear-gradient(rgba(0,0,0,0.6) 0%,  rgba(0,0,0,0.4) 80%), url(    background2.jpg
 );
     
      background-size:cover;
@@ -757,6 +780,8 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 }
 @media screen and (max-width: 900px) {
     
+ 
+    
     #menu li{
         font-size: 0.75em;
 
@@ -769,6 +794,11 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 
 @media screen and (max-width: 700px) {
     
+       h1{
+
+    margin:0px;
+}
+    
     #menu{
         display: none;
     }
@@ -778,13 +808,20 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     }
 
     body{
-        font-size: 0.7em;
+        font-size: 0.8em;
+    }
+    
+    .main #main-logo-svg{
+        max-width: 80vw;
     }
     
     #main-logo-svg{
-        max-width: 90%;    
+        max-width: 80vw;    
     }
     
+    .gradient-border {
+    --borderWidth: 3px;
+    }
     #pp-nav.right{
         right:7px;
         z-index: 50;
