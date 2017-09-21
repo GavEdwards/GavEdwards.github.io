@@ -294,8 +294,25 @@
 
             var timeNow = new Date().getTime();
             lastAnimation = timeNow;
+            
+            if($('.pop-up-container').hasClass('active-pop-up')){
+                closePopupAll($('.active-pop-up'));
+            }
+
         }
 
+        
+        function closePopupAll(pop) {
+    
+      var video = $(pop).find(".pop-video").attr("src");
+        $(pop).find(".pop-video").attr("src","");
+        $(pop).find(".pop-video").attr("src",video);
+    
+    $(pop).removeClass('active-pop-up');
+    //$('.pop-up-container').removeClass('active-pop-up');
+        $('#nav-button').removeClass('hide-nav');
+}
+        
         /**
         * Performs the movement (by CSS3 or by jQuery)
         */
