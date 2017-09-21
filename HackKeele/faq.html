@@ -10,7 +10,7 @@
     <meta name="description" content="Hack Keele hackathon..." />
     <meta name="keywords" content="Hackathon, Keele, Hack Keele" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.4/jquery.pagepiling.css" />
-    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <link rel="stylesheet" type="text/css" href="HackKeele.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Condensed" rel="stylesheet">
@@ -51,22 +51,13 @@
         <div id="nav-bar"> <i id="nav-button" class="fa fa-bars fa-2x" aria-hidden="true" onclick="navClick()"></i>
             <ul id="menu">
                 <li><a href="index.html">About</a></li>
-                <li class="active"><a href="events.html">Events</a></li>
+                <li><a href="events.html">Events</a></li>
                 <li><a href="register.html">Register</a></li>
                 <li><a href="sponsers.html">Sponsers</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li class="active"><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html" class="last">Contact</a></li>
             </ul> <img id="mlh-logo" src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season">
-            <!--ul id="menu">
-		<li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
-		<li data-menuanchor="page2"><a href="#page2">What</a></li>
-		<li data-menuanchor="page3"><a href="#page3">Where</a></li>
-        <li data-menuanchor="page4"><a href="#page4">When</a></li>
-        <li data-menuanchor="page5"><a href="#page5">Sign Up</a></li>
-        <li data-menuanchor="page6"><a href="#page6">FAQ</a></li>
-        <li data-menuanchor="page7"><a href="#page7">Sponsers</a></li>
-        <li data-menuanchor="page8"><a href="#page8" class="last">Contact</a></li>
-	</ul-->
+ 
         </div>
         <div id="pagepiling">
             <div class="gradient-border">
@@ -125,28 +116,52 @@
                             <button class="pop-up-button">What is a hackathon?</button>
                             <div class="pop-up-container">
                                 <div class="pop-up">
-                                    <div class="pop-up-text"> <span class="close" onclick="closePopup()">×</span>
-                                        <h1>What even is a hackathon?</h1>
+                                    <div class="pop-up-text"> <span class="close" onclick="closePopup(this)">×</span>
+                                        <h1>What is a hackathon?</h1>
                                         <p>Hackathons are a place where many passionate professionals or students in Technology and Business Development actively participate - form diverse teams, make their pitches, adds their expertise and work towards creating a solution. </p>
-                                        <p> It is one such opportunity where you make many new friends from diverse backgrounds whom you would have never met, and learn new things from mentors and teammates. Above all, Hackathon helps you to see a problem from multiple perspectives and arrive at a solution.</p> <a href="#">Link</a> </div>
+                                        <p> It is one such opportunity where you make many new friends from diverse backgrounds whom you would have never met, and learn new things from mentors and teammates. Above all, Hackathons helps you to see a problem from multiple perspectives and arrive at a solution.</p>
+                                        <div class="pop-video-container">
+                                            </br>
+                                            <iframe class="pop-video" width="500" height="300" src="https://www.youtube.com/embed/qj4DQfYx2Hg" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        </br> <a href="https://mlh.io/about">Click here to find out more</a> </div>
                                 </div>
                             </div>
                             </br>
                             <button class="pop-up-button">Why are hackathons good for me?</button>
                             <div class="pop-up-container">
                                 <div class="pop-up">
-                                    <div class="pop-up-text"> <span class="close" onclick="closePopup()">×</span>
-                                        <h1>Hackthons & You</h1>
-                                        <p>“Why is a hackathon a thing?” For all of these reasons: Community. To learn & teach. To solve problems. To create something new. To meet like-minded people. To build, because building is fun and rewarding. To gain the respect of peers, through creative expression. To collaboratively push the limits of technology as we know it today.</p> <a href="#">Link</a> </div>
+                                    <div class="pop-up-text"> <span class="close" onclick="closePopup(this)">×</span>
+                                        <h1>Why are hackathons good for me?</h1> </br>
+                                        <ul>
+                                            <li>Networking - make connections and build your network across universities.</li>
+                                            </br>
+                                            <li>Learn - learn new skills that are used in industry.</li>
+                                            </br>
+                                            <li>Solve problems - improve your ability to solve complex problems.</li>
+                                            </br>
+                                            <li>Innovation - hackathons are the perfect platform to create something new.</li>
+                                            </br>
+                                            <li>Build - Hacking is all about people that 'do'. Hack Keele enables you to use your skills.</li>
+                                            </br>
+                                            <li>Teamwork - collaboratively push the limits of technology as we know it today.</li>
+                                        </ul>
+                                        </br> <a href="https://mlh.io/about">Click here to find out more</a> </div>
                                 </div>
                             </div>
                             </br>
-                            <button class="pop-up-button">What else does Hack Keele do?</button>
+                            <button class="pop-up-button">What can I learn at Workshops?</button>
                             <div class="pop-up-container">
                                 <div class="pop-up">
-                                    <div class="pop-up-text"> <span class="close" onclick="closePopup()">×</span>
-                                        <h1>Title</h1>
-                                        <p>some pop-up text</p> <a href="#">Link</a> </div>
+                                    <div class="pop-up-text"> <span class="close" onclick="closePopup(this)">×</span>
+                                        <h1>Weekly activities</h1>
+                                        <p>We fun, engaging hacker community activities and expert workshops that you can attend on campus each week. Join our Hack Keele community, and learn valuable skills with your fellow students.</p>
+                                        <div class="pop-video-container">
+                                            </br>
+                                            <iframe class="pop-video" width="560" height="400" src="https://www.youtube.com/embed/wv51Vwy0PL4" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </br> <a href="https://localhost.mlh.io/#activities">Click here to find out more</a> 
+                                    </div>
                                 </div>
                             </div>
                             </br>
@@ -156,85 +171,6 @@
 
     
     
-    
-     <div class="section" id="section3">
-                    <div class="intro">
-                        <h1>Standout Hacks!</h1>
-                        <br/>
-                        <p>Here are some of our favorite inventions that have been made during our events...</p>
-                        <div class="questions">
-                            <button class="pop-up-button">What is a hackathon?</button>
-                            <div class="pop-up-container">
-                                <div class="pop-up">
-                                    <div class="pop-up-text"> <span class="close" onclick="closePopup()">×</span>
-                                        <h1>What even is a hackathon?</h1>
-                                        <p>Hackathons are a place where many passionate professionals or students in Technology and Business Development actively participate - form diverse teams, make their pitches, adds their expertise and work towards creating a solution. </p>
-                                        <p> It is one such opportunity where you make many new friends from diverse backgrounds whom you would have never met, and learn new things from mentors and teammates. Above all, Hackathon helps you to see a problem from multiple perspectives and arrive at a solution.</p> <a href="#">Link</a> </div>
-                                </div>
-                            </div>
-                            </br>
-                            <button class="pop-up-button">Why are hackathons good for me?</button>
-                            <div class="pop-up-container">
-                                <div class="pop-up">
-                                    <div class="pop-up-text"> <span class="close" onclick="closePopup()">×</span>
-                                        <h1>Hackthons & You</h1>
-                                        <p>“Why is a hackathon a thing?” For all of these reasons: Community. To learn & teach. To solve problems. To create something new. To meet like-minded people. To build, because building is fun and rewarding. To gain the respect of peers, through creative expression. To collaboratively push the limits of technology as we know it today.</p> <a href="#">Link</a> </div>
-                                </div>
-                            </div>
-                            </br>
-                            <button class="pop-up-button">This is another question?</button>
-                            <div class="pop-up-container">
-                                <div class="pop-up">
-                                    <div class="pop-up-text"> <span class="close" onclick="closePopup()">×</span>
-                                        <h1>Title</h1>
-                                        <p>some pop-up text</p> <a href="#">Link</a> </div>
-                                </div>
-                            </div>
-                            </br>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
- <div class="section" id="section4">
-                    <div class="intro">
-                        <h1>Standout Hacks!</h1>
-                        <br/>
-                        <p>Here are some of our favorite inventions that have been made during our events...</p>
-                        <div class="questions">
-                            <button class="pop-up-button">What is a hackathon?</button>
-                            <div class="pop-up-container">
-                                <div class="pop-up">
-                                    <div class="pop-up-text"> <span class="close" onclick="closePopup()">×</span>
-                                        <h1>What even is a hackathon?</h1>
-                                        <p>Hackathons are a place where many passionate professionals or students in Technology and Business Development actively participate - form diverse teams, make their pitches, adds their expertise and work towards creating a solution. </p>
-                                        <p> It is one such opportunity where you make many new friends from diverse backgrounds whom you would have never met, and learn new things from mentors and teammates. Above all, Hackathon helps you to see a problem from multiple perspectives and arrive at a solution.</p> <a href="#">Link</a> </div>
-                                </div>
-                            </div>
-                            </br>
-                            <button class="pop-up-button">Why are hackathons good for me?</button>
-                            <div class="pop-up-container">
-                                <div class="pop-up">
-                                    <div class="pop-up-text"> <span class="close" onclick="closePopup()">×</span>
-                                        <h1>Hackthons & You</h1>
-                                        <p>“Why is a hackathon a thing?” For all of these reasons: Community. To learn & teach. To solve problems. To create something new. To meet like-minded people. To build, because building is fun and rewarding. To gain the respect of peers, through creative expression. To collaboratively push the limits of technology as we know it today.</p> <a href="#">Link</a> </div>
-                                </div>
-                            </div>
-                            </br>
-                            <button class="pop-up-button">This is another question?</button>
-                            <div class="pop-up-container">
-                                <div class="pop-up">
-                                    <div class="pop-up-text"> <span class="close" onclick="closePopup()">×</span>
-                                        <h1>Title</h1>
-                                        <p>some pop-up text</p> <a href="#">Link</a> </div>
-                                </div>
-                            </div>
-                            </br>
-                        </div>
-                    </div>
-                </div>
              
             </div>
         </div>

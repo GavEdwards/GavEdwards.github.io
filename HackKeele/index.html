@@ -2,105 +2,84 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
     <meta name="theme-color" content="#0d0e0e">
-
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Hack Keele</title>
-	<meta name="author" content="Gavin Edwards" />
-	<meta name="description" content="Hack Keele hackathon..." />
-	<meta name="keywords"  content="Hackathon, Keele, Hack Keele" />
-
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.4/jquery.pagepiling.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hack Keele</title>
+    <meta name="author" content="Gavin Edwards" />
+    <meta name="description" content="Hack Keele hackathon..." />
+    <meta name="keywords" content="Hackathon, Keele, Hack Keele" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.4/jquery.pagepiling.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="examples.css" />
+    <link rel="stylesheet" type="text/css" href="HackKeele.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    
-    
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <!-- DELETE -->
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Condensed" rel="stylesheet">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" ></script>
-<script src="HackKeele.js" ></script>
-	<script type="text/javascript" src="jquery.pagepiling.js" defer></script>
-	<script type="text/javascript" >
-        
-    const second = 1000,
-      minute = second * 60,
-      hour = minute * 60, 
-      day = hour * 24;
-
-var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
-    x = setInterval(function() {
-
-      var now = new Date().getTime(),
-          distance = countDown - now;
-
-      document.getElementById('days').innerHTML = Math.floor(distance / (day)),
-        document.getElementById('hours').innerHTML = Math.floor((distance % (day)) / (hour)),
-        document.getElementById('minutes').innerHTML = Math.floor((distance % (hour)) / (minute)),
-        document.getElementById('seconds').innerHTML = Math.floor((distance % (minute)) / second);
-      
-      //do something later when date is reached
-      //if (distance < 0) {
-      //  clearInterval(x);
-      //  'IT'S MY BIRTHDAY!;
-      //}
-
-    }, second)
-
-		$(document).ready(function() {
-			/*
-			* Plugin intialization
-			*/
-	    	$('#pagepiling').pagepiling({
-	          	//direction: 'horizontal',
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Condensed" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="HackKeele.js"></script>
+    <script type="text/javascript" src="jquery.pagepiling.js" defer></script>
+    <script type="text/javascript">
+        const second = 1000
+            , minute = second * 60
+            , hour = minute * 60
+            , day = hour * 24;
+        var countDown = new Date('Sep 30, 2017 00:00:00').getTime()
+            , x = setInterval(function () {
+                var now = new Date().getTime()
+                    , distance = countDown - now;
+                document.getElementById('days').innerHTML = Math.floor(distance / (day))
+                    , document.getElementById('hours').innerHTML = Math.floor((distance % (day)) / (hour))
+                    , document.getElementById('minutes').innerHTML = Math.floor((distance % (hour)) / (minute))
+                    , document.getElementById('seconds').innerHTML = Math.floor((distance % (minute)) / second);
+                //do something later when date is reached
+                //if (distance < 0) {
+                //  clearInterval(x);
+                //  'IT'S MY BIRTHDAY!;
+                //}
+            }, second)
+        $(document).ready(function () {
+            /*
+             * Plugin intialization
+             */
+            $('#pagepiling').pagepiling({
+                //direction: 'horizontal',
                 //CHANGE MENU HIGHLIGHTING
-	    		menu: 'null',
-	    		anchors: ['page1', 'page2', 'page3','page4','page5','page6'],
-			   
-			    navigation: {
-			    	'position': 'right',
-			   		'tooltips': ['Home', 'What?', 'Who?', 'Why?','Skills','Sign Up']
-			   	},
-			    afterRender: function(){
-			    	$('#pp-nav').addClass('custom');
-			    },
-			    afterLoad: function(anchorLink, index){
-			    	if(index>1){
-			    		$('#pp-nav').removeClass('custom');
-			    	}else{
-			    		$('#pp-nav').addClass('custom');
-			    	}
-			    }
-			});
-            
-            
-	    });
+                menu: 'null'
+                , anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6']
+                , navigation: {
+                    'position': 'right'
+                    , 'tooltips': ['Home', 'What?', 'Who?', 'Why?', 'Skills', 'Sign Up']
+                }
+                , afterRender: function () {
+                    $('#pp-nav').addClass('custom');
+                }
+                , afterLoad: function (anchorLink, index) {
+                    if (index > 1) {
+                        $('#pp-nav').removeClass('custom');
+                    }
+                    else {
+                        $('#pp-nav').addClass('custom');
+                    }
+                }
+            });
+        });
     </script>
-
-
-
 </head>
+
 <body class="main">
     <div id="body-wrapper">
-
-    <div id="nav-bar">
-        <i id="nav-button" class="fa fa-bars fa-2x" aria-hidden="true" onclick="navClick()"></i>
-	<ul id="menu">
-		<li class="active"><a href="index.html">About</a></li>
-		<li ><a href="events.html">Events</a></li>
-		<li ><a href="register.html">Register</a></li>
-        <li ><a href="sponsers.html">Sponsers</a></li>
-        <li ><a href="faq.html">FAQ</a></li>
-        <li ><a href="contact.html" class="last">Contact</a></li>
-	</ul>
-        <img id="mlh-logo" src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season">
-        
-         
-        <!--ul id="menu">
+        <div id="nav-bar"> <i id="nav-button" class="fa fa-bars fa-2x" aria-hidden="true" onclick="navClick()"></i>
+            <ul id="menu">
+                <li class="active"><a href="index.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="sponsers.html">Sponsers</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" class="last">Contact</a></li>
+            </ul> <img id="mlh-logo" src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season">
+            <!--ul id="menu">
 		<li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
 		<li data-menuanchor="page2"><a href="#page2">What</a></li>
 		<li data-menuanchor="page3"><a href="#page3">Where</a></li>
@@ -110,36 +89,22 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
         <li data-menuanchor="page7"><a href="#page7">Sponsers</a></li>
         <li data-menuanchor="page8"><a href="#page8" class="last">Contact</a></li>
 	</ul-->
-    </div>
-
-
-	<div id="pagepiling">
-                                <div class="gradient-border">
-
-	    <div class="section" id="section1">
-	    	<div class="logo-wrap">
-
-   
-        <svg
-             id="main-logo-svg"
-     
-   viewBox="15 40 625.000000 290"
-   preserveAspectRatio="xMidYMid meet"
->
-          <defs>
-                          
-            <linearGradient id="gradient" x1="50%" y1="0%" x2="50%" y2="100%" > 
-            
-            <stop offset="0%" stop-color="#7A5FFF">
-                <animate attributeName="stop-color" values="#7A5FFF; #01FF89; #7A5FFF" dur="4s" repeatCount="indefinite"></animate>
-            </stop>
-
-            <stop offset="100%" stop-color="#01FF89">
-                <animate attributeName="stop-color" values="#01FF89; #7A5FFF; #01FF89" dur="4s" repeatCount="indefinite"></animate>
-            </stop>
-
-        </linearGradient> 
-                <!--linearGradient id="gradient" x1="100%" y1="100%">
+        </div>
+        <div id="pagepiling">
+            <div class="gradient-border">
+                <div class="section" id="section1">
+                    <div class="logo-wrap">
+                        <svg id="main-logo-svg" viewBox="15 40 625.000000 290" preserveAspectRatio="xMidYMid meet">
+                            <defs>
+                                <linearGradient id="gradient" x1="50%" y1="0%" x2="50%" y2="100%">
+                                    <stop offset="0%" stop-color="#7A5FFF">
+                                        <animate attributeName="stop-color" values="#7A5FFF; #01FF89; #7A5FFF" dur="4s" repeatCount="indefinite"></animate>
+                                    </stop>
+                                    <stop offset="100%" stop-color="#01FF89">
+                                        <animate attributeName="stop-color" values="#01FF89; #7A5FFF; #01FF89" dur="4s" repeatCount="indefinite"></animate>
+                                    </stop>
+                                </linearGradient>
+                                <!--linearGradient id="gradient" x1="100%" y1="100%">
           <stop offset="0%" stop-color="lightblue" >
             <animate attributeName="stop-color" values="#1098ad;#5073b8;#ef4e7b;#ef4e7b;#5073b8;#ef4e7b;#ef4e7b;#a166ab;#1098ad" dur="14s" repeatCount="indefinite" />
           </stop>
@@ -148,248 +113,165 @@ var countDown = new Date('Sep 30, 2017 00:00:00').getTime(),
             <animate attributeName="offset" values=".95;.80;.60;.40;.20;0;.20;.40;.60;.80;.95" dur="24s" repeatCount="indefinite" />
           </stop>
         </linearGradient-->
-            
-            <filter id="glow">
-                <fegaussianblur class="blur" result="coloredBlur" stddeviation="40"></fegaussianblur>
-                <femerge>
-                    <femergenode in="coloredBlur"></femergenode>
-          <femergenode in="coloredBlur"></femergenode>
-          <femergenode in="coloredBlur"></femergenode>
-                    <femergenode in="SourceGraphic"></femergenode>
-                </femerge>
-            </filter>
-              
-        </defs>
-
-  <g
-     transform="matrix(0.09930667,0,0,-0.09930667,1.7941316,350.1435)"
-     id="g4140"
-     style="fill:#ffffff;stroke:none;">
-    <path
-       d="m 280,2211 0,-740 83,-32 c 104,-40 368,-141 472,-180 44,-17 107,-41 140,-54 200,-77 249,-95 335,-128 52,-20 140,-54 195,-75 l 100,-39 3,213 2,214 1665,0 1665,0 0,-216 c 0,-169 3,-215 12,-211 7,3 121,47 253,98 132,51 285,110 340,131 55,21 159,61 230,88 207,78 448,169 478,181 l 27,12 -2,356 -3,356 -35,5 -35,5 38,23 37,24 0,354 0,354 -362,0 c -358,0 -362,0 -385,-22 l -23,-21 0,21 0,22 -364,0 -364,0 -14,-30 c -16,-36 -34,-34 -30,3 l 3,27 -630,0 -631,0 0,-60 0,-60 -45,0 -45,0 0,-65 0,-66 -62,3 -63,3 -3,62 -3,62 -42,3 -42,3 -3,58 -3,57 -609,0 -609,0 -3,-57 -3,-58 -51,-3 -51,-3 -37,61 -37,60 -360,0 c -352,0 -359,0 -359,-20 0,-11 -4,-20 -10,-20 -5,0 -14,9 -20,20 -10,19 -21,20 -375,20 l -365,0 0,-739 z m 620,391 5,-253 120,0 120,0 3,255 2,256 258,-2 257,-3 0,-640 0,-640 -255,0 -255,0 -5,255 -5,255 -122,3 -123,3 -2,-258 -3,-258 -253,0 -252,0 0,638 c 0,350 0,639 0,642 0,3 114,4 253,3 l 252,-3 5,-253 z m 2170,193 0,-65 65,0 65,0 0,-580 0,-580 -252,2 -253,3 -5,255 -5,255 -125,0 -125,0 -5,-255 -5,-255 -250,0 -250,0 -3,578 -2,577 65,0 65,0 0,65 0,65 510,0 510,0 0,-65 z m 1560,-65 0,-130 -327,-2 -328,-3 0,-380 0,-380 328,-3 327,-2 0,-130 0,-130 -522,2 -523,3 -3,62 -3,62 -62,3 -62,3 0,510 0,510 63,3 62,3 0,58 c 0,32 3,61 7,64 3,4 240,7 525,7 l 518,0 0,-130 z m 770,-125 c 0,-163 4,-255 10,-255 6,-1 63,-1 128,-1 l 117,0 3,255 2,256 256,-2 256,-3 -1,-250 -1,-250 -59,-3 c -59,-3 -60,-3 -63,-35 -2,-27 -8,-33 -33,-37 -29,-5 -30,-6 -30,-65 l 0,-60 33,-3 c 30,-3 33,-6 30,-30 -3,-26 -1,-27 60,-32 l 64,-5 -1,-255 0,-255 -255,-3 -256,-2 -2,257 -3,258 -125,0 -125,0 -3,-258 -2,-257 -253,2 -252,3 -3,630 c -1,347 0,636 3,643 3,9 64,12 255,12 l 250,0 0,-255 z"
-       id="path4142"
-          
-       style="fill:#000000;stroke: url(#gradient);
+                                <filter id="glow">
+                                    <fegaussianblur class="blur" result="coloredBlur" stddeviation="40"></fegaussianblur>
+                                    <femerge>
+                                        <femergenode in="coloredBlur"></femergenode>
+                                        <femergenode in="coloredBlur"></femergenode>
+                                        <femergenode in="coloredBlur"></femergenode>
+                                        <femergenode in="SourceGraphic"></femergenode>
+                                    </femerge>
+                                </filter>
+                            </defs>
+                            <g transform="matrix(0.09930667,0,0,-0.09930667,1.7941316,350.1435)" id="g4140" style="fill:#ffffff;stroke:none;">
+                                <path d="m 280,2211 0,-740 83,-32 c 104,-40 368,-141 472,-180 44,-17 107,-41 140,-54 200,-77 249,-95 335,-128 52,-20 140,-54 195,-75 l 100,-39 3,213 2,214 1665,0 1665,0 0,-216 c 0,-169 3,-215 12,-211 7,3 121,47 253,98 132,51 285,110 340,131 55,21 159,61 230,88 207,78 448,169 478,181 l 27,12 -2,356 -3,356 -35,5 -35,5 38,23 37,24 0,354 0,354 -362,0 c -358,0 -362,0 -385,-22 l -23,-21 0,21 0,22 -364,0 -364,0 -14,-30 c -16,-36 -34,-34 -30,3 l 3,27 -630,0 -631,0 0,-60 0,-60 -45,0 -45,0 0,-65 0,-66 -62,3 -63,3 -3,62 -3,62 -42,3 -42,3 -3,58 -3,57 -609,0 -609,0 -3,-57 -3,-58 -51,-3 -51,-3 -37,61 -37,60 -360,0 c -352,0 -359,0 -359,-20 0,-11 -4,-20 -10,-20 -5,0 -14,9 -20,20 -10,19 -21,20 -375,20 l -365,0 0,-739 z m 620,391 5,-253 120,0 120,0 3,255 2,256 258,-2 257,-3 0,-640 0,-640 -255,0 -255,0 -5,255 -5,255 -122,3 -123,3 -2,-258 -3,-258 -253,0 -252,0 0,638 c 0,350 0,639 0,642 0,3 114,4 253,3 l 252,-3 5,-253 z m 2170,193 0,-65 65,0 65,0 0,-580 0,-580 -252,2 -253,3 -5,255 -5,255 -125,0 -125,0 -5,-255 -5,-255 -250,0 -250,0 -3,578 -2,577 65,0 65,0 0,65 0,65 510,0 510,0 0,-65 z m 1560,-65 0,-130 -327,-2 -328,-3 0,-380 0,-380 328,-3 327,-2 0,-130 0,-130 -522,2 -523,3 -3,62 -3,62 -62,3 -62,3 0,510 0,510 63,3 62,3 0,58 c 0,32 3,61 7,64 3,4 240,7 525,7 l 518,0 0,-130 z m 770,-125 c 0,-163 4,-255 10,-255 6,-1 63,-1 128,-1 l 117,0 3,255 2,256 256,-2 256,-3 -1,-250 -1,-250 -59,-3 c -59,-3 -60,-3 -63,-35 -2,-27 -8,-33 -33,-37 -29,-5 -30,-6 -30,-65 l 0,-60 33,-3 c 30,-3 33,-6 30,-30 -3,-26 -1,-27 60,-32 l 64,-5 -1,-255 0,-255 -255,-3 -256,-2 -2,257 -3,258 -125,0 -125,0 -3,-258 -2,-257 -253,2 -252,3 -3,630 c -1,347 0,636 3,643 3,9 64,12 255,12 l 250,0 0,-255 z" id="path4142" style="fill:#000000;stroke: url(#gradient);
     stroke-width: 20px;
     stroke-dasharray: initial;
     stroke-linejoin: round;
-              filter: url(#glow);"/>
-    <path
-       d="m 2432,2474 3,-125 125,0 125,0 3,125 3,126 -131,0 -131,0 3,-126 z"
-       id="path4144"
-       inkscape:connector-curvature="0" />
-    <path
-       d="m 1822,958 3,-313 63,-3 62,-3 0,131 c 0,71 3,130 8,130 4,0 13,-10 21,-22 8,-13 50,-71 94,-130 l 79,-108 89,0 c 49,0 89,3 89,7 0,3 -54,73 -121,155 -107,133 -119,152 -107,168 54,75 192,251 204,261 8,6 14,18 14,25 0,11 -18,14 -77,14 -43,0 -83,-4 -89,-8 -6,-4 -50,-61 -98,-127 -48,-66 -92,-121 -97,-123 -5,-2 -9,52 -9,127 l 0,131 -65,0 -65,0 2,-312 z"
-       id="path4146"
-       inkscape:connector-curvature="0" />
-    <path
-       d="m 2545,1257 c -3,-7 -4,-147 -3,-312 l 3,-300 175,0 175,0 3,63 3,62 -111,0 -110,0 0,60 0,60 105,0 105,0 0,60 0,60 -105,0 -105,0 0,65 0,65 110,0 110,0 0,65 0,65 -175,0 c -132,0 -177,-3 -180,-13 z"
-       id="path4148"
-       inkscape:connector-curvature="0" />
-    <path
-       d="m 3155,1258 c -3,-7 -4,-148 -3,-313 l 3,-300 180,0 180,0 0,60 0,60 -107,3 -108,3 0,59 0,60 105,0 105,0 0,60 0,60 -105,0 -105,0 0,65 0,64 108,3 107,3 0,60 0,60 -178,3 c -137,2 -179,0 -182,-10 z"
-       id="path4150"
-       inkscape:connector-curvature="0" />
-    <path
-       d="m 3775,1258 c -3,-7 -4,-148 -3,-313 l 3,-300 180,0 180,0 0,60 0,60 -112,3 -113,3 -2,247 -3,247 -63,3 c -44,2 -64,-1 -67,-10 z"
-       id="path4152"
-       inkscape:connector-curvature="0" />
-    <path
-       d="m 4375,1258 c -3,-7 -4,-148 -3,-313 l 3,-300 180,0 180,0 0,60 0,60 -107,3 -108,3 0,59 0,60 105,0 105,0 0,60 0,60 -105,0 -105,0 0,65 0,64 108,3 107,3 0,60 0,60 -178,3 c -137,2 -179,0 -182,-10 z"
-       id="path4154"
-       inkscape:connector-curvature="0" />
-    <path
-       d="m 1636,501 c 5,-4 29,-15 54,-24 25,-8 92,-35 150,-59 l 105,-43 1319,-3 1318,-2 67,25 c 201,74 271,102 277,108 4,4 -737,7 -1646,7 -934,0 -1650,-4 -1644,-9 z"
-       id="path4156"
-       style="fill:#000000;stroke: url(#gradient);
+              filter: url(#glow);" />
+                                <path d="m 2432,2474 3,-125 125,0 125,0 3,125 3,126 -131,0 -131,0 3,-126 z" id="path4144" inkscape:connector-curvature="0" />
+                                <path d="m 1822,958 3,-313 63,-3 62,-3 0,131 c 0,71 3,130 8,130 4,0 13,-10 21,-22 8,-13 50,-71 94,-130 l 79,-108 89,0 c 49,0 89,3 89,7 0,3 -54,73 -121,155 -107,133 -119,152 -107,168 54,75 192,251 204,261 8,6 14,18 14,25 0,11 -18,14 -77,14 -43,0 -83,-4 -89,-8 -6,-4 -50,-61 -98,-127 -48,-66 -92,-121 -97,-123 -5,-2 -9,52 -9,127 l 0,131 -65,0 -65,0 2,-312 z" id="path4146" inkscape:connector-curvature="0" />
+                                <path d="m 2545,1257 c -3,-7 -4,-147 -3,-312 l 3,-300 175,0 175,0 3,63 3,62 -111,0 -110,0 0,60 0,60 105,0 105,0 0,60 0,60 -105,0 -105,0 0,65 0,65 110,0 110,0 0,65 0,65 -175,0 c -132,0 -177,-3 -180,-13 z" id="path4148" inkscape:connector-curvature="0" />
+                                <path d="m 3155,1258 c -3,-7 -4,-148 -3,-313 l 3,-300 180,0 180,0 0,60 0,60 -107,3 -108,3 0,59 0,60 105,0 105,0 0,60 0,60 -105,0 -105,0 0,65 0,64 108,3 107,3 0,60 0,60 -178,3 c -137,2 -179,0 -182,-10 z" id="path4150" inkscape:connector-curvature="0" />
+                                <path d="m 3775,1258 c -3,-7 -4,-148 -3,-313 l 3,-300 180,0 180,0 0,60 0,60 -112,3 -113,3 -2,247 -3,247 -63,3 c -44,2 -64,-1 -67,-10 z" id="path4152" inkscape:connector-curvature="0" />
+                                <path d="m 4375,1258 c -3,-7 -4,-148 -3,-313 l 3,-300 180,0 180,0 0,60 0,60 -107,3 -108,3 0,59 0,60 105,0 105,0 0,60 0,60 -105,0 -105,0 0,65 0,64 108,3 107,3 0,60 0,60 -178,3 c -137,2 -179,0 -182,-10 z" id="path4154" inkscape:connector-curvature="0" />
+                                <path d="m 1636,501 c 5,-4 29,-15 54,-24 25,-8 92,-35 150,-59 l 105,-43 1319,-3 1318,-2 67,25 c 201,74 271,102 277,108 4,4 -737,7 -1646,7 -934,0 -1650,-4 -1644,-9 z" id="path4156" style="fill:#000000;stroke: url(#gradient);
     stroke-width: 20px;
     stroke-dasharray: initial;
-    stroke-linejoin: round;filter: url(#glow);" />
-  </g>
-  <path
-     id="rect4204"
-     style="fill:#000000;fill-opacity:1"
-     d="m 597.46362,64.983154 20.82662,0 0,55.971536 -20.82662,0 z m 2.60334,73.543996 20.17578,0 0,57.92403 -20.17578,0 z m -117.14972,-74.194829 121.70555,0 0,131.468029 -121.70555,0 z m -128.86472,-4.55582 110.64142,0 0,31.890758 -110.64142,0 z m -11.06415,14.969135 123.00722,0 0,123.658054 -123.00722,0 z m -139.27801,-12.365807 106.73642,0 0,29.287434 -106.73642,0 z m -18.22328,13.667466 136.02385,0 0,122.356375 -136.02385,0 z M 35.795753,65.633987 l 134.722197,0 0,132.769703 -134.722197,0 z" />
-  <g
-     inkscape:groupmode="layer"
-     id="layer1"
-     inkscape:label="Layer 1"
-     style="display:inline">
-    <g
-       id="g4167"
-       transform="matrix(0.1,0,0,-0.1,30.254413,203.40018)"
-       style="fill:url(#gradient);fill-opacity:1;stroke:none">
-      <path
-         id="path4169"
-         d="m 80,735 0,-645 253,2 252,3 5,255 5,255 120,0 120,0 5,-255 5,-255 255,0 255,0 0,640 0,640 -255,0 -255,0 -3,-252 -2,-253 -125,0 -125,0 -2,253 -3,252 -252,3 -253,2 0,-645 z"
-          />
-      <path
-         id="path4171"
-         d="m 1747,1373 c -4,-3 -7,-32 -7,-64 l 0,-58 -62,-3 -63,-3 0,-575 0,-575 250,0 250,0 5,255 5,255 125,0 125,0 5,-255 5,-255 250,0 250,0 3,578 2,577 -65,0 -65,0 0,65 0,65 -503,0 c -277,0 -507,-3 -510,-7 z m 631,-380 3,-123 -131,0 -130,0 0,118 c 0,65 3,122 7,126 4,3 61,5 127,4 l 121,-3 3,-122 z"
-         />
-      <path
-         id="path4173"
-         d="m 3277,1373 c -4,-3 -7,-32 -7,-64 l 0,-58 -62,-3 -63,-3 0,-510 0,-510 62,-3 62,-3 3,-62 3,-62 520,0 520,0 3,127 3,128 -328,2 -328,3 0,380 0,380 328,3 327,2 0,130 0,130 -518,0 c -285,0 -522,-3 -525,-7 z"
-          />
-      <path
-         id="path4175"
-         d="m 4585,1368 c -3,-7 -4,-296 -3,-643 l 3,-630 253,-3 252,-2 0,247 c 0,137 4,254 8,261 7,9 39,12 128,10 l 119,-3 5,-255 5,-255 253,-3 c 138,-1 252,1 252,5 3,175 0,495 -5,503 -3,5 -30,10 -60,10 -51,0 -54,1 -57,27 -2,21 -10,29 -36,35 -33,9 -33,9 -30,66 3,55 4,57 33,62 24,4 31,11 35,35 5,29 8,30 63,35 l 58,5 0,243 c 0,133 -1,247 -1,252 0,6 -92,10 -255,10 l -255,0 0,-255 0,-256 -127,3 -128,3 -3,253 -2,252 -250,0 c -191,0 -252,-3 -255,-12 z"
-         />
-    </g>
-  </g>
-</svg>
-            </div>
-            			<br />
-            
-                    
-            
-            
-            
-            
-                <p id="strapline">Meet | Learn | Create</p>
- <form id="signup-form" method="post" action="#">
-				
-				<div class="count-container">
-
-  <ul class="countdown">
-    <li><span id="days">0</span>days</li>
-    <li><span id="hours">0</span>Hours</li>
-    <li><span id="minutes">0</span>Minutes</li>
-    <li><span id="seconds">0</span>Seconds</li>
-  </ul>
-</div>
-               
-        <a id="main-submit2" class="register"  href="https://docs.google.com/forms/d/e/1FAIpQLSeRUOr0cpw1ODicgwMBr2GeKBlH2AQIFzY_Und8n0GBjackgQ/viewform">Sign Up!</a>
-            </form>
-     
-        <!--a id="main-submit" class="register" href="http://my.mlh.io/oauth/authorize?client_id=15aca68722898f2f3026a5a8ed825c1964e590f920c3f57dd22bdc93eef8b3b8;redirect_uri=http://gavedwards.github.io/HackKeele/index.html;response_type=token">Register!</a-->
-     
-
-     
-     
-            <!--https://media.tenor.com/images/66880179a13cef64c70412cca8094073/tenor.gif -->
-            
-            <!--img id="main-background" src="8bit.png"  --> 
-            
-			<!--iframe class="grain" src="https://www.youtube.com/embed/8tZ_N3wP9Ko?autoplay=1&amp;loop=1&amp;controls=0&amp;iv_load_policy=3&amp;start=5&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;modestbranding=1"></iframe-->
-           </div>
-        
-	    <div class="section" id="section2">
-
-	    	<div class="intro">
-	    		<h1 >What is Hack Keele?</h1>
-	    		<br/>
-                <p>Whether you’re writing your first lines of HTML, building a VR app or a hoverboard, Hack Keele is just the place for you. We will have workshops and mentors to help make your idea happen. You will be able to exhibit your skills without worrying about any mortal needs. We will take care of everything :)!</p>
-                <br/>
-                <div class="questions">
-                 <button class="pop-up-button" >What is a hackathon?</button>
-<div class="pop-up-container">
-  <div class="pop-up">
-    <div class="pop-up-text">
-    <span class="close" onclick="closePopup()">×</span>
-        <h1>What even is a hackathon?</h1>
-      <p>Hackathons are a place where many passionate professionals or students in Technology and Business Development actively participate - form diverse teams, make their pitches, adds their expertise and work towards creating a solution.
-        </p><p>
-It is one such opportunity where you make many new friends from diverse backgrounds whom you would have never met, and learn new things from mentors and teammates. Above all, Hackathon helps you to see a problem from multiple perspectives and arrive at a solution.</p>
-      <a href="#">Link</a>
-    </div>
-  </div>
+    stroke-linejoin: round;filter: url(#glow);" /> </g>
+                            <path id="rect4204" style="fill:#000000;fill-opacity:1" d="m 597.46362,64.983154 20.82662,0 0,55.971536 -20.82662,0 z m 2.60334,73.543996 20.17578,0 0,57.92403 -20.17578,0 z m -117.14972,-74.194829 121.70555,0 0,131.468029 -121.70555,0 z m -128.86472,-4.55582 110.64142,0 0,31.890758 -110.64142,0 z m -11.06415,14.969135 123.00722,0 0,123.658054 -123.00722,0 z m -139.27801,-12.365807 106.73642,0 0,29.287434 -106.73642,0 z m -18.22328,13.667466 136.02385,0 0,122.356375 -136.02385,0 z M 35.795753,65.633987 l 134.722197,0 0,132.769703 -134.722197,0 z" />
+                            <g inkscape:groupmode="layer" id="layer1" inkscape:label="Layer 1" style="display:inline">
+                                <g id="g4167" transform="matrix(0.1,0,0,-0.1,30.254413,203.40018)" style="fill:url(#gradient);fill-opacity:1;stroke:none">
+                                    <path id="path4169" d="m 80,735 0,-645 253,2 252,3 5,255 5,255 120,0 120,0 5,-255 5,-255 255,0 255,0 0,640 0,640 -255,0 -255,0 -3,-252 -2,-253 -125,0 -125,0 -2,253 -3,252 -252,3 -253,2 0,-645 z" />
+                                    <path id="path4171" d="m 1747,1373 c -4,-3 -7,-32 -7,-64 l 0,-58 -62,-3 -63,-3 0,-575 0,-575 250,0 250,0 5,255 5,255 125,0 125,0 5,-255 5,-255 250,0 250,0 3,578 2,577 -65,0 -65,0 0,65 0,65 -503,0 c -277,0 -507,-3 -510,-7 z m 631,-380 3,-123 -131,0 -130,0 0,118 c 0,65 3,122 7,126 4,3 61,5 127,4 l 121,-3 3,-122 z" />
+                                    <path id="path4173" d="m 3277,1373 c -4,-3 -7,-32 -7,-64 l 0,-58 -62,-3 -63,-3 0,-510 0,-510 62,-3 62,-3 3,-62 3,-62 520,0 520,0 3,127 3,128 -328,2 -328,3 0,380 0,380 328,3 327,2 0,130 0,130 -518,0 c -285,0 -522,-3 -525,-7 z" />
+                                    <path id="path4175" d="m 4585,1368 c -3,-7 -4,-296 -3,-643 l 3,-630 253,-3 252,-2 0,247 c 0,137 4,254 8,261 7,9 39,12 128,10 l 119,-3 5,-255 5,-255 253,-3 c 138,-1 252,1 252,5 3,175 0,495 -5,503 -3,5 -30,10 -60,10 -51,0 -54,1 -57,27 -2,21 -10,29 -36,35 -33,9 -33,9 -30,66 3,55 4,57 33,62 24,4 31,11 35,35 5,29 8,30 63,35 l 58,5 0,243 c 0,133 -1,247 -1,252 0,6 -92,10 -255,10 l -255,0 0,-255 0,-256 -127,3 -128,3 -3,253 -2,252 -250,0 c -191,0 -252,-3 -255,-12 z" /> </g>
+                            </g>
+                        </svg>
                     </div>
-                    </br>
-                
-                 <button class="pop-up-button" >Why are hackathons good for me?</button>
-  <div class="pop-up-container">
-
-                <div class="pop-up">
-    <div class="pop-up-text">
-    <span class="close" onclick="closePopup()">×</span>
-        <h1>Hackthons & You</h1>
-      <p>“Why is a hackathon a thing?”
-
-For all of these reasons:
-
-Community.
-To learn & teach.
-To solve problems.
-To create something new.
-To meet like-minded people.
-To build, because building is fun and rewarding.
-To gain the respect of peers, through creative expression.
-To collaboratively push the limits of technology as we know it today.</p>
-      <a href="#">Link</a>
-    </div>
-  </div>
+                    <br />
+                    <p id="strapline">Meet | Learn | Create</p>
+                    <form id="signup-form" method="post" action="#">
+                        <div class="count-container">
+                            <ul class="countdown">
+                                <li><span id="days">0</span>days</li>
+                                <li><span id="hours">0</span>Hours</li>
+                                <li><span id="minutes">0</span>Minutes</li>
+                                <li><span id="seconds">0</span>Seconds</li>
+                            </ul>
+                        </div> <a id="main-submit2" class="register" href="https://docs.google.com/forms/d/e/1FAIpQLSeRUOr0cpw1ODicgwMBr2GeKBlH2AQIFzY_Und8n0GBjackgQ/viewform">Sign Up!</a> </form>
+                    <!--a id="main-submit" class="register" href="http://my.mlh.io/oauth/authorize?client_id=15aca68722898f2f3026a5a8ed825c1964e590f920c3f57dd22bdc93eef8b3b8;redirect_uri=http://gavedwards.github.io/HackKeele/index.html;response_type=token">Register!</a-->
+                    <!--https://media.tenor.com/images/66880179a13cef64c70412cca8094073/tenor.gif -->
+                    <!--img id="main-background" src="8bit.png"  -->
+                    <!--iframe class="grain" src="https://www.youtube.com/embed/8tZ_N3wP9Ko?autoplay=1&amp;loop=1&amp;controls=0&amp;iv_load_policy=3&amp;start=5&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;modestbranding=1"></iframe-->
                 </div>
-                    </br>
-            
-             <button class="pop-up-button" >What skills can I learn?</button>
-            <div class="pop-up-container">
+                <div class="section" id="section2">
+                    <div class="intro">
+                        <h1>What is Hack Keele?</h1>
+                        <br/>
+                        <p>Whether you’re writing your first lines of HTML, building a VR app or a hoverboard, Hack Keele is just the place for you. We will have workshops and hackathons to help make your idea happen and help you learn the technologies that are actually used in the real world. </p>
+                        </br>
+                        <p>We will hold regular activities such as VR workshops, ethical hacking capture the flags and hack days where you can bring your own ideas to life. Who knows... you could create the next big thing!</p>
+                        <br/>
+                        <div class="questions">
+                            <button class="pop-up-button">What is a hackathon?</button>
+                            <div class="pop-up-container">
+                                <div class="pop-up">
+                                    <div class="pop-up-text"> <span class="close" onclick="closePopup(this)">×</span>
+                                        <h1>What is a hackathon?</h1>
+                                        <p>Hackathons are a place where many passionate professionals or students in Technology and Business Development actively participate - form diverse teams, make their pitches, adds their expertise and work towards creating a solution. </p>
+                                        <p> It is one such opportunity where you make many new friends from diverse backgrounds whom you would have never met, and learn new things from mentors and teammates. Above all, Hackathons helps you to see a problem from multiple perspectives and arrive at a solution.</p>
+                                        <div class="pop-video-container">
+                                            </br>
+                                            <iframe class="pop-video" width="500" height="300" src="https://www.youtube.com/embed/qj4DQfYx2Hg" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        </br> <a href="https://mlh.io/about">Click here to find out more</a> </div>
+                                </div>
+                            </div>
+                            </br>
+                            <button class="pop-up-button">Why are hackathons good for me?</button>
+                            <div class="pop-up-container">
+                                <div class="pop-up">
+                                    <div class="pop-up-text"> <span class="close" onclick="closePopup(this)">×</span>
+                                        <h1>Why are hackathons good for me?</h1> </br>
+                                        <ul>
+                                            <li>Networking - make connections and build your network across universities.</li>
+                                            </br>
+                                            <li>Learn - learn new skills that are used in industry.</li>
+                                            </br>
+                                            <li>Solve problems - improve your ability to solve complex problems.</li>
+                                            </br>
+                                            <li>Innovation - hackathons are the perfect platform to create something new.</li>
+                                            </br>
+                                            <li>Build - Hacking is all about people that 'do'. Hack Keele enables you to use your skills.</li>
+                                            </br>
+                                            <li>Teamwork - collaboratively push the limits of technology as we know it today.</li>
+                                        </ul>
+                                        </br> <a href="https://mlh.io/about">Click here to find out more</a> </div>
+                                </div>
+                            </div>
+                            </br>
+                            <button class="pop-up-button">What can I learn at Workshops?</button>
+                            <div class="pop-up-container">
+                                <div class="pop-up">
+                                    <div class="pop-up-text"> <span class="close" onclick="closePopup(this)">×</span>
+                                        <h1>Weekly activities</h1>
+                                        <p>We fun, engaging hacker community activities and expert workshops that you can attend on campus each week. Join our Hack Keele community, and learn valuable skills with your fellow students.</p>
+                                        <div class="pop-video-container">
+                                            </br>
+                                            <iframe class="pop-video" width="560" height="400" src="https://www.youtube.com/embed/wv51Vwy0PL4" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                                                        </br> <a href="https://localhost.mlh.io/#activities">Click here to find out more</a> 
 
-  <div class="pop-up">
-    <div class="pop-up-text">
-    <span class="close" onclick="closePopup()">×</span>
-        <h1>Title</h1>
-      <p>We'll help you learn and teach the technologies that are actually used in the real world.</p>
-        <iframe width="560" height="400" src="https://www.youtube.com/embed/wv51Vwy0PL4" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-            </div>
-                    </br>
+                                    </div>
+                                </div>
+                            </div>
+                            </br>
+                        </div>
+                    </div>
                 </div>
-    <!--div class="video-right">
-                <iframe id="hack-video" width="500" height="300" src="https://www.youtube.com/embed/qj4DQfYx2Hg" frameborder="0" allowfullscreen></iframe>
-    </div-->
-	    	</div>
-	    </div>
-        <div class="section" id="section3">
-	    	<div class="intro">
-	    		<h1>Who is allowed?</h1>
-                <br/>
-	    		<p>Our hackathons are free to enter! If you're over 18, and you're a student or have graduated in the past 12 months, you are welcome to attend! More information will be released soon.</p>
-	  
-	    	</div>
-	    </div>
-    <div class="section" id="section4">
-
-	    	<div class="intro">
-	    		<h1>Why are hackthons important?</h1>
-                <br/>
-	    		<p>Students establish industry connections which not only creates employment opportunities, but it also puts a school on the radar of important donors and corporate partners. </p><br/><p>Students get to spend a weekend having fun, meeting new people, and preparing themselves for technical careers. Hackathons provide a real-world experience, competing in teams to create a product. Similar to the product cycles of a startup company.</p><br/><p> Students gain time management skills, along with technical expertise and new connections. In addition, students get to spend one-on-one time with expert mentors who teach students new skills and help with their projects.</p>
-                                        </div>
-	    </div>
-        
-        <div class="section" id="section5">
-
-	    	<div class="intro">
-	    		<h1>What skills do I need?</h1>
-                <br/>
-                <p>But I don't have any experience - I won't be any good!</p><p><br/>
-Nonsense - Everyone has to start somewhere, and we will have mentors at the event to help you along. One of the most awesome qualities of hackathons is the sheer number of lovely people that you'll meet at them, so no matter your skill level or expertise, you'll always be able to have an awesome time, pick up loads of new skills, and make new friends!</p>
-                                        </div>
-	    </div>
-        
-
-        <div class="section" id="section6">
-
-	    	<div class="intro questions">
-	    		<h1>Get Involved!</h1>
-                <br/>
-                <h3><i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <div class="section" id="section3">
+                    <div class="intro">
+                        <h1>Who can attend?</h1>
+                        <br/>
+                        <p>Our hackathons are free to enter! Hack Keele is a student focused society and hackathon, and therefore you must be a current student or have graduated within the last academic year to be able to attend. If you are under 18 years of age, we’ll need a parental consent form. More information will be released soon.</p>
+                    </div>
+                </div>
+                <div class="section" id="section4">
+                    <div class="intro">
+                        <h1>Why are hackthons important?</h1>
+                        <br/>
+                        <p>You’ll gain more practical knowledge in one hackathon than from a month of lectures. Hackathons provide a real-world experience, working in teams to learn new skills and create new products. Similar to the product cycles of a startup company.</p>
+                        <br/>
+                        <p>When you work with others, you’ll pick up so many new tips and tricks. These are all skills which will make you a better developer and help you get a job/internship. You’re going to love the inventive and smart people you meet at hackathons. You’ll get to meet people from all over the world you’d never get a chance to meet otherwise.</p>
+                        <br/>
+                        <p>Hackathons are like career fairs on steroids. If you’re looking for an internship or a job in the tech industry, guess where companies are recruiting? At hackathons of course! </div>
+                </div>
+                <div class="section" id="section5">
+                    <div class="intro">
+                        <h1>What skills do I need?</h1>
+                        <br/>
+                        <p>"But I don't have any experience - I won't be any good!"</p>
+                        <p>
+                            <br/> Nonsense - Everyone has to start somewhere, and we will have mentors at the events and workshops to help you along. One of the most awesome qualities of hackathons is the sheer number of lovely people that you'll meet at them, so no matter your skill level or expertise, you'll always be able to have an awesome time, pick up loads of new skills, and make new friends!</p>
+                    </div>
+                </div>
+                <div class="section" id="section6">
+                    <div class="intro questions">
+                        <h1>Get Involved!</h1>
+                        <br/>
+                        <h3><i class="fa fa-facebook-official" aria-hidden="true"></i>
 Facebook: <a href="https://www.facebook.com/hackkeele/">Hack Keele</a></h3>
-                <h3><i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        <h3><i class="fa fa-twitter-square" aria-hidden="true"></i>
 Twitter: <a href="https://twitter.com/HackKeele">@hackkeele</a></h3>
-                <h3><i class="fa fa-envelope" aria-hidden="true"></i>
-                    Email: <a href="mailto:soc.hack@keele.ac.uk">soc.hack@keele.ac.uk</a></h3>
-                  <a id="main-submit2" class="register"  href="https://docs.google.com/forms/d/e/1FAIpQLSeRUOr0cpw1ODicgwMBr2GeKBlH2AQIFzY_Und8n0GBjackgQ/viewform">Sign Up!</a>
-                                        </div>
-	    </div>
-        	    
-    </div></div>
-</div>
-
-  <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""
-     onclick="arrowClick()"></a>
-
-</div>
+                        <h3><i class="fa fa-envelope" aria-hidden="true"></i>
+                    Email: <a href="mailto:soc.hack@keele.ac.uk">soc.hack@keele.ac.uk</a></h3> <a id="main-submit2" class="register" href="https://docs.google.com/forms/d/e/1FAIpQLSeRUOr0cpw1ODicgwMBr2GeKBlH2AQIFzY_Und8n0GBjackgQ/viewform">Sign Up!</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon="" onclick="arrowClick()"></a>
+    </div>
 </body>
+
 </html>
