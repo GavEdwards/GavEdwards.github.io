@@ -443,12 +443,12 @@ top: 15px;
     -webkit-box-shadow:0px 0px 26px 0px #38b3c3;
     box-shadow: 0px 0px 26px 0px #38b3c3;
     border-radius: 6px;
-    max-height: 700px;
+    max-height: 650px;
     height: 100%;
     background:black;
     display: inline-block;
     width: 94%;
-    max-width: 720px;
+    max-width: 750px;
     position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -523,14 +523,14 @@ display: inline-block;
 .count-container{
     margin-bottom: 15px;
 }
-#email{
+.email{
     width:18em; display:inline-block; border: solid 2px rgba(255, 255, 255, 1);     height: 2.75em;
     background: rgba(0, 0, 0, 0.45);
     border-radius: 5px;
     padding: 0 1em; color:#fff; max-width: 220px;
 }
 
-#main-submit2{
+.main-submit2{
     background: #26ae5c;
     display: inline-block;
     padding: 1em 1.7em;
@@ -871,7 +871,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
         width:50%;
         height: 2.2em
     }
-    #main-submit{
+    .main-submit2{
         margin-left: 5px;
         height: 2.5em;
         padding: 0 1.1em;
