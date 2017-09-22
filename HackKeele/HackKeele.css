@@ -872,11 +872,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
         width:50%;
         height: 2.2em
     }
-    .main-submit2{
-        margin-left: 5px;
-        height: 2.5em;
-        padding: 0 1.1em;
-    }
+    
     .count-container{
         margin-bottom: 10px;
     }
