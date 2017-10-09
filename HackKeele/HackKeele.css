@@ -997,7 +997,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 }
 
 
-@media screen and (max-width:440px) {
+@media screen and (max-width:360px) {
     .section{
         padding-top: 5vh;
     }
