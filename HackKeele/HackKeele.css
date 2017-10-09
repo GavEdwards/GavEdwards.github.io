@@ -668,7 +668,8 @@ body {
     top: calc(var(--borderWidth));
     left: calc(var(--borderWidth));
     width: calc(100% - 4 * var(--borderWidth));
-    background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 80%), url(images/background2.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.9
+    ) 0%, rgba(0, 0, 0, 0.4) 80%), url(images/background2.jpg);
     background-size: cover;
     background-position: center;
     z-index: -1;
