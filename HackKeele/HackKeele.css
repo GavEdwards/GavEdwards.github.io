@@ -660,19 +660,29 @@ body {
 }
 
 .gradient-border {
-    --borderWidth: 7px;
+
+        --borderWidth: 7px;
     position: absolute;
     border-radius: var(--borderWidth);
     height: calc(100% - 4 * var(--borderWidth));
-    top: calc(2* var(--borderWidth));
-    left: calc(2* var(--borderWidth));
+    top: calc(var(--borderWidth));
+    left: calc(var(--borderWidth));
     width: calc(100% - 4 * var(--borderWidth));
-    background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 80%), url(images/background2.jpg
-);
+    background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 80%), url(images/background2.jpg);
     background-size: cover;
     background-position: center;
+    z-index: -1;
+    border: var(--borderWidth) solid #7A5FFF;
+        border-color: #7A5FFF;
+    border-image-source:
+      linear-gradient(30deg, #7A5FFF, #01FF89);
+    border-image-slice: 20;
+
+    #animation: animatedBorder 5s infinite;
+
 }
 
+/*
 .gradient-border:after {
     content: '';
     position: absolute;
@@ -681,7 +691,7 @@ body {
     left: calc(-1 * var(--borderWidth));
     height: calc(100% + var(--borderWidth) * 2);
     width: calc(100% + var(--borderWidth) * 2);
-    /*background:linear-gradient(60deg, #13420d 0%,#0c4f0f 11%,#157019 24%,#1b8e20 37%,#21a521 51%,#65af59 62%,#79d374 77%,#a1e0a1 87%,#95f49a 100%);*/
+   
     background: -webkit-linear-gradient(30deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
     background: -o-linear-gradient(30deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
     background: linear-gradient( 30deg, #7A5FFF, #01FF89, #7A5FFF, #01FF89);
@@ -713,6 +723,19 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+*/
+
+@keyframes animatedBorder {
+    0% {
+border-image-source:
+      linear-gradient(to bottom, #7A5FFF, #01FF89);    }
+    50% {
+border-image-source:
+      linear-gradient(to bottom, #01FF89, #7A5FFF);    }
+    100% {
+border-image-source:
+      linear-gradient(to bottom, #7A5FFF, #01FF89);    }
 }
 
 html body [data-ca3_iconfont="ETmodules"]::before {
@@ -985,6 +1008,8 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     }
     .intro-section-wrap h1, #section1 h1 {
         font-size: 2.5em;
+            margin: 0px;
+    margin-bottom: 20px;
     }
     .intro-section-wrap p {
         font-size: 1.5em;

@@ -39,6 +39,11 @@
                     document.getElementById('seconds').innerHTML = 0;
                 }
             }, second)
+        
+        
+                                var thresholdWindow = 440;
+
+        
         $(document).ready(function () {
             /*
              * Plugin intialization
@@ -65,7 +70,9 @@
                     }
                 }
             });
-            if ($(window).width() <= 440) {
+            
+
+            if ($(window).width() <= thresholdWindow) {
                 $('.section').addClass('pp-scrollable');
                 $('.section').removeClass('pp-table');
                 $('.section').children(':first-child').removeClass('pp-tableCell');
@@ -78,8 +85,8 @@
                 }
             }
         });
+        
         $(window).resize(function () {
-            var thresholdWindow = 440;
             if ($(window).width() <= thresholdWindow) {
                 $('.section').addClass('pp-scrollable');
                 $('.section').removeClass('pp-table');
