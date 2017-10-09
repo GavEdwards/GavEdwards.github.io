@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Hack Keele</title>
     <meta name="author" content="Gavin Edwards" />
-    <meta name="description" content="Hack Keele hackathon..." />
+    <meta name="description" content="We're a society for tech-minded individuals to meet up, learn and create the future of technology! If you've got an interest in Programming, Coding, Web development, Game development, Cyber Security, Ethical Hacking, Networking, Computing, Artificial Intelligence etc. - you'll fit in perfectly!" />
     <meta name="keywords" content="Hackathon, Keele, Hack Keele" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.4/jquery.pagepiling.css" />
     <link rel="stylesheet" type="text/css" href="HackKeele.css" />
@@ -18,17 +18,19 @@
     <script src="HackKeele.js"></script>
     <script type="text/javascript" src="jquery.pagepiling.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
+       $(document).ready(function () {
             /*
              * Plugin intialization
              */
             $('#pagepiling').pagepiling({
                 //direction: 'horizontal',
+                //CHANGE MENU HIGHLIGHTING
                 menu: 'null'
-                , anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8']
+                , normalScrollElements: '.intro .pop-up-container'
+                , anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6']
                 , navigation: {
                     'position': 'right'
-                    , 'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5', 'page6', 'page7', 'page8']
+                    , 'tooltips': ['Home', 'What?', 'Who?', 'Why?', 'Skills', 'Sign Up']
                 }
                 , afterRender: function () {
                     $('#pp-nav').addClass('custom');
@@ -42,6 +44,33 @@
                     }
                 }
             });
+            if ($(window).width() <= 440) {
+                $('.section').addClass('pp-scrollable');
+                $('.section').removeClass('pp-table');
+                $('.section').children(':first-child').removeClass('pp-tableCell');
+            }
+            else {
+                if ($(window).width() > thresholdWindow) {
+                    $('.section').removeClass('pp-scrollable');
+                    $('.section').addClass('pp-table');
+                    $('.section').children(':first-child').addClass('pp-tableCell');
+                }
+            }
+        });
+        $(window).resize(function () {
+            var thresholdWindow = 440;
+            if ($(window).width() <= thresholdWindow) {
+                $('.section').addClass('pp-scrollable');
+                $('.section').removeClass('pp-table');
+                $('.section').children(':first-child').removeClass('pp-tableCell');
+            }
+            else {
+                if ($(window).width() > thresholdWindow) {
+                    $('.section').removeClass('pp-scrollable');
+                    $('.section').addClass('pp-table');
+                    $('.section').children(':first-child').addClass('pp-tableCell');
+                }
+            }
         });
     </script>
 </head>
@@ -56,9 +85,7 @@
                 <li><a href="sponsers.html">Sponsers</a></li>
                 <li class="active"><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html" class="last">Contact</a></li>
-            </ul> <img id="mlh-logo" src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season">
- 
-        </div>
+            </ul> <img id="mlh-logo" src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season"> </div>
         <div id="pagepiling">
             <div class="gradient-border">
                 <div class="section" id="section1">
@@ -104,11 +131,9 @@
                         <h1>FAQ</h1>
                         <br/> <span>
             <p>Scroll down to see some frequently asked questions</p>
-            </span>
-                        
-                    </div>
+            </span> </div>
                 </div>
-  <div class="section" id="section2">
+                <div class="section" id="section2">
                     <div class="intro">
                         <h1>FAQ</h1>
                         <br/>
@@ -160,18 +185,13 @@
                                             </br>
                                             <iframe class="pop-video" width="560" height="400" src="https://www.youtube.com/embed/wv51Vwy0PL4" frameborder="0" allowfullscreen></iframe>
                                         </div>
-                                    </br> <a href="https://localhost.mlh.io/#activities">Click here to find out more</a> 
-                                    </div>
+                                        </br> <a href="https://localhost.mlh.io/#activities">Click here to find out more</a> </div>
                                 </div>
                             </div>
                             </br>
                         </div>
                     </div>
                 </div>
-
-    
-    
-             
             </div>
         </div>
     </div>
