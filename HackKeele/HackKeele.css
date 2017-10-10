@@ -660,6 +660,8 @@ body {
 }
 
 .gradient-border {
+    
+    overflow-y: hidden;
 
         --borderWidth: 7px;
     position: absolute;
@@ -668,8 +670,9 @@ body {
     top: calc(var(--borderWidth));
     left: calc(var(--borderWidth));
     width: calc(100% - 4 * var(--borderWidth));
-    background: linear-gradient(rgba(0, 0, 0, 0.9
-    ) 0%, rgba(0, 0, 0, 0.4) 80%), url(images/background2.jpg);
+        background: radial-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.11) 80%), url(images/background2.jpg);
+    
+
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -730,13 +733,19 @@ body {
 @keyframes animatedBorder {
     0% {
 border-image-source:
-      linear-gradient(to bottom, #7A5FFF, #01FF89);    }
+      linear-gradient(to bottom, #7A5FFF, #01FF89);
+   
+    }
     50% {
 border-image-source:
-      linear-gradient(to bottom, #01FF89, #7A5FFF);    }
+      linear-gradient(to bottom, #01FF89, #7A5FFF); 
+   
+    }
     100% {
 border-image-source:
-      linear-gradient(to bottom, #7A5FFF, #01FF89);    }
+      linear-gradient(to bottom, #7A5FFF, #01FF89);
+    
+    }
 }
 
 html body [data-ca3_iconfont="ETmodules"]::before {
