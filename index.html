@@ -1,0 +1,516 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Identity by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- link rel="stylesheet" href="assets/css/font-awesome.min.css" /-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" /> </noscript>
+</head>
+
+<body class="is-loading">
+    <style>
+        body {
+            /* background-image: url(images/overlay.png), linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb), url(../../images/bg.jpg);*/
+        }
+        
+        footer#footer {
+            height: 0px;
+            padding: 0px;
+        }
+        
+        #main {
+            width: 400px;
+            max-width: 95vw;
+            padding: 3em 3em 2em 3em;
+            transition: 0.4s ease-in-out;
+        }
+        
+        #name {
+            transition: 0.4s ease;
+        }
+        
+        #main.pageView #name {
+            margin-top: -38px;
+            font-size: 1.2em;
+            padding-left: 50px;
+            background: white;
+        }
+        
+        #main .avatar img {
+            transition: 0.4s ease-in-out;
+            /*margin: 0 106px;*/
+        }
+        
+        #main .avatar {
+            transition: 0.4s ease-in-out;
+            /*margin: 0 106px;*/
+        }
+        
+        #main.pageView .avatar img {
+            margin-left: 0;
+            max-width: 50px;
+        }
+        
+        #main.pageView .avatar {
+            margin-bottom: 0px;
+        }
+        
+        #main .avatar:before {
+            background: #4CAF50;
+        }
+        
+        p {
+            text-transform: none;
+        }
+        
+        #menu .pageView {
+            padding: 0 3em 1em 3em;
+            /*width: 900px!important;*/
+        }
+        
+        .portfolioView {
+            transform: translateX(-40px) rotateY(40deg)!important;
+        }
+        
+        h2:hover {
+            color: forestgreen;
+        }
+        
+        footer {
+            opacity: 1;
+            transition: 0.4s ease-in-out;
+            height: 75px;
+            overflow: hidden;
+        }
+        
+        ul.icons li a:hover {
+            border-color: forestgreen;
+        }
+        
+        a:hover {
+            color: forestgreen;
+        }
+        
+        #main_tagline {
+            height: 22px;
+            overflow: hidden;
+            opacity: 1;
+            transition: 0.4s ease-in-out;
+        }
+        
+        .pageView #main_tagline {
+            height: 0px;
+            opacity: 0;
+        }
+        
+        .pageView footer {
+            opacity: 0;
+            height: 0px;
+        }
+        
+        .header_content {
+            height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            transition: 0.4s ease-in-out;
+        }
+        
+        .scroll_content {
+            height: 0px;
+            overflow-y: auto!important;
+            padding-left: 15px;
+            opacity: 0;
+            transition: 0.4s ease-in-out;
+        }
+        
+        .open_content {
+            height: 250px;
+            opacity: 1;
+        }
+        
+        .open_scroll {
+            height: 250px;
+            opacity: 1;
+            border-left: 1px solid forestgreen;
+        }
+        
+        form {
+            margin: 0px;
+        }
+        
+        @media screen and (max-device-width: 480px) {
+            .scroll_content {
+                padding-left: 0px;
+            }
+            #main {
+                padding: 1em 2em 2em 2em;
+            }
+            #main.pageView #name {
+                font-size: 1em;
+            }
+        }
+    </style>
+    <script>
+        //add css style for when on the initial home view
+        function homeView() {
+            $("#main").removeClass("pageView");
+            $(".header_content").removeClass("open_content");
+            //alert("MINI");
+            //get element
+            var el = $(".header_content");
+            //get its current height
+            var curHeight = el.height();
+            //animate to 0 height
+            el.height(curHeight).animate({
+                height: 0
+            }, 300);
+        }
+        //on document ready 
+        $(document).ready(function () {
+            //when a header option is clicked transform the page styles
+            $('.header').click(function () {
+                if ($(this).siblings(".header_content").hasClass("open_content")) {
+                    $("#main").removeClass("pageView");
+                    $(this).siblings(".header_content").removeClass("open_content");
+                    $(".scroll_content").removeClass("open_scroll");
+                    //get element
+                    var el = $(".header_content");
+                    //get its current height
+                    var curHeight = el.height();
+                    //animate to 0 height
+                    el.height(curHeight).animate({
+                        height: 0
+                    }, 500);
+                    alreadyOpen = false;
+                }
+                else {
+                    $(".header_content").removeClass("open_content");
+                    $("#main").addClass("pageView");
+                    $(this).siblings(".header_content").addClass("open_content");
+                    $(".scroll_content").removeClass("open_scroll");
+                    //get element
+                    var el = $(".header_content");
+                    //get its current height
+                    var curHeight = el.height();
+                    //animate to 0 height
+                    el.height(curHeight).animate({
+                        height: 0
+                    }, 500);
+                    //get element
+                    var el = $(this).siblings(".header_content");
+                    //get its current height
+                    var curHeight = el.height();
+                    //temp set its height to auto
+                    var autoHeight = el.css('height', 'auto').height();
+                    //animate to auto height
+                    el.height(curHeight).animate({
+                        height: autoHeight
+                    }, 500);
+                    alreadyOpen = false;
+                }
+            });
+            //when an experience is clicked tranform the page styles
+            var alreadyOpen = false;
+            $('.subheader').click(function () {
+                if ($(this).children(".scroll_content").hasClass("open_scroll")) {
+                    $(this).children(".scroll_content").removeClass("open_scroll");
+                    var el = $(this).parent(".header_content");
+                    //get its current height
+                    var curHeight = el.height();
+                    //animate to height - 250
+                    el.height(curHeight).animate({
+                        height: curHeight - 250
+                    }, 500);
+                    alreadyOpen = false;
+                }
+                else {
+                    $(".scroll_content").removeClass("open_scroll");
+                    if (alreadyOpen == false) {
+                        //get element
+                        var el = $(this).parent(".header_content");
+                        //get its current height
+                        var curHeight = el.height();
+                        //temp set its height to auto
+                        var autoHeight = curHeight + 250;
+                        //animate to height plus vakue
+                        el.height(curHeight).animate({
+                            height: autoHeight
+                        }, 500);
+                        alreadyOpen = true;
+                    }
+                    $(this).children(".scroll_content").addClass("open_scroll");
+                }
+            });
+            // var child = $('.scroll_content:first').;
+            //alert(child.html());
+            //child.style.paddingRight = child.offsetWidth - child.clientWidth + "px";
+        });
+
+        function portfolioView() {
+            if ($('#main').hasClass('portfolioView')) {
+                // $("#main").removeClass("portfolioView");
+            }
+            else {
+                //  $("#main").addClass("portfolioView");
+            }
+        }
+    </script>
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Main -->
+        <section id="main">
+            <header> <span onclick='homeView()' class="avatar">
+                <!-- https://i.giphy.com/media/CVtNe84hhYF9u/giphy.webp -->
+                <img
+                                              src="person_icon.png" alt="" /></span>
+                <h1 onclick='homeView()' id="name">Gavin Edwards</h1>
+                <h3 id="main_tagline">Computer Science BSc</h3>
+                <!--i aria-hidden="true" class="fa-graduation-cap"></i-->
+                <div>
+                    <h2 class="header">Education</h2>
+                    <div class="header_content">
+                         <div class="subheader">
+                            <h3>Keele University</h3>
+                             <p>BSc (Hons) Computer Science</p>
+                            <div class="scroll_content">
+                                <h5>[September 2015 – Present]</h5>
+                                                                <h5>Predicted Grade: First Class</h5>
+
+                                <p>I co-founded Hack Keele society at Keele University and help to run it. I wanted to create a collaborative community within the university for proactive students interested in technology to share knowledge and work on projects. I created all our branding and the website, as well as helping to manage the social media.</p>
+                                </br>
+                                <p>We hold meetups every week, where we work on projects and teach relevant technical skills for the workplace, including how to use GitHub and Docker. Additionally, we have a Hack Day planned and a 24 hour MLH hackathon set for next year. I help to fundraise and personally manage all connections to external organisations.</p>
+                                </br>
+                                <p> I secured free access for our members to IBM’s Watson and Bluemix to launch a collaborative project and solve the universities car parking problem. I manage raising sponsorship and currently in talks with leading technology organisations.</p>
+                            </div>
+                        </div>
+                <div class="subheader">
+                            <h3>Blythe Bridge High School & Sixth Form</h3>
+                             <p>A Level & GCSE</p>
+                            <div class="scroll_content">
+                                <h5>[September 2007 – July 2015]</h5>
+                                <h5>A Level</h5>
+                                                               
+                                <p>I co-founded Hack Keele society at Keele University and help to run it. I wanted to create a collaborative community within the university for proactive students interested in technology to share knowledge and work on projects. I created all our branding and the website, as well as helping to manage the social media.</p>
+                                </br>
+                                                    <h5>GCSE</h5>
+
+                                <p>We hold meetups every week, where we work on projects and teach relevant technical skills for the workplace, including how to use GitHub and Docker. Additionally, we have a Hack Day planned and a 24 hour MLH hackathon set for next year. I help to fundraise and personally manage all connections to external organisations.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--i aria-hidden="true" class="fa-briefcase"></i-->
+                <div>
+                    <h2 class="header">Experience</h2>
+                    <div class="header_content">
+                        <div class="subheader">
+                            <h3>Hack Keele</h3>
+                            <div class="scroll_content">
+                                <h5>Co-founder and Organiser</h5>
+                                <p>I co-founded Hack Keele society at Keele University and help to run it. I wanted to create a collaborative community within the university for proactive students interested in technology to share knowledge and work on projects. I created all our branding and the website, as well as helping to manage the social media.</p>
+                                </br>
+                                <p>We hold meetups every week, where we work on projects and teach relevant technical skills for the workplace, including how to use GitHub and Docker. Additionally, we have a Hack Day planned and a 24 hour MLH hackathon set for next year. I help to fundraise and personally manage all connections to external organisations.</p>
+                                </br>
+                                <p> I secured free access for our members to IBM’s Watson and Bluemix to launch a collaborative project and solve the universities car parking problem. I manage raising sponsorship and currently in talks with leading technology organisations.</p>
+                            </div>
+                        </div>
+                        <div class="subheader">
+                            <h3>HM Government</h3>
+                            <div class="scroll_content">
+                                <h5>Cyber Internship</h5>
+                                <p>During my internship at a Government department I undertook an intense cyber training course aimed at transforming students into highly competent ‘Cyberists’. A wide range of skills were taught which included, evasion & ethical pen testing, secure software engineering, networking, reverse engineering, low level OS & windows internals, C programming, information assurance and IOT.</p>
+                                </br>
+                                <p>I also worked in teams for CTF’s, packet analysis, SOC and IA challenges. Adding to this I undertook a personal project. I decided to create a cyber security chatbot that would help make naïve users more secure by providing a more intuitive way to interact with cyber security whilst abstracting the complexities. </p>
+                            </div>
+                        </div>
+                        <div class="subheader">
+                            <h3>Ascot Business Solutions</h3>
+                            <div class="scroll_content">
+                                <h5>IT & Marketing</h5>
+                                <p>My role involved a mix of IT and marketing. I was the sole web developer for three websites, mainly being responsible for an e-commerce site. I had the task of fixing pre-existing errors throughout the site and reducing the load times. Afterwards, I updated the aesthetics by creating a consistent professional look and implemented a much smoother user experience. I also developed a new website to advertise the main software product we sold. </p>
+                                </br>
+                                <p>As it is a small business I had to be flexible and multi-disciplined, switching from technical to marketing tasks like creating a SEO strategy and customer support. I was trusted to self-manage my work and devise strategies to take the business forward.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--i aria-hidden="true" class="fa-trophy"></i-->
+                <div>
+                    <h2 class="header">Skills & Awards</h2>
+                    <div class="header_content">
+                        <div class="subheader">
+                            <h3>Skills</h3>
+                            <div class="scroll_content">
+                                <h3>Programming</h3>
+                                <h4>Confident Using: </h4>
+                                <p>Java, C++, Python, HTML, CSS, Javascript</p>
+                                <h4>Familiar With: </h4>
+                                <p>C, PHP, Tensorflow, JQuery</p>
+                                <h3>Other</h3>
+                                <h4>Confident Using: </h4>
+                                <p>Networks, Windows, Linux, GitHub, Virtual Machines</p>
+                                <h4>Familiar With: </h4>
+                                <p>Cloud Computing, Kali Linux, Databases</p>
+                            </div>
+                        </div>
+                        <div class="subheader">
+                            <h3>Awards</h3>
+                            <div class="scroll_content">
+                                <h3>Keele University AAA Excellence Scholarship</h3>
+                                <h3>2 x Hardest Working Student Award at A Level</h3>
+                                <h3>Duke of Edinburgh Bronze Award</h3>
+                                <h3>Young Leaders Award</h3> </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="header">Portfolio</h2>
+                    <div class="header_content">
+                        
+                        <div class="subheader">
+                        <h3 onclick="portfolioView()">Websites</h3>
+                            <div class="scroll_content">
+                                <a href="http://www.hackkeele.co.uk">Hack Keele</a>                                </br>
+
+                                <a href="https://scannersuperstore.co.uk/">Scanner Superstore</a>                                </br>
+
+                                <a href="https://gavedwards.github.io/FileDirector/">FileDirector</a>                                </br>
+
+                            </div>
+                        </div>
+                        
+                    <div class="subheader">
+                        <h3 onclick="portfolioView()">Projects</h3>
+                            <div class="scroll_content">
+                                <a href="javascript:;">Atari Player (In Progress)</a>
+                                </br>
+                                <a href="https://github.com/GavEdwards/CyberBot">CyberBot</a>
+                                                        </br>
+
+                                <a href="https://github.com/GavEdwards/EmailTokens">EmailTokens</a>
+                                                        </br>
+
+                                <a href="javascript:;">Road Distance Automated Calculator (In Progress)</a>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <!--div>
+                    <h2 class="header">Contact</h2>
+                    <div class="header_content">
+                        <div class="subheader">
+                            <h2>Contact Form</h2>
+                            <div class="scroll_content">
+                                <form method="post" action="#">
+                                    <div class="field">
+                                        <input type="text" name="name" id="name" placeholder="Name" /> </div>
+                                    <div class="field">
+                                        <input type="email" name="email" id="email" placeholder="Email" /> </div>
+                                    <div class="field">
+                                        <div class="select-wrapper">
+                                            <select name="department" id="department">
+                                                <option value="">Department</option>
+                                                <option value="sales">Sales</option>
+                                                <option value="tech">Tech Support</option>
+                                                <option value="null">/dev/null</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+                                    </div>
+                                    <div class="field">
+                                        <input type="checkbox" id="human" name="human" />
+                                        <label for="human">I'm a human</label>
+                                    </div>
+                                    <div class="field">
+                                        <label>But are you a robot?</label>
+                                        <input type="radio" id="robot_yes" name="robot" />
+                                        <label for="robot_yes">Yes</label>
+                                        <input type="radio" id="robot_no" name="robot" />
+                                        <label for="robot_no">No</label>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><a href="#" class="button">Get Started</a></li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div-->
+            </header>
+            <!--
+						<hr />
+						<h2>Extra Stuff!</h2>
+						<form method="post" action="#">
+							<div class="field">
+								<input type="text" name="name" id="name" placeholder="Name" />
+							</div>
+							<div class="field">
+								<input type="email" name="email" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<div class="select-wrapper">
+									<select name="department" id="department">
+										<option value="">Department</option>
+										<option value="sales">Sales</option>
+										<option value="tech">Tech Support</option>
+										<option value="null">/dev/null</option>
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+							</div>
+							<div class="field">
+								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
+							</div>
+							<div class="field">
+								<label>But are you a robot?</label>
+								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
+								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
+							</div>
+							<ul class="actions">
+								<li><a href="#" class="button">Get Started</a></li>
+							</ul>
+						</form>
+						<hr />
+						-->
+            <footer>
+                <ul class="icons">
+                    <li><a href="#" class="fa-github">GitHub</a></li>
+                    <li><a href="#" class="fa-envelope">Email</a></li>
+                    <li><a href="#" class="fa-linkedin-square">Linked In</a></li>
+                </ul>
+            </footer>
+        </section>
+        <!-- Footer -->
+        <footer id="footer"> </footer>
+    </div>
+    <!-- Scripts -->
+    <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+    <script>
+        if ('addEventListener' in window) {
+            window.addEventListener('load', function () {
+                document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+            });
+            document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+        }
+    </script>
+</body>
+
+</html>
