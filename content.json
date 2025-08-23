@@ -1,0 +1,145 @@
+{
+  "profile": {
+    "name": "Gavin Edwards",
+    "title": "Principal Applied AI Engineer",
+    "location": "London, UK",
+    "avatar": "https://avatars.githubusercontent.com/u/24434382",
+    "copyright": "© {year} Gavin Edwards"
+  },
+  "sections": [
+    {
+      "id": "projects",
+      "title": "KEY PROJECTS",
+      "icon": "sparkles",
+      "layout": "project",
+      "items": [
+        {
+          "title": "Extract",
+          "date": "01/2025 - Present",
+          "description": "Gemini-powered geospatial data extraction system; multi-agent orchestration with foundation models as tools for critical geospatial tasks; Champion backed by UK Prime Minister; highlighted by Sir Demis Hassabis."
+        },
+        {
+          "title": "Biomedical Research Assistant",
+          "date": "11/2023 - 04/2024",
+          "description": "Pioneered an agentic system to reduce drug-discovery research from days to minutes; adopted by 1,000+ scientists and used daily by the CEO. Shipped AstraZeneca's first GenAI tool."
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "title": "EXPERIENCE",
+      "icon": "briefcase",
+      "layout": "experience",
+      "items": [
+        {
+          "jobTitle": "Principal Applied AI Engineer",
+          "company": "Incubator for AI",
+          "date": "06/2024 - Present",
+          "location": "London, UK"
+        },
+        {
+          "jobTitle": "Staff Machine Learning Engineer",
+          "company": "AstraZeneca",
+          "date": "10/2022 - 06/2024",
+          "location": "Cambridge, UK"
+        },
+        {
+          "jobTitle": "R&D Lab Engineering Lead",
+          "company": "AstraZeneca",
+          "date": "10/2021 - 10/2022",
+          "location": "Cambridge, UK"
+        },
+        {
+          "jobTitle": "Machine Learning Engineer",
+          "company": "AstraZeneca",
+          "date": "10/2019 - 10/2021",
+          "location": "Cambridge, UK"
+        },
+        {
+          "title": "Previous roles - Data Scientist, Web Developer & Cyber Security",
+          "date": "08/2018 - 10/2019",
+          "location": "UK"
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "EDUCATION",
+      "icon": "academic-cap",
+      "layout": "education",
+      "items": [
+        {
+          "title": "Keele University",
+          "subtitle": "BSc (Hons) Computer Science, First Class",
+          "date": "09/2015 - 07/2018",
+          "bullets": [
+            "Final Year Project — Training policy-based and value-based RL agents to play Atari 2600 games"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "publications",
+      "title": "PUBLICATIONS & OPEN SOURCE",
+      "icon": "book-open",
+      "layout": "simple",
+      "items": [
+        {
+          "description": "Publications in ML venues including Science Advances, CIKM, WSDM MLoG."
+        },
+        {
+          "description": "Open-source repos for ML/AI (3,000+ stars)"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "title": "Message Me",
+      "url": "https://www.linkedin.com/messaging/compose?recipient=gavedwards0",
+      "icon": {
+        "type": "svg",
+        "viewBox": "0 0 24 24",
+        "fill": true,
+        "path": "M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.8v2.1h.1c.5-1 1.7-2.1 3.6-2.1 3.9 0 4.6 2.6 4.6 5.9V24h-4v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24h-4V8.5z",
+        "className": "h-4 w-4 opacity-80 group-hover:opacity-100"
+      }
+    },
+    {
+      "title": "GitHub",
+      "url": "https://github.com/GavEdwards",
+      "icon": {
+        "type": "svg",
+        "viewBox": "0 0 24 24",
+        "fill": true,
+        "fillRule": "evenodd",
+        "clipRule": "evenodd",
+        "path": "M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-1.017-.013-1.845-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z",
+        "className": "h-4 w-4"
+      }
+    },
+    {
+      "title": "Scholar",
+      "url": "https://scholar.google.co.uk/citations?user=_dH0ZN8AAAAJ&hl=fil",
+      "icon": "academic-cap"
+    }
+  ],
+  "modal": {
+    "title": "Background Animation",
+    "content": {
+      "intro": "The green shapes moving in the background are <strong>boids</strong> — artificial life forms that demonstrate emergent flocking behavior.",
+      "algorithmTitle": "Flocking Algorithm",
+      "algorithmIntro": "Each boid follows three simple rules:",
+      "rules": [
+        {"name": "Separation", "description": "Avoid crowding neighbors"},
+        {"name": "Alignment", "description": "Steer towards average heading"},
+        {"name": "Cohesion", "description": "Move towards the center of the group"}
+      ],
+      "conclusion": "From these simple rules emerges complex, lifelike behavior - much like how AI systems can exhibit sophisticated capabilities from simple mathematical foundations.",
+      "links": [
+        {"text": "Boids", "url": "https://en.wikipedia.org/wiki/Boids"},
+        {"text": "Emergence", "url": "https://en.wikipedia.org/wiki/Emergence"}
+      ]
+    }
+  }
+}
