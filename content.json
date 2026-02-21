@@ -1,7 +1,8 @@
 {
   "profile": {
     "name": "Gavin Edwards",
-    "title": "Principal Applied AI Engineer",
+    "title": "Applied AI",
+    "company": "DeepMind",
     "location": "London, UK",
     "avatar": "https://avatars.githubusercontent.com/u/24434382",
     "copyright": "© {year} Gavin Edwards"
@@ -15,8 +16,8 @@
       "items": [
         {
           "title": "Extract",
-          "date": "01/2025 - Present",
-          "description": "Gemini-powered geospatial data extraction system; multi-agent orchestration with foundation models as tools for critical geospatial tasks; Champion backed by UK Prime Minister; highlighted by Sir Demis Hassabis."
+          "date": "01/2025 - 02/2025",
+          "description": "Gemini-powered geospatial data extraction system; multi-agent orchestration with foundation models as tools for critical geospatial tasks; Announced and championed by UK Prime Minister and Sir Demis Hassabis."
         },
         {
           "title": "Biomedical Research Assistant",
@@ -32,9 +33,15 @@
       "layout": "experience",
       "items": [
         {
+          "jobTitle": "Applied AI Engineer",
+          "company": "Google DeepMind",
+          "date": "02/2025 - Present",
+          "location": "London, UK"
+        },
+        {
           "jobTitle": "Principal Applied AI Engineer",
           "company": "Incubator for AI",
-          "date": "06/2024 - Present",
+          "date": "06/2024 - 02/2025",
           "location": "London, UK"
         },
         {
@@ -44,7 +51,7 @@
           "location": "Cambridge, UK"
         },
         {
-          "jobTitle": "R&D Lab Engineering Lead",
+          "jobTitle": "Engineering Lead",
           "company": "AstraZeneca",
           "date": "10/2021 - 10/2022",
           "location": "Cambridge, UK"

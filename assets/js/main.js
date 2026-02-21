@@ -31,7 +31,10 @@ async function loadContent() {
 function populatePage(data) {
     // Profile section
     document.getElementById('profile-name').textContent = data.profile.name;
-    document.getElementById('profile-title').textContent = `${data.profile.title} · ${data.profile.location}`;
+    const titleParts = [data.profile.title];
+    if (data.profile.company) titleParts.push(data.profile.company);
+    titleParts.push(data.profile.location);
+    document.getElementById('profile-title').textContent = titleParts.join(' · ');
     document.getElementById('profile-avatar').src = data.profile.avatar;
     document.getElementById('profile-avatar').alt = `Photo of ${data.profile.name}`;
     
